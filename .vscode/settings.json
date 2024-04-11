@@ -1,0 +1,11 @@
+{
+    "idf.espIdfPath": "/Users/nicolekaldus/esp/esp-idf",
+    "idf.pythonBinPath": "/Users/nicolekaldus/esp/esp-idf/tools/python_env/idf5.3_py3.11_env/bin/python",
+    "idf.toolsPath": "/Users/nicolekaldus/esp/esp-idf/tools",
+    "idf.customExtraPaths": "/Users/nicolekaldus/esp/esp-idf/tools/tools/xtensa-esp-elf-gdb/12.1_20231023/xtensa-esp-elf-gdb/bin:/Users/nicolekaldus/esp/esp-idf/tools/tools/riscv32-esp-elf-gdb/12.1_20231023/riscv32-esp-elf-gdb/bin:/Users/nicolekaldus/esp/esp-idf/tools/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin:/Users/nicolekaldus/esp/esp-idf/tools/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin:/Users/nicolekaldus/esp/esp-idf/tools/tools/esp32ulp-elf/2.35_20220830/esp32ulp-elf/bin:/Users/nicolekaldus/esp/esp-idf/tools/tools/cmake/3.24.0/CMake.app/Contents/bin:/Users/nicolekaldus/esp/esp-idf/tools/tools/openocd-esp32/v0.12.0-esp32-20230921/openocd-esp32/bin:/Users/nicolekaldus/esp/esp-idf/tools/tools/ninja/1.11.1:/Users/nicolekaldus/esp/esp-idf/tools/tools/esp-rom-elfs/20240305",
+    "idf.customExtraVars": {
+        "OPENOCD_SCRIPTS": "/Users/nicolekaldus/esp/esp-idf/tools/tools/openocd-esp32/v0.12.0-esp32-20230921/openocd-esp32/share/openocd/scripts",
+        "ESP_ROM_ELF_DIR": "/Users/nicolekaldus/esp/esp-idf/tools/tools/esp-rom-elfs/20240305/"
+    },
+    "idf.gitPath": "/usr/bin/git"
+}
