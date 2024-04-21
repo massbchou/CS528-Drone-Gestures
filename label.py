@@ -17,14 +17,14 @@ def main():
     print(labels, "\n", len(labels))
 
     df = pd.DataFrame.from_dict(labels, orient='index')
-    df.to_csv(data_dir + 'labels.csv')
+    df.to_csv(data_dir + '/labels/labels.csv')
 
     df['filename'] = df.index
 
     train, val = train_test_split(df, test_size=0.2, random_state=1)
 
-    train.to_csv('./data/train.csv', index=False)
-    val.to_csv('./data/val.csv', index=False)
+    train.to_csv('./data/labels/train.csv', index=False)
+    val.to_csv('./data/labels/val.csv', index=False)
 
 
 if __name__ == "__main__":
