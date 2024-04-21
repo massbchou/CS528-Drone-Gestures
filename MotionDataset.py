@@ -18,6 +18,11 @@ class MotionData(Dataset):
         df = pd.read_csv(filename)
         data = df[['acce_x', 'acce_y', 'acce_z', 'gyro_x', 'gyro_y', 'gyro_z']].values.astype(np.float32)
 
+        # normalize
+        min_val = np.min(data, axis=0)
+        max_val = np.max(data, axis=0)
+        data = (data - min_val) / (max_val - min_val)
+
         if self.transform:
             data = self.transform(data)
 
