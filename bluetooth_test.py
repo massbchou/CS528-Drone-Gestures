@@ -34,8 +34,19 @@ async def connect_to_device():
                     await client.connect()
                     print("Connected successfully!")
                     # Perform operations with the connected device here
-                    # disconnect after 5 seconds
+                    # Receive data from the connected device
+                    services = client.services
+                    for service in services:
+                        print("Service:", service)
+                        for characteristic in service.characteristics:
+                            print("Characteristic:", characteristic)
                     
+                    #print("First UUID:", first_uuid)
+                    data = await client.read_gatt_char("0000ff01-0000-1000-8000-00805f9b34fb") #Hardcoded UUID
+                    print("Recieved ByteArray:", data)
+                    data = data.decode("utf-8")
+                    print("Received data:", data)
+                    # disconnect after 5 seconds
                     await asyncio.sleep(5)
                     await client.disconnect()
                     print("Disconnected from device")

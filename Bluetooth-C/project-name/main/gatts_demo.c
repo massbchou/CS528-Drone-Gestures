@@ -345,14 +345,28 @@ static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_i
         ESP_LOGI(GATTS_TAG, "GATT_READ_EVT, conn_id %d, trans_id %" PRIu32 ", handle %d", param->read.conn_id, param->read.trans_id, param->read.handle);
         esp_gatt_rsp_t rsp;
         memset(&rsp, 0, sizeof(esp_gatt_rsp_t));
+        // rsp.attr_value.handle = param->read.handle;
+        // rsp.attr_value.len = 4;  kai
+        // rsp.attr_value.value[0] = 0xde;
+        // rsp.attr_value.value[1] = 0xed;
+        // rsp.attr_value.value[2] = 0xbe;
+        // rsp.attr_value.value[3] = 0xef;
+        // esp_ble_gatts_send_response(gatts_if, param->read.conn_id, param->read.trans_id,
+        //                             ESP_GATT_OK, &rsp);
         rsp.attr_value.handle = param->read.handle;
-        rsp.attr_value.len = 4;
-        rsp.attr_value.value[0] = 0xde;
-        rsp.attr_value.value[1] = 0xed;
-        rsp.attr_value.value[2] = 0xbe;
-        rsp.attr_value.value[3] = 0xef;
-        esp_ble_gatts_send_response(gatts_if, param->read.conn_id, param->read.trans_id,
-                                    ESP_GATT_OK, &rsp);
+        rsp.attr_value.len = 11;
+        rsp.attr_value.value[0] = 'H';
+        rsp.attr_value.value[1] = 'e';
+        rsp.attr_value.value[2] = 'l';
+        rsp.attr_value.value[3] = 'l';
+        rsp.attr_value.value[4] = 'o';
+        rsp.attr_value.value[5] = ' ';
+        rsp.attr_value.value[6] = 'W';
+        rsp.attr_value.value[7] = 'o';
+        rsp.attr_value.value[8] = 'r';
+        rsp.attr_value.value[9] = 'l';
+        rsp.attr_value.value[10] = 'd';
+        esp_ble_gatts_send_response(gatts_if, param->read.conn_id, param->read.trans_id, ESP_GATT_OK, &rsp);
         break;
     }
     case ESP_GATTS_WRITE_EVT: {
@@ -518,14 +532,19 @@ static void gatts_profile_b_event_handler(esp_gatts_cb_event_t event, esp_gatt_i
         esp_gatt_rsp_t rsp;
         memset(&rsp, 0, sizeof(esp_gatt_rsp_t));
         rsp.attr_value.handle = param->read.handle;
-        rsp.attr_value.len = 4;
-        rsp.attr_value.value[0] = 0xde;
-        rsp.attr_value.value[1] = 0xed;
-        rsp.attr_value.value[2] = 0xbe;
-        rsp.attr_value.value[3] = 0xef;
-        esp_ble_gatts_send_response(gatts_if, param->read.conn_id, param->read.trans_id,
-                                    ESP_GATT_OK, &rsp);
-        break;
+        rsp.attr_value.len = 11;
+        rsp.attr_value.value[0] = 'H';
+        rsp.attr_value.value[1] = 'e';
+        rsp.attr_value.value[2] = 'l';
+        rsp.attr_value.value[3] = 'l';
+        rsp.attr_value.value[4] = 'o';
+        rsp.attr_value.value[5] = ' ';
+        rsp.attr_value.value[6] = 'W';
+        rsp.attr_value.value[7] = 'o';
+        rsp.attr_value.value[8] = 'r';
+        rsp.attr_value.value[9] = 'l';
+        rsp.attr_value.value[10] = 'd';
+        esp_ble_gatts_send_response(gatts_if, param->read.conn_id, param->read.trans_id, ESP_GATT_OK, &rsp);
     }
     case ESP_GATTS_WRITE_EVT: {
         ESP_LOGI(GATTS_TAG, "GATT_WRITE_EVT, conn_id %d, trans_id %" PRIu32 ", handle %d", param->write.conn_id, param->write.trans_id, param->write.handle);
@@ -737,6 +756,17 @@ void app_main(void)
     if (local_mtu_ret){
         ESP_LOGE(GATTS_TAG, "set local  MTU failed, error code = %x", local_mtu_ret);
     }
+    // //Send Hello World
+    // uint8_t data[] = "Hello World, GIOJIOEJOI ia a test";
+    // uint16_t conn_id = 0; // the connection id
+    // uint16_t attr_handle = 0; // Attribute handle
+    // uint16_t value_len = sizeof(data); // Length of data to send
+    // uint8_t *value = data; // Pointer to data to send
+    // bool need_confirm = false; // Whether to send a confirmation
 
+    // esp_err_t send_ret = esp_ble_gatts_send_indicate(gl_profile_tab[PROFILE_A_APP_ID].gatts_if, conn_id, attr_handle, value_len, value, need_confirm);
+    // if (send_ret){
+    //     ESP_LOGE(GATTS_TAG, "Send indicate failed, error code = %x", send_ret);
+    // }
     return;
 }

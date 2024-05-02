@@ -1,0 +1,99 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xa (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+Octal Flash Mode Enabled
+For OPI Flash, Use Default Flash Boot Mode
+mode:SLOW_RD, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2da0
+entry 0x403c9914
+[0;32mI (33) boot: ESP-IDF v5.2.1 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time May  2 2024 17:54:05[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v0.1[0m
+[0;32mI (40) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (45) boot.esp32s3: SPI Mode       : SLOW READ[0m
+[0;32mI (50) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=24888h (149640) map[0m
+[0;32mI (142) esp_image: segment 1: paddr=000348b0 vaddr=3fc97300 size=03e90h ( 16016) load[0m
+[0;32mI (146) esp_image: segment 2: paddr=00038748 vaddr=40374000 size=078d0h ( 30928) load[0m
+[0;32mI (156) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=7b360h (504672) map[0m
+[0;32mI (276) esp_image: segment 4: paddr=000bb388 vaddr=4037b8d0 size=0b960h ( 47456) load[0m
+[0;32mI (298) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (298) boot: Disabling RNG early entropy source...[0m
+[0;32mI (309) cpu_start: Multicore app[0m
+[0;32mI (319) cpu_start: Pro cpu start user code[0m
+[0;32mI (319) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (319) cpu_start: Application information:[0m
+[0;32mI (322) cpu_start: Project name:     project-name[0m
+[0;32mI (327) cpu_start: App version:      703cdf7-dirty[0m
+[0;32mI (332) cpu_start: Compile time:     May  2 2024 18:06:53[0m
+[0;32mI (339) cpu_start: ELF file SHA256:  48db8fb22...[0m
+[0;32mI (344) cpu_start: ESP-IDF:          v5.2.1[0m
+[0;32mI (349) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (353) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (358) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (363) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (370) heap_init: At 3FC9F290 len 0004A480 (297 KiB): RAM[0m
+[0;32mI (376) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (382) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (389) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;33mW (395) spi_flash: Octal flash chip is using but dio mode is selected, will automatically swich to Octal mode[0m
+[0;32mI (406) spi_flash: detected chip: mxic (opi)[0m
+[0;32mI (410) spi_flash: flash io: opi_str[0m
+[0;33mW (415) spi_flash: Detected size(32768k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (428) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (435) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (442) coexist: coex firmware version: 77cd7f8[0m
+[0;32mI (447) coexist: coexist rom version e7ae62f[0m
+[0;32mI (452) main_task: Started on CPU0[0m
+[0;32mI (462) main_task: Calling app_main()[0m
+[0;32mI (472) BLE_INIT: BT controller compile version [30b57c4][0m
+[0;32mI (472) BLE_INIT: Bluetooth MAC: 68:b6:b3:3e:1b:6e[0m
+[0;32mI (472) phy_init: phy_version 640,cd64a1a,Jan 24 2024,17:28:12[0m
+[0;32mI (532) GATTS_DEMO: REGISTER_APP_EVT, status 0, app_id 0[0m
+[0;32mI (542) GATTS_DEMO: CREATE_SERVICE_EVT, status 0,  service_handle 40[0m
+[0;32mI (542) GATTS_DEMO: SERVICE_START_EVT, status 0, service_handle 40[0m
+[0;32mI (542) GATTS_DEMO: ADD_CHAR_EVT, status 0,  attr_handle 42, service_handle 40[0m
+[0;32mI (552) GATTS_DEMO: the gatts demo char length = 3[0m
+[0;32mI (562) GATTS_DEMO: prf_char[0] =11[0m
+[0;32mI (562) GATTS_DEMO: prf_char[1] =22[0m
+[0;32mI (572) GATTS_DEMO: prf_char[2] =33[0m
+[0;32mI (572) GATTS_DEMO: ADD_DESCR_EVT, status 0, attr_handle 43, service_handle 40[0m
+[0;32mI (582) GATTS_DEMO: REGISTER_APP_EVT, status 0, app_id 1[0m
+[0;32mI (582) GATTS_DEMO: CREATE_SERVICE_EVT, status 0,  service_handle 44[0m
+[0;32mI (592) GATTS_DEMO: SERVICE_START_EVT, status 0, service_handle 44[0m
+[0;32mI (602) GATTS_DEMO: ADD_CHAR_EVT, status 0,  attr_handle 46, service_handle 44[0m
+[0;32mI (612) GATTS_DEMO: ADD_DESCR_EVT, status 0, attr_handle 47, service_handle 44[0m
+[0;32mI (612) main_task: Returned from app_main()[0m
+[0;32mI (9412) GATTS_DEMO: ESP_GATTS_CONNECT_EVT, conn_id 0, remote c8:89:f3:a8:aa:bb:[0m
+[0;32mI (9412) GATTS_DEMO: CONNECT_EVT, conn_id 0, remote c8:89:f3:a8:aa:bb:[0m
+[0;32mI (9472) GATTS_DEMO: ESP_GATTS_MTU_EVT, MTU 500[0m
+[0;32mI (9472) GATTS_DEMO: ESP_GATTS_MTU_EVT, MTU 500[0m
+[0;32mI (9802) GATTS_DEMO: update connection params status = 0, min_int = 16, max_int = 32,conn_int = 24,latency = 0, timeout = 400[0m
+[0;32mI (10332) GATTS_DEMO: GATT_READ_EVT, conn_id 0, trans_id 2, handle 42[0m
+[0;33mW (30382) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;33mW (31342) BT_LOG: esp_ble_gatts_send_response, The connection not created.[0m
+[0;33mW (32342) BT_LOG: esp_ble_gatts_send_response, The connection not created.[0m
+[0;33mW (33342) BT_LOG: esp_ble_gatts_send_response, The connection not created.[0m
+[0;33mW (34342) BT_LOG: esp_ble_gatts_send_response, The connection not created.[0m
+[0;33mW (35342) BT_LOG: esp_ble_gatts_send_response, The connection not created.[0m
+[0;33mW (36342) BT_LOG: esp_ble_gatts_send_response, The connection not created.[0m
+[0;33mW (37342) BT_LOG: esp_ble_gatts_send_response, The connection not created.[0m
+[0;33mW (38342) BT_LOG: esp_ble_gatts_send_response, The connection not created.[0m
+[0;33mW (39342) BT_LOG: esp_ble_gatts_send_response, The connection not created.[0m
+[0;33mW (40342) BT_LOG: esp_ble_gatts_send_response, The connection not created.[0m
+[0;33mW (41342) BT_LOG: esp_ble_gatts_send_response, The connection not created.[0m
+[0;33mW (42342) BT_LOG: esp_ble_gatts_send_response, The connection not created.[0m
+[0;33mW (43342) BT_LOG: esp_ble_gatts_send_response, The connection not created.[0m
+[0;33mW (44342) BT_LOG: esp_ble_gatts_send_response, The connection not created.[0m
