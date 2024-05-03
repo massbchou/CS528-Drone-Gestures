@@ -640,6 +640,13 @@
 /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/wifi_provisioning/CMakeFiles/install.dir
 /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/wifi_provisioning/CMakeFiles/install/local.dir
 /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/wifi_provisioning/CMakeFiles/install/strip.dir
+/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/espressif__mpu6050/CMakeFiles/__idf_espressif__mpu6050.dir
+/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/espressif__mpu6050/CMakeFiles/edit_cache.dir
+/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/espressif__mpu6050/CMakeFiles/rebuild_cache.dir
+/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/espressif__mpu6050/CMakeFiles/list_install_components.dir
+/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/espressif__mpu6050/CMakeFiles/install.dir
+/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/espressif__mpu6050/CMakeFiles/install/local.dir
+/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/espressif__mpu6050/CMakeFiles/install/strip.dir
 /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/main/CMakeFiles/__idf_main.dir
 /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/main/CMakeFiles/edit_cache.dir
 /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/main/CMakeFiles/rebuild_cache.dir

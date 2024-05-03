@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "project-name",
-    "project_version":    "703cdf7-dirty",
+    "project_version":    "dc21a0e-dirty",
     "project_path":       "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name",
     "idf_path":           "/Users/benchou/esp/esp-idf",
     "build_dir":          "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build",
@@ -25,8 +25,8 @@
         "COMPONENT_KCONFIGS_PROJBUILD" : "/Users/benchou/esp/esp-idf/components/bootloader/Kconfig.projbuild;/Users/benchou/esp/esp-idf/components/esp_app_format/Kconfig.projbuild;/Users/benchou/esp/esp-idf/components/esp_rom/Kconfig.projbuild;/Users/benchou/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/Users/benchou/esp/esp-idf/components/partition_table/Kconfig.projbuild;/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/main/Kconfig.projbuild"
     },
     "common_component_reqs": [ "cxx", "newlib", "freertos", "esp_hw_support", "heap", "log", "soc", "hal", "esp_rom", "esp_common", "esp_system", "xtensa" ],
-    "build_components" : [ "app_trace", "app_update", "bootloader", "bootloader_support", "bt", "cmock", "console", "cxx", "driver", "efuse", "esp-tls", "esp_adc", "esp_app_format", "esp_bootloader_format", "esp_coex", "esp_common", "esp_eth", "esp_event", "esp_gdbstub", "esp_hid", "esp_http_client", "esp_http_server", "esp_https_ota", "esp_https_server", "esp_hw_support", "esp_lcd", "esp_local_ctrl", "esp_mm", "esp_netif", "esp_netif_stack", "esp_partition", "esp_phy", "esp_pm", "esp_psram", "esp_ringbuf", "esp_rom", "esp_system", "esp_timer", "esp_wifi", "espcoredump", "esptool_py", "fatfs", "freertos", "hal", "heap", "http_parser", "idf_test", "ieee802154", "json", "log", "lwip", "main", "mbedtls", "mqtt", "newlib", "nvs_flash", "nvs_sec_provider", "openthread", "partition_table", "perfmon", "protobuf-c", "protocomm", "pthread", "sdmmc", "soc", "spi_flash", "spiffs", "tcp_transport", "touch_element", "ulp", "unity", "usb", "vfs", "wear_levelling", "wifi_provisioning", "wpa_supplicant", "xtensa", "" ],
-    "build_component_paths" : [ "/Users/benchou/esp/esp-idf/components/app_trace", "/Users/benchou/esp/esp-idf/components/app_update", "/Users/benchou/esp/esp-idf/components/bootloader", "/Users/benchou/esp/esp-idf/components/bootloader_support", "/Users/benchou/esp/esp-idf/components/bt", "/Users/benchou/esp/esp-idf/components/cmock", "/Users/benchou/esp/esp-idf/components/console", "/Users/benchou/esp/esp-idf/components/cxx", "/Users/benchou/esp/esp-idf/components/driver", "/Users/benchou/esp/esp-idf/components/efuse", "/Users/benchou/esp/esp-idf/components/esp-tls", "/Users/benchou/esp/esp-idf/components/esp_adc", "/Users/benchou/esp/esp-idf/components/esp_app_format", "/Users/benchou/esp/esp-idf/components/esp_bootloader_format", "/Users/benchou/esp/esp-idf/components/esp_coex", "/Users/benchou/esp/esp-idf/components/esp_common", "/Users/benchou/esp/esp-idf/components/esp_eth", "/Users/benchou/esp/esp-idf/components/esp_event", "/Users/benchou/esp/esp-idf/components/esp_gdbstub", "/Users/benchou/esp/esp-idf/components/esp_hid", "/Users/benchou/esp/esp-idf/components/esp_http_client", "/Users/benchou/esp/esp-idf/components/esp_http_server", "/Users/benchou/esp/esp-idf/components/esp_https_ota", "/Users/benchou/esp/esp-idf/components/esp_https_server", "/Users/benchou/esp/esp-idf/components/esp_hw_support", "/Users/benchou/esp/esp-idf/components/esp_lcd", "/Users/benchou/esp/esp-idf/components/esp_local_ctrl", "/Users/benchou/esp/esp-idf/components/esp_mm", "/Users/benchou/esp/esp-idf/components/esp_netif", "/Users/benchou/esp/esp-idf/components/esp_netif_stack", "/Users/benchou/esp/esp-idf/components/esp_partition", "/Users/benchou/esp/esp-idf/components/esp_phy", "/Users/benchou/esp/esp-idf/components/esp_pm", "/Users/benchou/esp/esp-idf/components/esp_psram", "/Users/benchou/esp/esp-idf/components/esp_ringbuf", "/Users/benchou/esp/esp-idf/components/esp_rom", "/Users/benchou/esp/esp-idf/components/esp_system", "/Users/benchou/esp/esp-idf/components/esp_timer", "/Users/benchou/esp/esp-idf/components/esp_wifi", "/Users/benchou/esp/esp-idf/components/espcoredump", "/Users/benchou/esp/esp-idf/components/esptool_py", "/Users/benchou/esp/esp-idf/components/fatfs", "/Users/benchou/esp/esp-idf/components/freertos", "/Users/benchou/esp/esp-idf/components/hal", "/Users/benchou/esp/esp-idf/components/heap", "/Users/benchou/esp/esp-idf/components/http_parser", "/Users/benchou/esp/esp-idf/components/idf_test", "/Users/benchou/esp/esp-idf/components/ieee802154", "/Users/benchou/esp/esp-idf/components/json", "/Users/benchou/esp/esp-idf/components/log", "/Users/benchou/esp/esp-idf/components/lwip", "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/main", "/Users/benchou/esp/esp-idf/components/mbedtls", "/Users/benchou/esp/esp-idf/components/mqtt", "/Users/benchou/esp/esp-idf/components/newlib", "/Users/benchou/esp/esp-idf/components/nvs_flash", "/Users/benchou/esp/esp-idf/components/nvs_sec_provider", "/Users/benchou/esp/esp-idf/components/openthread", "/Users/benchou/esp/esp-idf/components/partition_table", "/Users/benchou/esp/esp-idf/components/perfmon", "/Users/benchou/esp/esp-idf/components/protobuf-c", "/Users/benchou/esp/esp-idf/components/protocomm", "/Users/benchou/esp/esp-idf/components/pthread", "/Users/benchou/esp/esp-idf/components/sdmmc", "/Users/benchou/esp/esp-idf/components/soc", "/Users/benchou/esp/esp-idf/components/spi_flash", "/Users/benchou/esp/esp-idf/components/spiffs", "/Users/benchou/esp/esp-idf/components/tcp_transport", "/Users/benchou/esp/esp-idf/components/touch_element", "/Users/benchou/esp/esp-idf/components/ulp", "/Users/benchou/esp/esp-idf/components/unity", "/Users/benchou/esp/esp-idf/components/usb", "/Users/benchou/esp/esp-idf/components/vfs", "/Users/benchou/esp/esp-idf/components/wear_levelling", "/Users/benchou/esp/esp-idf/components/wifi_provisioning", "/Users/benchou/esp/esp-idf/components/wpa_supplicant", "/Users/benchou/esp/esp-idf/components/xtensa", "" ],
+    "build_components" : [ "app_trace", "app_update", "bootloader", "bootloader_support", "bt", "cmock", "console", "cxx", "driver", "efuse", "esp-tls", "esp_adc", "esp_app_format", "esp_bootloader_format", "esp_coex", "esp_common", "esp_eth", "esp_event", "esp_gdbstub", "esp_hid", "esp_http_client", "esp_http_server", "esp_https_ota", "esp_https_server", "esp_hw_support", "esp_lcd", "esp_local_ctrl", "esp_mm", "esp_netif", "esp_netif_stack", "esp_partition", "esp_phy", "esp_pm", "esp_psram", "esp_ringbuf", "esp_rom", "esp_system", "esp_timer", "esp_wifi", "espcoredump", "espressif__mpu6050", "esptool_py", "fatfs", "freertos", "hal", "heap", "http_parser", "idf_test", "ieee802154", "json", "log", "lwip", "main", "mbedtls", "mqtt", "newlib", "nvs_flash", "nvs_sec_provider", "openthread", "partition_table", "perfmon", "protobuf-c", "protocomm", "pthread", "sdmmc", "soc", "spi_flash", "spiffs", "tcp_transport", "touch_element", "ulp", "unity", "usb", "vfs", "wear_levelling", "wifi_provisioning", "wpa_supplicant", "xtensa", "" ],
+    "build_component_paths" : [ "/Users/benchou/esp/esp-idf/components/app_trace", "/Users/benchou/esp/esp-idf/components/app_update", "/Users/benchou/esp/esp-idf/components/bootloader", "/Users/benchou/esp/esp-idf/components/bootloader_support", "/Users/benchou/esp/esp-idf/components/bt", "/Users/benchou/esp/esp-idf/components/cmock", "/Users/benchou/esp/esp-idf/components/console", "/Users/benchou/esp/esp-idf/components/cxx", "/Users/benchou/esp/esp-idf/components/driver", "/Users/benchou/esp/esp-idf/components/efuse", "/Users/benchou/esp/esp-idf/components/esp-tls", "/Users/benchou/esp/esp-idf/components/esp_adc", "/Users/benchou/esp/esp-idf/components/esp_app_format", "/Users/benchou/esp/esp-idf/components/esp_bootloader_format", "/Users/benchou/esp/esp-idf/components/esp_coex", "/Users/benchou/esp/esp-idf/components/esp_common", "/Users/benchou/esp/esp-idf/components/esp_eth", "/Users/benchou/esp/esp-idf/components/esp_event", "/Users/benchou/esp/esp-idf/components/esp_gdbstub", "/Users/benchou/esp/esp-idf/components/esp_hid", "/Users/benchou/esp/esp-idf/components/esp_http_client", "/Users/benchou/esp/esp-idf/components/esp_http_server", "/Users/benchou/esp/esp-idf/components/esp_https_ota", "/Users/benchou/esp/esp-idf/components/esp_https_server", "/Users/benchou/esp/esp-idf/components/esp_hw_support", "/Users/benchou/esp/esp-idf/components/esp_lcd", "/Users/benchou/esp/esp-idf/components/esp_local_ctrl", "/Users/benchou/esp/esp-idf/components/esp_mm", "/Users/benchou/esp/esp-idf/components/esp_netif", "/Users/benchou/esp/esp-idf/components/esp_netif_stack", "/Users/benchou/esp/esp-idf/components/esp_partition", "/Users/benchou/esp/esp-idf/components/esp_phy", "/Users/benchou/esp/esp-idf/components/esp_pm", "/Users/benchou/esp/esp-idf/components/esp_psram", "/Users/benchou/esp/esp-idf/components/esp_ringbuf", "/Users/benchou/esp/esp-idf/components/esp_rom", "/Users/benchou/esp/esp-idf/components/esp_system", "/Users/benchou/esp/esp-idf/components/esp_timer", "/Users/benchou/esp/esp-idf/components/esp_wifi", "/Users/benchou/esp/esp-idf/components/espcoredump", "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/managed_components/espressif__mpu6050", "/Users/benchou/esp/esp-idf/components/esptool_py", "/Users/benchou/esp/esp-idf/components/fatfs", "/Users/benchou/esp/esp-idf/components/freertos", "/Users/benchou/esp/esp-idf/components/hal", "/Users/benchou/esp/esp-idf/components/heap", "/Users/benchou/esp/esp-idf/components/http_parser", "/Users/benchou/esp/esp-idf/components/idf_test", "/Users/benchou/esp/esp-idf/components/ieee802154", "/Users/benchou/esp/esp-idf/components/json", "/Users/benchou/esp/esp-idf/components/log", "/Users/benchou/esp/esp-idf/components/lwip", "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/main", "/Users/benchou/esp/esp-idf/components/mbedtls", "/Users/benchou/esp/esp-idf/components/mqtt", "/Users/benchou/esp/esp-idf/components/newlib", "/Users/benchou/esp/esp-idf/components/nvs_flash", "/Users/benchou/esp/esp-idf/components/nvs_sec_provider", "/Users/benchou/esp/esp-idf/components/openthread", "/Users/benchou/esp/esp-idf/components/partition_table", "/Users/benchou/esp/esp-idf/components/perfmon", "/Users/benchou/esp/esp-idf/components/protobuf-c", "/Users/benchou/esp/esp-idf/components/protocomm", "/Users/benchou/esp/esp-idf/components/pthread", "/Users/benchou/esp/esp-idf/components/sdmmc", "/Users/benchou/esp/esp-idf/components/soc", "/Users/benchou/esp/esp-idf/components/spi_flash", "/Users/benchou/esp/esp-idf/components/spiffs", "/Users/benchou/esp/esp-idf/components/tcp_transport", "/Users/benchou/esp/esp-idf/components/touch_element", "/Users/benchou/esp/esp-idf/components/ulp", "/Users/benchou/esp/esp-idf/components/unity", "/Users/benchou/esp/esp-idf/components/usb", "/Users/benchou/esp/esp-idf/components/vfs", "/Users/benchou/esp/esp-idf/components/wear_levelling", "/Users/benchou/esp/esp-idf/components/wifi_provisioning", "/Users/benchou/esp/esp-idf/components/wpa_supplicant", "/Users/benchou/esp/esp-idf/components/xtensa", "" ],
     "build_component_info" : {
         "app_trace": {
             "alias": "idf::app_trace",
@@ -628,6 +628,21 @@
             "sources": [ "/Users/benchou/esp/esp-idf/components/espcoredump/src/core_dump_common.c", "/Users/benchou/esp/esp-idf/components/espcoredump/src/core_dump_checksum.c", "/Users/benchou/esp/esp-idf/components/espcoredump/src/core_dump_flash.c", "/Users/benchou/esp/esp-idf/components/espcoredump/src/core_dump_uart.c", "/Users/benchou/esp/esp-idf/components/espcoredump/src/core_dump_elf.c", "/Users/benchou/esp/esp-idf/components/espcoredump/src/core_dump_binary.c", "/Users/benchou/esp/esp-idf/components/espcoredump/src/port/xtensa/core_dump_port.c" ],
             "include_dirs": [ "include", "include/port/xtensa" ]
         },
+        "espressif__mpu6050": {
+            "alias": "idf::espressif__mpu6050",
+            "target": "___idf_espressif__mpu6050",
+            "prefix": "idf",
+            "dir": "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/managed_components/espressif__mpu6050",
+            "type": "LIBRARY",
+            "lib": "__idf_espressif__mpu6050",
+            "reqs": [ "driver" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/espressif__mpu6050/libespressif__mpu6050.a",
+            "sources": [ "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/managed_components/espressif__mpu6050/mpu6050.c" ],
+            "include_dirs": [ "include" ]
+        },
         "esptool_py": {
             "alias": "idf::esptool_py",
             "target": "___idf_esptool_py",
@@ -801,9 +816,9 @@
             "type": "LIBRARY",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [],
+            "priv_reqs": [ "espressif__mpu6050" ],
             "managed_reqs": [],
-            "managed_priv_reqs": [],
+            "managed_priv_reqs": [ "espressif__mpu6050" ],
             "file": "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/main/libmain.a",
             "sources": [ "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/main/gatts_demo.c" ],
             "include_dirs": [ "." ]
@@ -2128,10 +2143,22 @@
             "dir": "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/main",
             "lib": "__idf_main",
             "reqs": [],
+            "priv_reqs": [ "espressif__mpu6050" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [ "espressif__mpu6050" ],
+            "include_dirs": [ "." ]
+        },
+        "espressif__mpu6050": {
+            "alias": "idf::espressif__mpu6050",
+            "target": "___idf_espressif__mpu6050",
+            "prefix": "idf",
+            "dir": "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/managed_components/espressif__mpu6050",
+            "lib": "__idf_espressif__mpu6050",
+            "reqs": [ "driver" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "." ]
+            "include_dirs": [ "include" ]
         }
     },
     "debug_prefix_map_gdbinit": ""

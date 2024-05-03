@@ -13,7 +13,7 @@
 *
 ****************************************************************************/
 
-
+//gatt imports
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -35,6 +35,19 @@
 #include "sdkconfig.h"
 
 #define GATTS_TAG "GATTS_DEMO"
+
+//mpu imports
+#include <stdio.h>
+#include "unity.h"
+#include "driver/i2c.h"
+#include "mpu6050.h"
+// #include "esp_system.h" Imported above
+// #include "esp_log.h"
+
+//added by me
+#include "driver/uart.h" // for uart
+#include "string.h" // for strlen
+#include "sys/time.h" // for time
 
 ///Declare the static function
 static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
@@ -694,6 +707,117 @@ static void gatts_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_
     } while (0);
 }
 
+//MPU 6050 Code Starts Here
+#define I2C_MASTER_SCL_IO 1      /*!< gpio number for I2C master clock */
+#define I2C_MASTER_SDA_IO 0      /*!< gpio number for I2C master data  */
+#define I2C_MASTER_NUM I2C_NUM_0  /*!< I2C port number for master dev */
+#define I2C_MASTER_FREQ_HZ 100000 /*!< I2C master clock frequency */
+
+#define UART_NUM UART_NUM_1
+
+static const char *TAG = "mpu6050 test";
+static mpu6050_handle_t mpu6050 = NULL;
+
+void setup() {
+    uart_config_t uart_config = {
+        .baud_rate = 115200,
+        .data_bits = UART_DATA_8_BITS,
+        .parity = UART_PARITY_DISABLE,
+        .stop_bits = UART_STOP_BITS_1,
+        .flow_ctrl = UART_HW_FLOWCTRL_DISABLE
+    };
+
+    uart_param_config(UART_NUM, &uart_config);
+    uart_set_pin(UART_NUM, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
+    uart_driver_install(UART_NUM, 1024 * 2, 0, 0, NULL, 0);
+}
+
+/**
+ * @brief i2c master initialization
+ */
+static void i2c_bus_init(void)
+{
+    i2c_config_t conf;
+    conf.mode = I2C_MODE_MASTER;
+    conf.sda_io_num = (gpio_num_t)I2C_MASTER_SDA_IO;
+    conf.sda_pullup_en = GPIO_PULLUP_ENABLE;
+    conf.scl_io_num = (gpio_num_t)I2C_MASTER_SCL_IO;
+    conf.scl_pullup_en = GPIO_PULLUP_ENABLE;
+    conf.master.clk_speed = I2C_MASTER_FREQ_HZ;
+    conf.clk_flags = I2C_SCLK_SRC_FLAG_FOR_NOMAL;
+
+    esp_err_t ret = i2c_param_config(I2C_MASTER_NUM, &conf);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "I2C config returned error");
+        return;
+    }
+
+    ret = i2c_driver_install(I2C_MASTER_NUM, conf.mode, 0, 0, 0);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "I2C install returned error");
+        return;
+    }
+}
+
+/**
+ * @brief i2c master initialization
+ */
+static void i2c_sensor_mpu6050_init(void)
+{
+    esp_err_t ret;
+
+    i2c_bus_init();
+    mpu6050 = mpu6050_create(I2C_MASTER_NUM, MPU6050_I2C_ADDRESS);
+    if (mpu6050 == NULL) {
+        ESP_LOGE(TAG, "MPU6050 create returned NULL");
+        return;
+    }
+
+    ret = mpu6050_config(mpu6050, ACCE_FS_4G, GYRO_FS_500DPS);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "MPU6050 config error");
+        return;
+    }
+
+    ret = mpu6050_wake_up(mpu6050);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "MPU6050 wake up error");
+        return;
+    }
+}
+
+void sendData(esp_err_t ret, mpu6050_handle_t mpu6050, mpu6050_acce_value_t acce, mpu6050_gyro_value_t gyro) {
+    int counter = 0;
+    int samples = 500;
+    clock_t start = clock();
+    double time = 0.0;
+
+    while (counter < samples) {
+        ret = mpu6050_get_acce(mpu6050, &acce);
+        if (ret != ESP_OK) {
+            ESP_LOGE(TAG, "Failed to get accelerometer data");
+        }
+        ret = mpu6050_get_gyro(mpu6050, &gyro);
+        if (ret != ESP_OK) {
+            ESP_LOGE(TAG, "Failed to get gyroscope data");
+        }
+
+        clock_t currentTime = clock();
+        time = (double)(currentTime - start) / CLOCKS_PER_SEC;
+
+        ESP_LOGI(TAG, "LOGGING DATA Time:%.6f, acce_x:%.2f, acce_y:%.2f, acce_z:%.2f, gyro_x:%.2f, gyro_y:%.2f, gyro_z:%.2f END OF LOG",
+             time, acce.acce_x, acce.acce_y, acce.acce_z, gyro.gyro_x, gyro.gyro_y, gyro.gyro_z);
+
+        counter++; 
+    }
+    //send an end of data message
+    ESP_LOGI(TAG, "END OF DATA");
+}
+
+
+
+
+
 void app_main(void)
 {
     esp_err_t ret;
@@ -756,17 +880,25 @@ void app_main(void)
     if (local_mtu_ret){
         ESP_LOGE(GATTS_TAG, "set local  MTU failed, error code = %x", local_mtu_ret);
     }
-    // //Send Hello World
-    // uint8_t data[] = "Hello World, GIOJIOEJOI ia a test";
-    // uint16_t conn_id = 0; // the connection id
-    // uint16_t attr_handle = 0; // Attribute handle
-    // uint16_t value_len = sizeof(data); // Length of data to send
-    // uint8_t *value = data; // Pointer to data to send
-    // bool need_confirm = false; // Whether to send a confirmation
+    
+    esp_err_t ret2;
+    uint8_t mpu6050_deviceid;
+    mpu6050_acce_value_t acce;
+    mpu6050_gyro_value_t gyro;
 
-    // esp_err_t send_ret = esp_ble_gatts_send_indicate(gl_profile_tab[PROFILE_A_APP_ID].gatts_if, conn_id, attr_handle, value_len, value, need_confirm);
-    // if (send_ret){
-    //     ESP_LOGE(GATTS_TAG, "Send indicate failed, error code = %x", send_ret);
-    // }
+    i2c_sensor_mpu6050_init();
+
+    ret2 = mpu6050_get_deviceid(mpu6050, &mpu6050_deviceid);
+    if (ret2 != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to get MPU6050 device ID");
+    }
+
+    sendData(ret, mpu6050, acce, gyro);
+    mpu6050_delete(mpu6050);
+    ret = i2c_driver_delete(I2C_MASTER_NUM);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to delete I2C driver");
+    }
+
     return;
 }

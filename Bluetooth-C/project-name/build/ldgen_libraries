@@ -64,4 +64,5 @@
 /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/touch_element/libtouch_element.a
 /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/usb/libusb.a
 /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
+/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/espressif__mpu6050/libespressif__mpu6050.a
 /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/main/libmain.a
