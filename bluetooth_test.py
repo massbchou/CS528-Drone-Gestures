@@ -1,5 +1,6 @@
 import asyncio
 from bleak import BleakClient, BleakScanner
+import struct
 
 # async def run():
 #     try:
@@ -43,12 +44,16 @@ async def connect_to_device():
                     
                     #print("First UUID:", first_uuid)
                     data = await client.read_gatt_char("0000ff01-0000-1000-8000-00805f9b34fb") #Hardcoded UUID
+                    # data = await client.start_notify("0000ff01-0000-1000-8000-00805f9b34fb", lambda c, x: print("Received data:", x.decode("utf-8")))
+                    # while(True):
+                    #     await asyncio.sleep(1)
                     print("Recieved ByteArray:", data)
-                    data = data.decode("utf-8")
+                    # data = struct.unpack('<f', data)
                     print("Received data:", data)
                     # disconnect after 5 seconds
-                    await asyncio.sleep(5)
-                    await client.disconnect()
+                    #await asyncio.sleep(5)
+                        
+                    #await client.disconnect()
                     print("Disconnected from device")
             except ValueError as e:
                 print(f"An error occurred while processing a device: {e}")

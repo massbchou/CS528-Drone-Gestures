@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "project-name",
-    "project_version":    "dc21a0e-dirty",
+    "project_version":    "7d034a5-dirty",
     "project_path":       "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name",
     "idf_path":           "/Users/benchou/esp/esp-idf",
     "build_dir":          "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build",

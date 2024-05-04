@@ -1,0 +1,589 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xa (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+Octal Flash Mode Enabled
+For OPI Flash, Use Default Flash Boot Mode
+mode:SLOW_RD, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2da0
+entry 0x403c9914
+[0;32mI (33) boot: ESP-IDF v5.2.1 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time May  3 2024 15:45:50[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v0.1[0m
+[0;32mI (40) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (45) boot.esp32s3: SPI Mode       : SLOW READ[0m
+[0;32mI (50) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=25c84h (154756) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00035cac vaddr=3fc98700 size=03eb0h ( 16048) load[0m
+[0;32mI (147) esp_image: segment 2: paddr=00039b64 vaddr=40374000 size=064b4h ( 25780) load[0m
+[0;32mI (156) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=7e3b8h (517048) map[0m
+[0;32mI (280) esp_image: segment 4: paddr=000be3e0 vaddr=4037a4b4 size=0e144h ( 57668) load[0m
+[0;32mI (304) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (305) boot: Disabling RNG early entropy source...[0m
+[0;32mI (316) cpu_start: Multicore app[0m
+[0;32mI (325) cpu_start: Pro cpu start user code[0m
+[0;32mI (325) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (326) cpu_start: Application information:[0m
+[0;32mI (328) cpu_start: Project name:     project-name[0m
+[0;32mI (334) cpu_start: App version:      7d034a5-dirty[0m
+[0;32mI (339) cpu_start: Compile time:     May  3 2024 19:24:40[0m
+[0;32mI (345) cpu_start: ELF file SHA256:  c612078f1...[0m
+[0;32mI (351) cpu_start: ESP-IDF:          v5.2.1[0m
+[0;32mI (356) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (360) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (365) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (370) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (377) heap_init: At 3FCA08A8 len 00048E68 (291 KiB): RAM[0m
+[0;32mI (383) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (389) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (396) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;33mW (402) spi_flash: Octal flash chip is using but dio mode is selected, will automatically swich to Octal mode[0m
+[0;32mI (413) spi_flash: detected chip: mxic (opi)[0m
+[0;32mI (417) spi_flash: flash io: opi_str[0m
+[0;33mW (422) spi_flash: Detected size(32768k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (435) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (446) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (452) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (459) coexist: coex firmware version: 77cd7f8[0m
+[0;32mI (465) coexist: coexist rom version e7ae62f[0m
+[0;32mI (470) main_task: Started on CPU0[0m
+[0;32mI (480) main_task: Calling app_main()[0m
+[0;32mI (490) BLE_INIT: BT controller compile version [30b57c4][0m
+[0;32mI (490) BLE_INIT: Bluetooth MAC: 68:b6:b3:3e:1b:6e[0m
+[0;32mI (500) phy_init: phy_version 640,cd64a1a,Jan 24 2024,17:28:12[0m
+[0;32mI (560) GATTS_DEMO: REGISTER_APP_EVT, status 0, app_id 0[0m
+[0;32mI (560) GATTS_DEMO: CREATE_SERVICE_EVT, status 0,  service_handle 40[0m
+[0;32mI (560) GATTS_DEMO: SERVICE_START_EVT, status 0, service_handle 40[0m
+[0;32mI (570) GATTS_DEMO: ADD_CHAR_EVT, status 0,  attr_handle 42, service_handle 40[0m
+[0;32mI (570) GATTS_DEMO: the gatts demo char length = 3[0m
+[0;32mI (580) GATTS_DEMO: prf_char[0] =11[0m
+[0;32mI (580) GATTS_DEMO: prf_char[1] =22[0m
+[0;32mI (590) GATTS_DEMO: prf_char[2] =33[0m
+[0;32mI (590) GATTS_DEMO: ADD_DESCR_EVT, status 0, attr_handle 43, service_handle 40[0m
+[0;32mI (600) GATTS_DEMO: REGISTER_APP_EVT, status 0, app_id 1[0m
+[0;32mI (610) GATTS_DEMO: CREATE_SERVICE_EVT, status 0,  service_handle 44[0m
+[0;32mI (610) GATTS_DEMO: SERVICE_START_EVT, status 0, service_handle 44[0m
+[0;32mI (620) GATTS_DEMO: ADD_CHAR_EVT, status 0,  attr_handle 46, service_handle 44[0m
+[0;32mI (630) GATTS_DEMO: ADD_DESCR_EVT, status 0, attr_handle 47, service_handle 44[0m
+[0;31mE (640) mpu6050 test: MPU6050 config error[0m
+[0;32mI (640) mpu6050 test: LOGGING DATA Time:0.000000, acce_x:0.30, acce_y:0.17, acce_z:0.91, gyro_x:9.50, gyro_y:-52.99, gyro_z:-29.36 END OF LOG[0m
+[0;32mI (660) mpu6050 test: LOGGING DATA Time:0.000020, acce_x:0.30, acce_y:0.54, acce_z:0.98, gyro_x:3.98, gyro_y:-74.52, gyro_z:-14.21 END OF LOG[0m
+[0;32mI (670) mpu6050 test: LOGGING DATA Time:0.000030, acce_x:0.42, acce_y:0.32, acce_z:0.94, gyro_x:-6.66, gyro_y:-83.66, gyro_z:-6.72 END OF LOG[0m
+[0;32mI (680) mpu6050 test: LOGGING DATA Time:0.000040, acce_x:0.50, acce_y:0.13, acce_z:0.97, gyro_x:30.02, gyro_y:-74.61, gyro_z:-59.05 END OF LOG[0m
+[0;32mI (700) mpu6050 test: LOGGING DATA Time:0.000060, acce_x:0.55, acce_y:0.59, acce_z:0.97, gyro_x:13.18, gyro_y:-64.85, gyro_z:-30.32 END OF LOG[0m
+[0;32mI (710) mpu6050 test: LOGGING DATA Time:0.000070, acce_x:0.65, acce_y:0.40, acce_z:0.93, gyro_x:-4.17, gyro_y:-40.46, gyro_z:-8.46 END OF LOG[0m
+[0;32mI (720) mpu6050 test: LOGGING DATA Time:0.000080, acce_x:0.60, acce_y:0.35, acce_z:0.88, gyro_x:0.47, gyro_y:-7.27, gyro_z:-37.44 END OF LOG[0m
+[0;32mI (740) mpu6050 test: LOGGING DATA Time:0.000100, acce_x:0.69, acce_y:0.62, acce_z:0.93, gyro_x:-32.43, gyro_y:13.95, gyro_z:5.89 END OF LOG[0m
+[0;32mI (750) mpu6050 test: LOGGING DATA Time:0.000110, acce_x:0.70, acce_y:0.33, acce_z:0.90, gyro_x:-39.53, gyro_y:51.82, gyro_z:-7.44 END OF LOG[0m
+[0;32mI (760) mpu6050 test: LOGGING DATA Time:0.000120, acce_x:0.70, acce_y:0.50, acce_z:0.93, gyro_x:-53.22, gyro_y:80.81, gyro_z:-25.89 END OF LOG[0m
+[0;32mI (780) mpu6050 test: LOGGING DATA Time:0.000140, acce_x:0.89, acce_y:0.35, acce_z:0.89, gyro_x:-67.22, gyro_y:120.61, gyro_z:-5.62 END OF LOG[0m
+[0;32mI (790) mpu6050 test: LOGGING DATA Time:0.000150, acce_x:0.77, acce_y:0.11, acce_z:0.72, gyro_x:-43.01, gyro_y:248.23, gyro_z:97.34 END OF LOG[0m
+[0;32mI (800) mpu6050 test: LOGGING DATA Time:0.000160, acce_x:-0.40, acce_y:0.28, acce_z:1.09, gyro_x:-28.92, gyro_y:165.79, gyro_z:-15.86 END OF LOG[0m
+[0;32mI (820) mpu6050 test: LOGGING DATA Time:0.000180, acce_x:-0.39, acce_y:0.18, acce_z:1.12, gyro_x:-34.85, gyro_y:9.60, gyro_z:6.31 END OF LOG[0m
+[0;32mI (830) mpu6050 test: LOGGING DATA Time:0.000190, acce_x:0.18, acce_y:0.10, acce_z:1.05, gyro_x:-8.99, gyro_y:-36.52, gyro_z:-39.48 END OF LOG[0m
+[0;32mI (840) mpu6050 test: LOGGING DATA Time:0.000200, acce_x:0.73, acce_y:0.28, acce_z:1.01, gyro_x:-4.81, gyro_y:0.99, gyro_z:-41.85 END OF LOG[0m
+[0;32mI (860) mpu6050 test: LOGGING DATA Time:0.000220, acce_x:1.04, acce_y:0.43, acce_z:0.91, gyro_x:-22.55, gyro_y:93.47, gyro_z:-49.51 END OF LOG[0m
+[0;32mI (870) mpu6050 test: LOGGING DATA Time:0.000230, acce_x:1.11, acce_y:0.28, acce_z:0.83, gyro_x:-31.13, gyro_y:221.48, gyro_z:-11.69 END OF LOG[0m
+[0;32mI (880) mpu6050 test: LOGGING DATA Time:0.000240, acce_x:0.71, acce_y:0.36, acce_z:0.79, gyro_x:-21.60, gyro_y:342.47, gyro_z:9.18 END OF LOG[0m
+[0;32mI (900) mpu6050 test: LOGGING DATA Time:0.000260, acce_x:0.09, acce_y:0.59, acce_z:0.87, gyro_x:-54.60, gyro_y:357.51, gyro_z:24.24 END OF LOG[0m
+[0;32mI (910) mpu6050 test: LOGGING DATA Time:0.000270, acce_x:-0.47, acce_y:0.21, acce_z:0.98, gyro_x:-54.11, gyro_y:294.60, gyro_z:-2.05 END OF LOG[0m
+[0;32mI (920) mpu6050 test: LOGGING DATA Time:0.000280, acce_x:-0.64, acce_y:0.26, acce_z:1.02, gyro_x:-38.58, gyro_y:175.37, gyro_z:-33.39 END OF LOG[0m
+[0;32mI (940) mpu6050 test: LOGGING DATA Time:0.000300, acce_x:-0.53, acce_y:0.28, acce_z:0.89, gyro_x:-38.63, gyro_y:99.40, gyro_z:-128.73 END OF LOG[0m
+[0;32mI (950) mpu6050 test: LOGGING DATA Time:0.000310, acce_x:-0.33, acce_y:0.27, acce_z:1.42, gyro_x:-52.96, gyro_y:45.86, gyro_z:-48.98 END OF LOG[0m
+[0;32mI (970) mpu6050 test: LOGGING DATA Time:0.000330, acce_x:0.16, acce_y:0.15, acce_z:1.05, gyro_x:-45.37, gyro_y:95.22, gyro_z:14.29 END OF LOG[0m
+[0;32mI (980) mpu6050 test: LOGGING DATA Time:0.000340, acce_x:0.03, acce_y:0.14, acce_z:0.97, gyro_x:-30.96, gyro_y:136.63, gyro_z:-1.11 END OF LOG[0m
+[0;32mI (990) mpu6050 test: LOGGING DATA Time:0.000350, acce_x:-0.11, acce_y:0.28, acce_z:1.03, gyro_x:-28.76, gyro_y:136.49, gyro_z:7.65 END OF LOG[0m
+[0;32mI (1010) mpu6050 test: LOGGING DATA Time:0.000370, acce_x:-0.21, acce_y:0.26, acce_z:1.08, gyro_x:-40.37, gyro_y:122.35, gyro_z:15.31 END OF LOG[0m
+[0;32mI (1020) mpu6050 test: LOGGING DATA Time:0.000380, acce_x:-0.25, acce_y:0.13, acce_z:1.00, gyro_x:-34.55, gyro_y:109.39, gyro_z:6.05 END OF LOG[0m
+[0;32mI (1030) mpu6050 test: LOGGING DATA Time:0.000390, acce_x:-0.29, acce_y:0.16, acce_z:1.00, gyro_x:-24.82, gyro_y:96.78, gyro_z:-2.82 END OF LOG[0m
+[0;32mI (1050) mpu6050 test: LOGGING DATA Time:0.000410, acce_x:-0.30, acce_y:0.19, acce_z:1.02, gyro_x:-21.45, gyro_y:83.08, gyro_z:3.19 END OF LOG[0m
+[0;32mI (1060) mpu6050 test: LOGGING DATA Time:0.000420, acce_x:-0.30, acce_y:0.19, acce_z:1.06, gyro_x:-23.77, gyro_y:69.57, gyro_z:4.20 END OF LOG[0m
+[0;32mI (1070) mpu6050 test: LOGGING DATA Time:0.000430, acce_x:-0.27, acce_y:0.14, acce_z:1.04, gyro_x:-21.89, gyro_y:64.69, gyro_z:5.91 END OF LOG[0m
+[0;32mI (1090) mpu6050 test: LOGGING DATA Time:0.000450, acce_x:-0.28, acce_y:0.11, acce_z:1.05, gyro_x:-17.92, gyro_y:65.71, gyro_z:6.78 END OF LOG[0m
+[0;32mI (1100) mpu6050 test: LOGGING DATA Time:0.000460, acce_x:-0.31, acce_y:0.11, acce_z:1.01, gyro_x:-9.65, gyro_y:69.60, gyro_z:0.78 END OF LOG[0m
+[0;32mI (1110) mpu6050 test: LOGGING DATA Time:0.000470, acce_x:-0.37, acce_y:0.16, acce_z:1.01, gyro_x:-6.56, gyro_y:61.86, gyro_z:3.53 END OF LOG[0m
+[0;32mI (1130) mpu6050 test: LOGGING DATA Time:0.000490, acce_x:1.10, acce_y:1.91, acce_z:0.62, gyro_x:-142.00, gyro_y:159.51, gyro_z:-436.67 END OF LOG[0m
+[0;32mI (1140) mpu6050 test: LOGGING DATA Time:0.000500, acce_x:0.22, acce_y:0.03, acce_z:0.66, gyro_x:-156.61, gyro_y:245.76, gyro_z:289.24 END OF LOG[0m
+[0;32mI (1150) mpu6050 test: LOGGING DATA Time:0.000510, acce_x:-0.14, acce_y:-0.40, acce_z:0.75, gyro_x:-85.39, gyro_y:322.89, gyro_z:-26.79 END OF LOG[0m
+[0;32mI (1170) mpu6050 test: LOGGING DATA Time:0.000530, acce_x:-0.28, acce_y:0.28, acce_z:0.79, gyro_x:-87.62, gyro_y:346.58, gyro_z:18.20 END OF LOG[0m
+[0;32mI (1180) mpu6050 test: LOGGING DATA Time:0.000540, acce_x:-0.22, acce_y:0.33, acce_z:0.67, gyro_x:-120.26, gyro_y:368.79, gyro_z:93.92 END OF LOG[0m
+[0;32mI (1200) mpu6050 test: LOGGING DATA Time:0.000560, acce_x:-0.26, acce_y:0.10, acce_z:0.47, gyro_x:-127.02, gyro_y:441.11, gyro_z:183.82 END OF LOG[0m
+[0;32mI (1210) mpu6050 test: LOGGING DATA Time:0.000570, acce_x:-0.77, acce_y:-0.21, acce_z:0.34, gyro_x:-87.88, gyro_y:486.14, gyro_z:186.95 END OF LOG[0m
+[0;32mI (1220) mpu6050 test: LOGGING DATA Time:0.000580, acce_x:-1.33, acce_y:-0.18, acce_z:0.41, gyro_x:-38.20, gyro_y:436.26, gyro_z:78.89 END OF LOG[0m
+[0;32mI (1240) mpu6050 test: LOGGING DATA Time:0.000600, acce_x:-1.69, acce_y:-0.09, acce_z:0.47, gyro_x:-3.60, gyro_y:319.11, gyro_z:5.98 END OF LOG[0m
+[0;32mI (1250) mpu6050 test: LOGGING DATA Time:0.000610, acce_x:-1.68, acce_y:0.10, acce_z:0.54, gyro_x:3.30, gyro_y:178.82, gyro_z:-28.90 END OF LOG[0m
+[0;32mI (1260) mpu6050 test: LOGGING DATA Time:0.000620, acce_x:-1.32, acce_y:0.19, acce_z:0.53, gyro_x:-9.33, gyro_y:73.15, gyro_z:-21.28 END OF LOG[0m
+[0;32mI (1280) mpu6050 test: LOGGING DATA Time:0.000640, acce_x:-0.94, acce_y:0.10, acce_z:0.48, gyro_x:-15.02, gyro_y:49.19, gyro_z:-11.08 END OF LOG[0m
+[0;32mI (1290) mpu6050 test: LOGGING DATA Time:0.000650, acce_x:-0.74, acce_y:0.07, acce_z:0.45, gyro_x:-13.24, gyro_y:73.65, gyro_z:-9.83 END OF LOG[0m
+[0;32mI (1300) mpu6050 test: LOGGING DATA Time:0.000660, acce_x:-0.77, acce_y:0.08, acce_z:0.42, gyro_x:-11.44, gyro_y:105.24, gyro_z:1.98 END OF LOG[0m
+[0;32mI (1320) mpu6050 test: LOGGING DATA Time:0.000680, acce_x:-0.96, acce_y:0.07, acce_z:0.41, gyro_x:-10.12, gyro_y:108.53, gyro_z:10.05 END OF LOG[0m
+[0;32mI (1330) mpu6050 test: LOGGING DATA Time:0.000690, acce_x:-1.04, acce_y:0.08, acce_z:0.41, gyro_x:-10.46, gyro_y:83.88, gyro_z:-3.22 END OF LOG[0m
+[0;32mI (1350) mpu6050 test: LOGGING DATA Time:0.000710, acce_x:-1.05, acce_y:0.08, acce_z:0.39, gyro_x:-9.36, gyro_y:61.57, gyro_z:5.10 END OF LOG[0m
+[0;32mI (1360) mpu6050 test: LOGGING DATA Time:0.000720, acce_x:-0.99, acce_y:0.04, acce_z:0.36, gyro_x:-4.34, gyro_y:39.22, gyro_z:-6.87 END OF LOG[0m
+[0;32mI (1370) mpu6050 test: LOGGING DATA Time:0.000730, acce_x:-0.91, acce_y:0.05, acce_z:0.37, gyro_x:0.27, gyro_y:34.15, gyro_z:-13.07 END OF LOG[0m
+[0;32mI (1390) mpu6050 test: LOGGING DATA Time:0.000750, acce_x:-0.83, acce_y:0.09, acce_z:0.34, gyro_x:1.30, gyro_y:46.43, gyro_z:-18.72 END OF LOG[0m
+[0;32mI (1400) mpu6050 test: LOGGING DATA Time:0.000760, acce_x:-0.84, acce_y:0.13, acce_z:0.34, gyro_x:-4.47, gyro_y:63.27, gyro_z:-6.43 END OF LOG[0m
+[0;32mI (1410) mpu6050 test: LOGGING DATA Time:0.000770, acce_x:-0.87, acce_y:0.10, acce_z:0.33, gyro_x:-10.18, gyro_y:67.21, gyro_z:-6.96 END OF LOG[0m
+[0;32mI (1430) mpu6050 test: LOGGING DATA Time:0.000790, acce_x:-0.83, acce_y:0.10, acce_z:0.28, gyro_x:-10.67, gyro_y:81.39, gyro_z:-11.51 END OF LOG[0m
+[0;32mI (1440) mpu6050 test: LOGGING DATA Time:0.000800, acce_x:-0.80, acce_y:0.06, acce_z:0.26, gyro_x:-8.56, gyro_y:97.97, gyro_z:-16.08 END OF LOG[0m
+[0;32mI (1450) mpu6050 test: LOGGING DATA Time:0.000810, acce_x:-0.85, acce_y:0.09, acce_z:0.24, gyro_x:-6.34, gyro_y:119.54, gyro_z:-12.09 END OF LOG[0m
+[0;32mI (1470) mpu6050 test: LOGGING DATA Time:0.000830, acce_x:-1.03, acce_y:0.10, acce_z:0.22, gyro_x:-7.19, gyro_y:119.82, gyro_z:-0.32 END OF LOG[0m
+[0;32mI (1480) mpu6050 test: LOGGING DATA Time:0.000840, acce_x:-1.19, acce_y:0.07, acce_z:0.24, gyro_x:-6.67, gyro_y:87.47, gyro_z:0.93 END OF LOG[0m
+[0;32mI (1490) mpu6050 test: LOGGING DATA Time:0.000850, acce_x:-1.14, acce_y:0.06, acce_z:0.29, gyro_x:-5.39, gyro_y:42.53, gyro_z:-27.19 END OF LOG[0m
+[0;32mI (1510) mpu6050 test: LOGGING DATA Time:0.000870, acce_x:-0.76, acce_y:0.05, acce_z:0.21, gyro_x:-5.95, gyro_y:40.87, gyro_z:-39.97 END OF LOG[0m
+[0;32mI (1520) mpu6050 test: LOGGING DATA Time:0.000880, acce_x:-0.48, acce_y:0.03, acce_z:0.10, gyro_x:-4.46, gyro_y:113.48, gyro_z:-39.86 END OF LOG[0m
+[0;32mI (1530) mpu6050 test: LOGGING DATA Time:0.000890, acce_x:-0.76, acce_y:0.08, acce_z:0.07, gyro_x:-8.24, gyro_y:188.50, gyro_z:2.95 END OF LOG[0m
+[0;32mI (1550) mpu6050 test: LOGGING DATA Time:0.000910, acce_x:-1.20, acce_y:-0.01, acce_z:0.09, gyro_x:-10.78, gyro_y:176.87, gyro_z:7.80 END OF LOG[0m
+[0;32mI (1560) mpu6050 test: LOGGING DATA Time:0.000920, acce_x:-1.43, acce_y:0.06, acce_z:0.13, gyro_x:-14.90, gyro_y:106.32, gyro_z:1.79 END OF LOG[0m
+[0;32mI (1580) mpu6050 test: LOGGING DATA Time:0.000940, acce_x:-1.22, acce_y:0.07, acce_z:0.09, gyro_x:-19.83, gyro_y:45.10, gyro_z:-47.04 END OF LOG[0m
+[0;32mI (1590) mpu6050 test: LOGGING DATA Time:0.000950, acce_x:-1.10, acce_y:0.07, acce_z:0.06, gyro_x:-28.96, gyro_y:20.61, gyro_z:32.64 END OF LOG[0m
+[0;32mI (1600) mpu6050 test: LOGGING DATA Time:0.000960, acce_x:-1.03, acce_y:-0.15, acce_z:-0.02, gyro_x:-12.49, gyro_y:13.16, gyro_z:-2.38 END OF LOG[0m
+[0;32mI (1620) mpu6050 test: LOGGING DATA Time:0.000980, acce_x:-1.00, acce_y:-0.06, acce_z:-0.02, gyro_x:1.86, gyro_y:10.96, gyro_z:-3.95 END OF LOG[0m
+[0;32mI (1630) mpu6050 test: LOGGING DATA Time:0.000990, acce_x:-1.04, acce_y:0.03, acce_z:-0.02, gyro_x:3.76, gyro_y:-1.31, gyro_z:2.73 END OF LOG[0m
+[0;32mI (1640) mpu6050 test: LOGGING DATA Time:0.001000, acce_x:-1.08, acce_y:0.04, acce_z:-0.04, gyro_x:2.18, gyro_y:-16.29, gyro_z:15.65 END OF LOG[0m
+[0;32mI (1660) mpu6050 test: LOGGING DATA Time:0.001020, acce_x:-1.13, acce_y:0.01, acce_z:-0.00, gyro_x:4.93, gyro_y:-41.10, gyro_z:18.37 END OF LOG[0m
+[0;32mI (1670) mpu6050 test: LOGGING DATA Time:0.001030, acce_x:-1.07, acce_y:-0.03, acce_z:0.02, gyro_x:14.02, gyro_y:-65.22, gyro_z:12.05 END OF LOG[0m
+[0;32mI (1680) mpu6050 test: LOGGING DATA Time:0.001040, acce_x:-0.99, acce_y:-0.03, acce_z:-0.01, gyro_x:25.28, gyro_y:-72.50, gyro_z:8.87 END OF LOG[0m
+[0;32mI (1700) mpu6050 test: LOGGING DATA Time:0.001060, acce_x:-0.94, acce_y:0.04, acce_z:0.05, gyro_x:30.27, gyro_y:-70.58, gyro_z:3.33 END OF LOG[0m
+[0;32mI (1710) mpu6050 test: LOGGING DATA Time:0.001070, acce_x:-0.97, acce_y:0.08, acce_z:0.07, gyro_x:27.57, gyro_y:-67.07, gyro_z:14.90 END OF LOG[0m
+[0;32mI (1720) mpu6050 test: LOGGING DATA Time:0.001080, acce_x:-1.09, acce_y:0.05, acce_z:0.09, gyro_x:24.85, gyro_y:-70.03, gyro_z:40.00 END OF LOG[0m
+[0;32mI (1740) mpu6050 test: LOGGING DATA Time:0.001100, acce_x:-1.24, acce_y:-0.07, acce_z:0.13, gyro_x:34.35, gyro_y:-102.78, gyro_z:43.62 END OF LOG[0m
+[0;32mI (1750) mpu6050 test: LOGGING DATA Time:0.001110, acce_x:-1.24, acce_y:-0.09, acce_z:0.11, gyro_x:55.92, gyro_y:-144.31, gyro_z:9.54 END OF LOG[0m
+[0;32mI (1770) mpu6050 test: LOGGING DATA Time:0.001130, acce_x:-1.07, acce_y:0.10, acce_z:0.15, gyro_x:64.79, gyro_y:-173.31, gyro_z:-32.34 END OF LOG[0m
+[0;32mI (1780) mpu6050 test: LOGGING DATA Time:0.001140, acce_x:-0.87, acce_y:0.23, acce_z:0.18, gyro_x:51.07, gyro_y:-170.50, gyro_z:-14.03 END OF LOG[0m
+[0;32mI (1790) mpu6050 test: LOGGING DATA Time:0.001150, acce_x:-0.76, acce_y:0.24, acce_z:0.22, gyro_x:31.21, gyro_y:-148.29, gyro_z:0.64 END OF LOG[0m
+[0;32mI (1810) mpu6050 test: LOGGING DATA Time:0.001170, acce_x:-0.74, acce_y:0.17, acce_z:0.28, gyro_x:15.59, gyro_y:-117.16, gyro_z:13.85 END OF LOG[0m
+[0;32mI (1820) mpu6050 test: LOGGING DATA Time:0.001180, acce_x:-0.81, acce_y:0.07, acce_z:0.31, gyro_x:10.40, gyro_y:-98.09, gyro_z:17.86 END OF LOG[0m
+[0;32mI (1830) mpu6050 test: LOGGING DATA Time:0.001190, acce_x:-0.82, acce_y:0.02, acce_z:0.29, gyro_x:16.17, gyro_y:-85.42, gyro_z:-2.11 END OF LOG[0m
+[0;32mI (1850) mpu6050 test: LOGGING DATA Time:0.001210, acce_x:-0.79, acce_y:0.05, acce_z:0.34, gyro_x:23.15, gyro_y:-68.09, gyro_z:-12.29 END OF LOG[0m
+[0;32mI (1860) mpu6050 test: LOGGING DATA Time:0.001220, acce_x:-0.79, acce_y:0.11, acce_z:0.36, gyro_x:22.35, gyro_y:-46.78, gyro_z:-12.96 END OF LOG[0m
+[0;32mI (1870) mpu6050 test: LOGGING DATA Time:0.001230, acce_x:-0.84, acce_y:0.15, acce_z:0.37, gyro_x:14.17, gyro_y:-32.76, gyro_z:-4.69 END OF LOG[0m
+[0;32mI (1890) mpu6050 test: LOGGING DATA Time:0.001250, acce_x:-0.88, acce_y:0.15, acce_z:0.38, gyro_x:4.03, gyro_y:-26.99, gyro_z:6.08 END OF LOG[0m
+[0;32mI (1900) mpu6050 test: LOGGING DATA Time:0.001260, acce_x:-0.94, acce_y:0.11, acce_z:0.41, gyro_x:-2.40, gyro_y:-27.25, gyro_z:14.69 END OF LOG[0m
+[0;32mI (1910) mpu6050 test: LOGGING DATA Time:0.001270, acce_x:-1.00, acce_y:0.05, acce_z:0.39, gyro_x:-1.98, gyro_y:-38.63, gyro_z:9.51 END OF LOG[0m
+[0;32mI (1930) mpu6050 test: LOGGING DATA Time:0.001290, acce_x:-1.00, acce_y:0.03, acce_z:0.42, gyro_x:3.60, gyro_y:-55.45, gyro_z:4.79 END OF LOG[0m
+[0;32mI (1940) mpu6050 test: LOGGING DATA Time:0.001300, acce_x:-0.93, acce_y:0.03, acce_z:0.45, gyro_x:10.52, gyro_y:-62.87, gyro_z:-2.76 END OF LOG[0m
+[0;32mI (1950) mpu6050 test: LOGGING DATA Time:0.001310, acce_x:-0.84, acce_y:0.05, acce_z:0.35, gyro_x:16.90, gyro_y:-56.44, gyro_z:-15.73 END OF LOG[0m
+[0;32mI (1970) mpu6050 test: LOGGING DATA Time:0.001330, acce_x:-0.80, acce_y:0.10, acce_z:0.44, gyro_x:17.80, gyro_y:-47.01, gyro_z:-20.24 END OF LOG[0m
+[0;32mI (1980) mpu6050 test: LOGGING DATA Time:0.001340, acce_x:-0.75, acce_y:0.15, acce_z:0.47, gyro_x:9.71, gyro_y:-29.13, gyro_z:-4.06 END OF LOG[0m
+[0;32mI (2000) mpu6050 test: LOGGING DATA Time:0.001360, acce_x:-0.75, acce_y:0.15, acce_z:0.46, gyro_x:-0.06, gyro_y:-9.42, gyro_z:4.47 END OF LOG[0m
+[0;32mI (2010) mpu6050 test: LOGGING DATA Time:0.001370, acce_x:-0.80, acce_y:0.13, acce_z:0.47, gyro_x:-6.95, gyro_y:5.18, gyro_z:11.97 END OF LOG[0m
+[0;32mI (2020) mpu6050 test: LOGGING DATA Time:0.001380, acce_x:-0.87, acce_y:0.08, acce_z:0.45, gyro_x:-7.57, gyro_y:15.74, gyro_z:16.72 END OF LOG[0m
+[0;32mI (2040) mpu6050 test: LOGGING DATA Time:0.001400, acce_x:-0.99, acce_y:0.06, acce_z:0.48, gyro_x:-6.34, gyro_y:0.76, gyro_z:11.56 END OF LOG[0m
+[0;32mI (2050) mpu6050 test: LOGGING DATA Time:0.001410, acce_x:-0.98, acce_y:0.05, acce_z:0.45, gyro_x:0.09, gyro_y:-13.47, gyro_z:2.50 END OF LOG[0m
+[0;32mI (2060) mpu6050 test: LOGGING DATA Time:0.001420, acce_x:-0.95, acce_y:0.05, acce_z:0.44, gyro_x:6.82, gyro_y:-24.37, gyro_z:-4.81 END OF LOG[0m
+[0;32mI (2080) mpu6050 test: LOGGING DATA Time:0.001440, acce_x:-0.90, acce_y:0.08, acce_z:0.43, gyro_x:10.27, gyro_y:-28.00, gyro_z:-13.79 END OF LOG[0m
+[0;32mI (2090) mpu6050 test: LOGGING DATA Time:0.001450, acce_x:-0.85, acce_y:0.12, acce_z:0.46, gyro_x:7.83, gyro_y:-23.82, gyro_z:-9.05 END OF LOG[0m
+[0;32mI (2100) mpu6050 test: LOGGING DATA Time:0.001460, acce_x:-0.83, acce_y:0.13, acce_z:0.49, gyro_x:2.34, gyro_y:-15.66, gyro_z:-1.91 END OF LOG[0m
+[0;32mI (2120) mpu6050 test: LOGGING DATA Time:0.001480, acce_x:-0.83, acce_y:0.11, acce_z:0.46, gyro_x:-1.76, gyro_y:-5.85, gyro_z:5.53 END OF LOG[0m
+[0;32mI (2130) mpu6050 test: LOGGING DATA Time:0.001490, acce_x:-0.86, acce_y:0.10, acce_z:0.46, gyro_x:-4.14, gyro_y:3.37, gyro_z:6.15 END OF LOG[0m
+[0;32mI (2140) mpu6050 test: LOGGING DATA Time:0.001500, acce_x:-0.90, acce_y:0.08, acce_z:0.49, gyro_x:-7.69, gyro_y:6.72, gyro_z:11.30 END OF LOG[0m
+[0;32mI (2160) mpu6050 test: LOGGING DATA Time:0.001520, acce_x:-0.93, acce_y:0.06, acce_z:0.50, gyro_x:-10.64, gyro_y:6.02, gyro_z:18.75 END OF LOG[0m
+[0;32mI (2170) mpu6050 test: LOGGING DATA Time:0.001530, acce_x:-0.95, acce_y:0.02, acce_z:0.47, gyro_x:-8.17, gyro_y:1.66, gyro_z:15.48 END OF LOG[0m
+[0;32mI (2180) mpu6050 test: LOGGING DATA Time:0.001540, acce_x:-0.95, acce_y:0.02, acce_z:0.47, gyro_x:-2.21, gyro_y:-4.34, gyro_z:9.44 END OF LOG[0m
+[0;32mI (2200) mpu6050 test: LOGGING DATA Time:0.001560, acce_x:-0.94, acce_y:0.00, acce_z:0.41, gyro_x:4.85, gyro_y:-10.87, gyro_z:10.78 END OF LOG[0m
+[0;32mI (2210) mpu6050 test: LOGGING DATA Time:0.001570, acce_x:-0.92, acce_y:0.05, acce_z:0.43, gyro_x:9.54, gyro_y:-21.22, gyro_z:-1.48 END OF LOG[0m
+[0;32mI (2220) mpu6050 test: LOGGING DATA Time:0.001580, acce_x:-0.89, acce_y:0.09, acce_z:0.50, gyro_x:10.90, gyro_y:-24.12, gyro_z:-9.48 END OF LOG[0m
+[0;32mI (2240) mpu6050 test: LOGGING DATA Time:0.001600, acce_x:-0.83, acce_y:0.15, acce_z:0.50, gyro_x:8.43, gyro_y:-23.07, gyro_z:-18.00 END OF LOG[0m
+[0;32mI (2250) mpu6050 test: LOGGING DATA Time:0.001610, acce_x:-0.79, acce_y:0.24, acce_z:0.46, gyro_x:-4.24, gyro_y:-15.30, gyro_z:-6.87 END OF LOG[0m
+[0;32mI (2260) mpu6050 test: LOGGING DATA Time:0.001620, acce_x:-0.77, acce_y:0.20, acce_z:0.49, gyro_x:-20.24, gyro_y:-7.60, gyro_z:15.48 END OF LOG[0m
+[0;32mI (2280) mpu6050 test: LOGGING DATA Time:0.001640, acce_x:-0.78, acce_y:0.10, acce_z:0.44, gyro_x:-27.56, gyro_y:5.07, gyro_z:30.23 END OF LOG[0m
+[0;32mI (2290) mpu6050 test: LOGGING DATA Time:0.001650, acce_x:-0.83, acce_y:-0.01, acce_z:0.46, gyro_x:-23.05, gyro_y:13.24, gyro_z:27.83 END OF LOG[0m
+[0;32mI (2300) mpu6050 test: LOGGING DATA Time:0.001660, acce_x:-0.90, acce_y:-0.03, acce_z:0.46, gyro_x:-9.30, gyro_y:12.05, gyro_z:5.94 END OF LOG[0m
+[0;32mI (2320) mpu6050 test: LOGGING DATA Time:0.001680, acce_x:-0.93, acce_y:0.04, acce_z:0.47, gyro_x:3.08, gyro_y:1.48, gyro_z:-6.14 END OF LOG[0m
+[0;32mI (2330) mpu6050 test: LOGGING DATA Time:0.001690, acce_x:-0.91, acce_y:0.14, acce_z:0.44, gyro_x:9.31, gyro_y:-11.79, gyro_z:-21.98 END OF LOG[0m
+[0;32mI (2350) mpu6050 test: LOGGING DATA Time:0.001710, acce_x:-0.84, acce_y:0.20, acce_z:0.44, gyro_x:9.21, gyro_y:-21.51, gyro_z:-17.79 END OF LOG[0m
+[0;32mI (2360) mpu6050 test: LOGGING DATA Time:0.001720, acce_x:-0.80, acce_y:0.20, acce_z:0.49, gyro_x:6.58, gyro_y:-22.31, gyro_z:-12.43 END OF LOG[0m
+[0;32mI (2370) mpu6050 test: LOGGING DATA Time:0.001730, acce_x:-0.76, acce_y:0.19, acce_z:0.46, gyro_x:7.68, gyro_y:-12.09, gyro_z:-18.08 END OF LOG[0m
+[0;32mI (2390) mpu6050 test: LOGGING DATA Time:0.001750, acce_x:-0.76, acce_y:0.21, acce_z:0.49, gyro_x:3.16, gyro_y:0.75, gyro_z:-11.69 END OF LOG[0m
+[0;32mI (2400) mpu6050 test: LOGGING DATA Time:0.001760, acce_x:-0.81, acce_y:0.20, acce_z:0.49, gyro_x:-7.57, gyro_y:9.83, gyro_z:8.27 END OF LOG[0m
+[0;32mI (2410) mpu6050 test: LOGGING DATA Time:0.001770, acce_x:-0.86, acce_y:0.14, acce_z:0.49, gyro_x:-13.50, gyro_y:12.20, gyro_z:21.66 END OF LOG[0m
+[0;32mI (2430) mpu6050 test: LOGGING DATA Time:0.001790, acce_x:-0.92, acce_y:0.07, acce_z:0.46, gyro_x:-7.97, gyro_y:8.03, gyro_z:17.56 END OF LOG[0m
+[0;32mI (2440) mpu6050 test: LOGGING DATA Time:0.001800, acce_x:-0.96, acce_y:0.07, acce_z:0.48, gyro_x:2.49, gyro_y:-5.24, gyro_z:3.68 END OF LOG[0m
+[0;32mI (2450) mpu6050 test: LOGGING DATA Time:0.001810, acce_x:-0.95, acce_y:0.12, acce_z:0.50, gyro_x:9.73, gyro_y:-20.41, gyro_z:-9.07 END OF LOG[0m
+[0;32mI (2470) mpu6050 test: LOGGING DATA Time:0.001830, acce_x:-0.89, acce_y:0.17, acce_z:0.50, gyro_x:52.20, gyro_y:63.85, gyro_z:-6.98 END OF LOG[0m
+[0;32mI (2480) mpu6050 test: LOGGING DATA Time:0.001840, acce_x:-1.81, acce_y:0.19, acce_z:0.43, gyro_x:11.71, gyro_y:-189.28, gyro_z:-132.79 END OF LOG[0m
+[0;32mI (2490) mpu6050 test: LOGGING DATA Time:0.001850, acce_x:-1.51, acce_y:0.00, acce_z:0.55, gyro_x:8.27, gyro_y:-315.95, gyro_z:51.63 END OF LOG[0m
+[0;32mI (2510) mpu6050 test: LOGGING DATA Time:0.001870, acce_x:-0.97, acce_y:-0.30, acce_z:0.47, gyro_x:64.52, gyro_y:-344.99, gyro_z:-42.44 END OF LOG[0m
+[0;32mI (2520) mpu6050 test: LOGGING DATA Time:0.001880, acce_x:-0.88, acce_y:0.10, acce_z:0.73, gyro_x:99.53, gyro_y:-345.66, gyro_z:-3.95 END OF LOG[0m
+[0;32mI (2530) mpu6050 test: LOGGING DATA Time:0.001890, acce_x:-0.76, acce_y:0.33, acce_z:0.67, gyro_x:71.54, gyro_y:-351.53, gyro_z:43.56 END OF LOG[0m
+[0;32mI (2550) mpu6050 test: LOGGING DATA Time:0.001910, acce_x:-0.78, acce_y:0.25, acce_z:0.64, gyro_x:46.64, gyro_y:-372.12, gyro_z:67.31 END OF LOG[0m
+[0;32mI (2560) mpu6050 test: LOGGING DATA Time:0.001920, acce_x:-0.60, acce_y:0.05, acce_z:0.67, gyro_x:38.73, gyro_y:-409.08, gyro_z:89.74 END OF LOG[0m
+[0;32mI (2580) mpu6050 test: LOGGING DATA Time:0.001940, acce_x:-0.37, acce_y:0.07, acce_z:0.73, gyro_x:56.55, gyro_y:-407.40, gyro_z:29.74 END OF LOG[0m
+[0;32mI (2590) mpu6050 test: LOGGING DATA Time:0.001950, acce_x:-0.04, acce_y:0.38, acce_z:0.74, gyro_x:43.82, gyro_y:-368.92, gyro_z:50.84 END OF LOG[0m
+[0;32mI (2600) mpu6050 test: LOGGING DATA Time:0.001960, acce_x:0.12, acce_y:0.22, acce_z:0.92, gyro_x:29.24, gyro_y:-301.85, gyro_z:64.02 END OF LOG[0m
+[0;32mI (2620) mpu6050 test: LOGGING DATA Time:0.001980, acce_x:0.17, acce_y:0.15, acce_z:0.90, gyro_x:33.16, gyro_y:-218.75, gyro_z:21.10 END OF LOG[0m
+[0;32mI (2630) mpu6050 test: LOGGING DATA Time:0.001990, acce_x:0.13, acce_y:0.27, acce_z:0.96, gyro_x:33.30, gyro_y:-145.39, gyro_z:-6.98 END OF LOG[0m
+[0;32mI (2640) mpu6050 test: LOGGING DATA Time:0.002000, acce_x:-0.01, acce_y:0.23, acce_z:1.00, gyro_x:20.50, gyro_y:-108.29, gyro_z:42.90 END OF LOG[0m
+[0;32mI (2660) mpu6050 test: LOGGING DATA Time:0.002020, acce_x:-0.22, acce_y:0.17, acce_z:1.01, gyro_x:25.74, gyro_y:-96.58, gyro_z:18.11 END OF LOG[0m
+[0;32mI (2670) mpu6050 test: LOGGING DATA Time:0.002030, acce_x:-0.30, acce_y:0.26, acce_z:1.05, gyro_x:17.76, gyro_y:-123.83, gyro_z:6.20 END OF LOG[0m
+[0;32mI (2680) mpu6050 test: LOGGING DATA Time:0.002040, acce_x:-0.16, acce_y:0.21, acce_z:1.03, gyro_x:13.95, gyro_y:-131.31, gyro_z:-0.93 END OF LOG[0m
+[0;32mI (2700) mpu6050 test: LOGGING DATA Time:0.002060, acce_x:-0.04, acce_y:0.18, acce_z:1.02, gyro_x:12.58, gyro_y:-120.35, gyro_z:0.08 END OF LOG[0m
+[0;32mI (2710) mpu6050 test: LOGGING DATA Time:0.002070, acce_x:-0.03, acce_y:0.15, acce_z:1.06, gyro_x:12.67, gyro_y:-97.59, gyro_z:16.26 END OF LOG[0m
+[0;32mI (2720) mpu6050 test: LOGGING DATA Time:0.002080, acce_x:-0.07, acce_y:0.11, acce_z:1.08, gyro_x:18.20, gyro_y:-90.55, gyro_z:14.56 END OF LOG[0m
+[0;32mI (2740) mpu6050 test: LOGGING DATA Time:0.002100, acce_x:-0.13, acce_y:0.16, acce_z:1.03, gyro_x:27.05, gyro_y:-91.10, gyro_z:23.45 END OF LOG[0m
+[0;32mI (2750) mpu6050 test: LOGGING DATA Time:0.002110, acce_x:-0.21, acce_y:0.23, acce_z:1.04, gyro_x:29.05, gyro_y:-119.54, gyro_z:11.05 END OF LOG[0m
+[0;32mI (2770) mpu6050 test: LOGGING DATA Time:0.002130, acce_x:-0.19, acce_y:0.27, acce_z:1.02, gyro_x:30.95, gyro_y:-147.13, gyro_z:14.95 END OF LOG[0m
+[0;32mI (2780) mpu6050 test: LOGGING DATA Time:0.002140, acce_x:-0.08, acce_y:0.27, acce_z:1.03, gyro_x:31.50, gyro_y:-181.63, gyro_z:2.18 END OF LOG[0m
+[0;32mI (2790) mpu6050 test: LOGGING DATA Time:0.002150, acce_x:0.18, acce_y:0.33, acce_z:0.97, gyro_x:31.80, gyro_y:-181.85, gyro_z:-4.09 END OF LOG[0m
+[0;32mI (2810) mpu6050 test: LOGGING DATA Time:0.002170, acce_x:0.39, acce_y:0.35, acce_z:0.96, gyro_x:27.45, gyro_y:-153.39, gyro_z:2.58 END OF LOG[0m
+[0;32mI (2820) mpu6050 test: LOGGING DATA Time:0.002180, acce_x:0.49, acce_y:0.38, acce_z:0.92, gyro_x:25.22, gyro_y:-94.75, gyro_z:20.64 END OF LOG[0m
+[0;32mI (2830) mpu6050 test: LOGGING DATA Time:0.002190, acce_x:0.30, acce_y:0.43, acce_z:0.99, gyro_x:14.58, gyro_y:-60.05, gyro_z:31.02 END OF LOG[0m
+[0;32mI (2850) mpu6050 test: LOGGING DATA Time:0.002210, acce_x:0.09, acce_y:0.29, acce_z:1.01, gyro_x:12.17, gyro_y:-73.79, gyro_z:45.63 END OF LOG[0m
+[0;32mI (2860) mpu6050 test: LOGGING DATA Time:0.002220, acce_x:0.07, acce_y:0.23, acce_z:1.01, gyro_x:27.24, gyro_y:-109.71, gyro_z:12.78 END OF LOG[0m
+[0;32mI (2870) mpu6050 test: LOGGING DATA Time:0.002230, acce_x:0.27, acce_y:0.38, acce_z:0.94, gyro_x:33.92, gyro_y:-127.92, gyro_z:-21.07 END OF LOG[0m
+[0;32mI (2890) mpu6050 test: LOGGING DATA Time:0.002250, acce_x:0.53, acce_y:0.53, acce_z:0.88, gyro_x:20.18, gyro_y:-104.99, gyro_z:-28.00 END OF LOG[0m
+[0;32mI (2900) mpu6050 test: LOGGING DATA Time:0.002260, acce_x:0.63, acce_y:0.54, acce_z:0.86, gyro_x:4.15, gyro_y:-48.96, gyro_z:-11.34 END OF LOG[0m
+[0;32mI (2910) mpu6050 test: LOGGING DATA Time:0.002270, acce_x:0.69, acce_y:0.56, acce_z:0.79, gyro_x:-6.17, gyro_y:3.62, gyro_z:-5.21 END OF LOG[0m
+[0;32mI (2930) mpu6050 test: LOGGING DATA Time:0.002290, acce_x:0.57, acce_y:1.05, acce_z:1.36, gyro_x:-59.65, gyro_y:88.92, gyro_z:-97.86 END OF LOG[0m
+[0;32mI (2940) mpu6050 test: LOGGING DATA Time:0.002300, acce_x:1.01, acce_y:1.27, acce_z:0.93, gyro_x:-208.17, gyro_y:80.89, gyro_z:-243.27 END OF LOG[0m
+[0;32mI (2950) mpu6050 test: LOGGING DATA Time:0.002310, acce_x:1.53, acce_y:0.16, acce_z:0.87, gyro_x:-261.76, gyro_y:251.01, gyro_z:-106.08 END OF LOG[0m
+[0;32mI (2970) mpu6050 test: LOGGING DATA Time:0.002330, acce_x:1.36, acce_y:-0.84, acce_z:1.22, gyro_x:-185.69, gyro_y:421.07, gyro_z:-155.37 END OF LOG[0m
+[0;32mI (2980) mpu6050 test: LOGGING DATA Time:0.002340, acce_x:1.29, acce_y:-0.15, acce_z:0.09, gyro_x:-94.12, gyro_y:500.26, gyro_z:-88.05 END OF LOG[0m
+[0;32mI (3000) mpu6050 test: LOGGING DATA Time:0.002360, acce_x:-0.35, acce_y:0.66, acce_z:0.11, gyro_x:-102.58, gyro_y:500.26, gyro_z:94.92 END OF LOG[0m
+[0;32mI (3010) mpu6050 test: LOGGING DATA Time:0.002370, acce_x:-1.28, acce_y:0.19, acce_z:0.31, gyro_x:-106.95, gyro_y:500.26, gyro_z:71.79 END OF LOG[0m
+[0;32mI (3020) mpu6050 test: LOGGING DATA Time:0.002380, acce_x:-1.86, acce_y:-0.11, acce_z:0.70, gyro_x:-70.43, gyro_y:439.39, gyro_z:33.95 END OF LOG[0m
+[0;32mI (3040) mpu6050 test: LOGGING DATA Time:0.002400, acce_x:-1.78, acce_y:-0.25, acce_z:0.87, gyro_x:-20.05, gyro_y:215.91, gyro_z:-22.03 END OF LOG[0m
+[0;32mI (3050) mpu6050 test: LOGGING DATA Time:0.002410, acce_x:-1.41, acce_y:-0.05, acce_z:0.76, gyro_x:21.30, gyro_y:66.50, gyro_z:-60.17 END OF LOG[0m
+[0;32mI (3060) mpu6050 test: LOGGING DATA Time:0.002420, acce_x:-1.31, acce_y:0.07, acce_z:0.99, gyro_x:19.34, gyro_y:-19.76, gyro_z:-17.71 END OF LOG[0m
+[0;32mI (3080) mpu6050 test: LOGGING DATA Time:0.002440, acce_x:-1.01, acce_y:-0.07, acce_z:0.91, gyro_x:32.96, gyro_y:-125.69, gyro_z:-63.86 END OF LOG[0m
+[0;32mI (3090) mpu6050 test: LOGGING DATA Time:0.002450, acce_x:-0.50, acce_y:0.17, acce_z:0.84, gyro_x:36.05, gyro_y:-134.50, gyro_z:-64.58 END OF LOG[0m
+[0;32mI (3110) mpu6050 test: LOGGING DATA Time:0.002470, acce_x:-0.11, acce_y:0.34, acce_z:0.86, gyro_x:15.66, gyro_y:-101.01, gyro_z:-56.72 END OF LOG[0m
+[0;32mI (3120) mpu6050 test: LOGGING DATA Time:0.002480, acce_x:0.12, acce_y:0.34, acce_z:0.72, gyro_x:-7.07, gyro_y:26.32, gyro_z:38.49 END OF LOG[0m
+[0;32mI (3130) mpu6050 test: LOGGING DATA Time:0.002490, acce_x:-0.08, acce_y:0.19, acce_z:0.72, gyro_x:-6.82, gyro_y:98.52, gyro_z:-14.44 END OF LOG[0m
+[0;32mI (3150) mpu6050 test: LOGGING DATA Time:0.002510, acce_x:-0.95, acce_y:-0.00, acce_z:0.79, gyro_x:-2.73, gyro_y:47.48, gyro_z:53.71 END OF LOG[0m
+[0;32mI (3160) mpu6050 test: LOGGING DATA Time:0.002520, acce_x:-1.39, acce_y:-0.04, acce_z:0.92, gyro_x:21.22, gyro_y:-94.64, gyro_z:-18.29 END OF LOG[0m
+[0;32mI (3170) mpu6050 test: LOGGING DATA Time:0.002530, acce_x:-1.59, acce_y:-0.13, acce_z:1.08, gyro_x:50.61, gyro_y:-207.63, gyro_z:-24.84 END OF LOG[0m
+[0;32mI (3190) mpu6050 test: LOGGING DATA Time:0.002550, acce_x:-1.13, acce_y:0.16, acce_z:0.88, gyro_x:33.51, gyro_y:-431.56, gyro_z:-49.01 END OF LOG[0m
+[0;32mI (3200) mpu6050 test: LOGGING DATA Time:0.002560, acce_x:0.31, acce_y:0.22, acce_z:0.69, gyro_x:-0.06, gyro_y:-402.26, gyro_z:141.97 END OF LOG[0m
+[0;32mI (3210) mpu6050 test: LOGGING DATA Time:0.002570, acce_x:0.60, acce_y:-0.12, acce_z:0.76, gyro_x:30.24, gyro_y:-218.84, gyro_z:34.32 END OF LOG[0m
+[0;32mI (3230) mpu6050 test: LOGGING DATA Time:0.002590, acce_x:0.32, acce_y:0.13, acce_z:0.94, gyro_x:55.48, gyro_y:-103.63, gyro_z:44.06 END OF LOG[0m
+[0;32mI (3240) mpu6050 test: LOGGING DATA Time:0.002600, acce_x:-0.17, acce_y:0.34, acce_z:0.96, gyro_x:44.82, gyro_y:-72.37, gyro_z:94.81 END OF LOG[0m
+[0;32mI (3260) mpu6050 test: LOGGING DATA Time:0.002620, acce_x:-0.79, acce_y:0.19, acce_z:1.13, gyro_x:27.08, gyro_y:-162.96, gyro_z:196.72 END OF LOG[0m
+[0;32mI (3270) mpu6050 test: LOGGING DATA Time:0.002630, acce_x:-0.82, acce_y:-0.10, acce_z:0.91, gyro_x:55.16, gyro_y:-315.65, gyro_z:30.55 END OF LOG[0m
+[0;32mI (3280) mpu6050 test: LOGGING DATA Time:0.002640, acce_x:-0.20, acce_y:0.25, acce_z:0.66, gyro_x:82.40, gyro_y:-400.95, gyro_z:-88.02 END OF LOG[0m
+[0;32mI (3300) mpu6050 test: LOGGING DATA Time:0.002660, acce_x:0.19, acce_y:0.90, acce_z:0.86, gyro_x:46.35, gyro_y:-384.92, gyro_z:-111.88 END OF LOG[0m
+[0;32mI (3310) mpu6050 test: LOGGING DATA Time:0.002670, acce_x:0.83, acce_y:-0.15, acce_z:0.20, gyro_x:-0.49, gyro_y:-286.96, gyro_z:-389.07 END OF LOG[0m
+[0;32mI (3320) mpu6050 test: LOGGING DATA Time:0.002680, acce_x:1.91, acce_y:0.90, acce_z:0.79, gyro_x:-10.47, gyro_y:-53.21, gyro_z:-440.78 END OF LOG[0m
+[0;32mI (3340) mpu6050 test: LOGGING DATA Time:0.002700, acce_x:0.79, acce_y:1.33, acce_z:1.12, gyro_x:-25.88, gyro_y:-168.66, gyro_z:-333.08 END OF LOG[0m
+[0;32mI (3350) mpu6050 test: LOGGING DATA Time:0.002710, acce_x:1.26, acce_y:0.64, acce_z:0.83, gyro_x:-127.44, gyro_y:35.77, gyro_z:-35.27 END OF LOG[0m
+[0;32mI (3370) mpu6050 test: LOGGING DATA Time:0.002720, acce_x:0.35, acce_y:0.54, acce_z:1.07, gyro_x:-141.04, gyro_y:78.95, gyro_z:-216.70 END OF LOG[0m
+[0;32mI (3380) mpu6050 test: LOGGING DATA Time:0.002740, acce_x:1.15, acce_y:0.20, acce_z:0.67, gyro_x:-132.12, gyro_y:119.80, gyro_z:137.37 END OF LOG[0m
+[0;32mI (3390) mpu6050 test: LOGGING DATA Time:0.002750, acce_x:-0.20, acce_y:0.32, acce_z:1.15, gyro_x:-142.02, gyro_y:63.85, gyro_z:-195.95 END OF LOG[0m
+[0;32mI (3410) mpu6050 test: LOGGING DATA Time:0.002770, acce_x:0.10, acce_y:0.29, acce_z:0.95, gyro_x:-168.66, gyro_y:3.95, gyro_z:-86.63 END OF LOG[0m
+[0;32mI (3420) mpu6050 test: LOGGING DATA Time:0.002780, acce_x:0.69, acce_y:0.11, acce_z:0.95, gyro_x:-170.23, gyro_y:44.21, gyro_z:-45.34 END OF LOG[0m
+[0;32mI (3430) mpu6050 test: LOGGING DATA Time:0.002790, acce_x:0.77, acce_y:0.05, acce_z:0.86, gyro_x:-166.70, gyro_y:159.24, gyro_z:-7.68 END OF LOG[0m
+[0;32mI (3450) mpu6050 test: LOGGING DATA Time:0.002810, acce_x:0.70, acce_y:0.25, acce_z:0.90, gyro_x:-190.26, gyro_y:234.61, gyro_z:43.86 END OF LOG[0m
+[0;32mI (3460) mpu6050 test: LOGGING DATA Time:0.002820, acce_x:0.40, acce_y:0.20, acce_z:0.90, gyro_x:-221.54, gyro_y:313.21, gyro_z:72.15 END OF LOG[0m
+[0;32mI (3470) mpu6050 test: LOGGING DATA Time:0.002830, acce_x:0.49, acce_y:-0.24, acce_z:0.69, gyro_x:-200.03, gyro_y:396.06, gyro_z:203.59 END OF LOG[0m
+[0;32mI (3490) mpu6050 test: LOGGING DATA Time:0.002850, acce_x:0.40, acce_y:0.13, acce_z:0.41, gyro_x:-193.42, gyro_y:500.26, gyro_z:253.88 END OF LOG[0m
+[0;32mI (3500) mpu6050 test: LOGGING DATA Time:0.002860, acce_x:-0.20, acce_y:0.24, acce_z:0.44, gyro_x:-203.05, gyro_y:500.26, gyro_z:337.69 END OF LOG[0m
+[0;32mI (3520) mpu6050 test: LOGGING DATA Time:0.002880, acce_x:-0.62, acce_y:0.40, acce_z:0.36, gyro_x:-247.19, gyro_y:500.26, gyro_z:333.91 END OF LOG[0m
+[0;32mI (3530) mpu6050 test: LOGGING DATA Time:0.002890, acce_x:-0.97, acce_y:0.15, acce_z:0.20, gyro_x:-260.61, gyro_y:500.26, gyro_z:426.93 END OF LOG[0m
+[0;32mI (3540) mpu6050 test: LOGGING DATA Time:0.002900, acce_x:-1.54, acce_y:-0.36, acce_z:0.26, gyro_x:-210.81, gyro_y:500.26, gyro_z:416.99 END OF LOG[0m
+[0;32mI (3560) mpu6050 test: LOGGING DATA Time:0.002920, acce_x:-2.01, acce_y:-0.54, acce_z:0.44, gyro_x:-127.22, gyro_y:365.45, gyro_z:231.63 END OF LOG[0m
+[0;32mI (3570) mpu6050 test: LOGGING DATA Time:0.002930, acce_x:-1.65, acce_y:-0.08, acce_z:0.71, gyro_x:-93.11, gyro_y:153.13, gyro_z:22.79 END OF LOG[0m
+[0;32mI (3580) mpu6050 test: LOGGING DATA Time:0.002940, acce_x:-0.57, acce_y:0.32, acce_z:0.52, gyro_x:-127.07, gyro_y:106.08, gyro_z:48.00 END OF LOG[0m
+[0;32mI (3600) mpu6050 test: LOGGING DATA Time:0.002960, acce_x:-0.03, acce_y:-0.06, acce_z:0.24, gyro_x:-131.40, gyro_y:243.04, gyro_z:123.08 END OF LOG[0m
+[0;32mI (3610) mpu6050 test: LOGGING DATA Time:0.002970, acce_x:-0.39, acce_y:-0.36, acce_z:0.12, gyro_x:-86.55, gyro_y:395.86, gyro_z:98.38 END OF LOG[0m
+[0;32mI (3630) mpu6050 test: LOGGING DATA Time:0.002990, acce_x:-1.18, acce_y:-0.30, acce_z:0.09, gyro_x:-42.17, gyro_y:418.92, gyro_z:75.65 END OF LOG[0m
+[0;32mI (3640) mpu6050 test: LOGGING DATA Time:0.003000, acce_x:-1.71, acce_y:-0.16, acce_z:0.21, gyro_x:-13.16, gyro_y:303.53, gyro_z:21.92 END OF LOG[0m
+[0;32mI (3650) mpu6050 test: LOGGING DATA Time:0.003010, acce_x:-1.49, acce_y:-0.04, acce_z:0.27, gyro_x:-5.24, gyro_y:161.45, gyro_z:-31.31 END OF LOG[0m
+[0;32mI (3670) mpu6050 test: LOGGING DATA Time:0.003030, acce_x:-1.13, acce_y:-0.03, acce_z:0.14, gyro_x:1.57, gyro_y:143.44, gyro_z:-17.71 END OF LOG[0m
+[0;32mI (3680) mpu6050 test: LOGGING DATA Time:0.003040, acce_x:-1.02, acce_y:-0.11, acce_z:0.07, gyro_x:13.56, gyro_y:140.69, gyro_z:-35.83 END OF LOG[0m
+[0;32mI (3690) mpu6050 test: LOGGING DATA Time:0.003050, acce_x:-1.16, acce_y:-0.14, acce_z:0.04, gyro_x:24.14, gyro_y:136.98, gyro_z:-0.17 END OF LOG[0m
+[0;32mI (3710) mpu6050 test: LOGGING DATA Time:0.003070, acce_x:-1.33, acce_y:-0.16, acce_z:0.06, gyro_x:38.08, gyro_y:92.69, gyro_z:-22.95 END OF LOG[0m
+[0;32mI (3720) mpu6050 test: LOGGING DATA Time:0.003080, acce_x:-1.33, acce_y:-0.07, acce_z:0.07, gyro_x:43.60, gyro_y:28.75, gyro_z:-24.72 END OF LOG[0m
+[0;32mI (3740) mpu6050 test: LOGGING DATA Time:0.003100, acce_x:-1.19, acce_y:-0.09, acce_z:0.05, gyro_x:48.55, gyro_y:-13.34, gyro_z:-9.79 END OF LOG[0m
+[0;32mI (3750) mpu6050 test: LOGGING DATA Time:0.003110, acce_x:-1.13, acce_y:0.01, acce_z:0.05, gyro_x:49.56, gyro_y:-30.63, gyro_z:-16.09 END OF LOG[0m
+[0;32mI (3760) mpu6050 test: LOGGING DATA Time:0.003120, acce_x:-1.22, acce_y:0.18, acce_z:0.12, gyro_x:33.54, gyro_y:-71.73, gyro_z:47.56 END OF LOG[0m
+[0;32mI (3780) mpu6050 test: LOGGING DATA Time:0.003140, acce_x:-1.30, acce_y:0.01, acce_z:0.08, gyro_x:28.29, gyro_y:-119.95, gyro_z:71.76 END OF LOG[0m
+[0;32mI (3790) mpu6050 test: LOGGING DATA Time:0.003150, acce_x:-1.29, acce_y:-0.08, acce_z:0.09, gyro_x:30.61, gyro_y:-165.85, gyro_z:88.52 END OF LOG[0m
+[0;32mI (3800) mpu6050 test: LOGGING DATA Time:0.003160, acce_x:-1.34, acce_y:-0.35, acce_z:0.11, gyro_x:57.59, gyro_y:-211.04, gyro_z:91.66 END OF LOG[0m
+[0;32mI (3820) mpu6050 test: LOGGING DATA Time:0.003180, acce_x:-1.26, acce_y:-0.39, acce_z:0.11, gyro_x:112.63, gyro_y:-252.73, gyro_z:0.43 END OF LOG[0m
+[0;32mI (3830) mpu6050 test: LOGGING DATA Time:0.003190, acce_x:-1.17, acce_y:-0.20, acce_z:0.14, gyro_x:158.55, gyro_y:-283.95, gyro_z:-65.40 END OF LOG[0m
+[0;32mI (3840) mpu6050 test: LOGGING DATA Time:0.003200, acce_x:-1.12, acce_y:0.30, acce_z:0.25, gyro_x:169.68, gyro_y:-297.89, gyro_z:-223.65 END OF LOG[0m
+[0;32mI (3860) mpu6050 test: LOGGING DATA Time:0.003220, acce_x:-0.72, acce_y:0.67, acce_z:0.33, gyro_x:96.72, gyro_y:-327.98, gyro_z:-51.39 END OF LOG[0m
+[0;32mI (3870) mpu6050 test: LOGGING DATA Time:0.003230, acce_x:-0.26, acce_y:0.52, acce_z:0.40, gyro_x:27.85, gyro_y:-268.79, gyro_z:-6.78 END OF LOG[0m
+[0;32mI (3890) mpu6050 test: LOGGING DATA Time:0.003250, acce_x:-0.04, acce_y:0.20, acce_z:0.43, gyro_x:-11.62, gyro_y:-153.11, gyro_z:31.68 END OF LOG[0m
+[0;32mI (3900) mpu6050 test: LOGGING DATA Time:0.003260, acce_x:-0.09, acce_y:-0.02, acce_z:0.49, gyro_x:-20.95, gyro_y:-30.14, gyro_z:43.30 END OF LOG[0m
+[0;32mI (3910) mpu6050 test: LOGGING DATA Time:0.003270, acce_x:-0.36, acce_y:-0.08, acce_z:0.47, gyro_x:-18.38, gyro_y:66.41, gyro_z:27.08 END OF LOG[0m
+[0;32mI (3930) mpu6050 test: LOGGING DATA Time:0.003290, acce_x:-0.75, acce_y:-0.08, acce_z:0.47, gyro_x:-22.58, gyro_y:107.51, gyro_z:57.37 END OF LOG[0m
+[0;32mI (3940) mpu6050 test: LOGGING DATA Time:0.003300, acce_x:-1.08, acce_y:-0.13, acce_z:0.53, gyro_x:-17.73, gyro_y:88.27, gyro_z:46.60 END OF LOG[0m
+[0;32mI (3950) mpu6050 test: LOGGING DATA Time:0.003310, acce_x:-1.26, acce_y:-0.10, acce_z:0.46, gyro_x:-5.95, gyro_y:34.70, gyro_z:23.37 END OF LOG[0m
+[0;32mI (3970) mpu6050 test: LOGGING DATA Time:0.003330, acce_x:-1.21, acce_y:-0.04, acce_z:0.51, gyro_x:3.44, gyro_y:-29.51, gyro_z:-9.69 END OF LOG[0m
+[0;32mI (3980) mpu6050 test: LOGGING DATA Time:0.003340, acce_x:-1.02, acce_y:0.01, acce_z:0.48, gyro_x:12.99, gyro_y:-67.01, gyro_z:-23.40 END OF LOG[0m
+[0;32mI (4000) mpu6050 test: LOGGING DATA Time:0.003360, acce_x:-0.80, acce_y:0.07, acce_z:0.50, gyro_x:12.95, gyro_y:-71.97, gyro_z:-13.69 END OF LOG[0m
+[0;32mI (4010) mpu6050 test: LOGGING DATA Time:0.003370, acce_x:-0.67, acce_y:0.07, acce_z:0.51, gyro_x:11.18, gyro_y:-49.94, gyro_z:-11.57 END OF LOG[0m
+[0;32mI (4020) mpu6050 test: LOGGING DATA Time:0.003380, acce_x:-0.63, acce_y:0.08, acce_z:0.56, gyro_x:8.47, gyro_y:-26.27, gyro_z:-6.63 END OF LOG[0m
+[0;32mI (4040) mpu6050 test: LOGGING DATA Time:0.003400, acce_x:-0.63, acce_y:0.10, acce_z:0.65, gyro_x:-2.05, gyro_y:0.02, gyro_z:8.81 END OF LOG[0m
+[0;32mI (4050) mpu6050 test: LOGGING DATA Time:0.003410, acce_x:-0.67, acce_y:0.07, acce_z:0.58, gyro_x:-15.11, gyro_y:30.85, gyro_z:34.11 END OF LOG[0m
+[0;32mI (4060) mpu6050 test: LOGGING DATA Time:0.003420, acce_x:-0.83, acce_y:-0.04, acce_z:0.62, gyro_x:-17.76, gyro_y:48.05, gyro_z:53.94 END OF LOG[0m
+[0;32mI (4080) mpu6050 test: LOGGING DATA Time:0.003440, acce_x:-1.01, acce_y:-0.10, acce_z:0.52, gyro_x:-0.14, gyro_y:36.27, gyro_z:29.25 END OF LOG[0m
+[0;32mI (4090) mpu6050 test: LOGGING DATA Time:0.003450, acce_x:-1.09, acce_y:0.00, acce_z:0.56, gyro_x:15.76, gyro_y:-0.89, gyro_z:-6.72 END OF LOG[0m
+[0;32mI (4100) mpu6050 test: LOGGING DATA Time:0.003460, acce_x:-1.03, acce_y:0.12, acce_z:0.57, gyro_x:15.94, gyro_y:-37.82, gyro_z:-25.21 END OF LOG[0m
+[0;32mI (4120) mpu6050 test: LOGGING DATA Time:0.003480, acce_x:-0.08, acce_y:-0.10, acce_z:-4.00, gyro_x:85.77, gyro_y:427.37, gyro_z:64.87 END OF LOG[0m
+[0;32mI (4130) mpu6050 test: LOGGING DATA Time:0.003490, acce_x:-2.20, acce_y:-0.32, acce_z:0.27, gyro_x:72.96, gyro_y:-291.11, gyro_z:-194.26 END OF LOG[0m
+[0;32mI (4140) mpu6050 test: LOGGING DATA Time:0.003500, acce_x:-1.86, acce_y:-0.33, acce_z:0.35, gyro_x:107.04, gyro_y:-500.27, gyro_z:-54.31 END OF LOG[0m
+[0;32mI (4160) mpu6050 test: LOGGING DATA Time:0.003520, acce_x:-0.97, acce_y:0.18, acce_z:0.13, gyro_x:81.94, gyro_y:-500.27, gyro_z:96.87 END OF LOG[0m
+[0;32mI (4170) mpu6050 test: LOGGING DATA Time:0.003530, acce_x:-0.41, acce_y:-0.04, acce_z:0.42, gyro_x:95.01, gyro_y:-500.27, gyro_z:-16.87 END OF LOG[0m
+[0;32mI (4190) mpu6050 test: LOGGING DATA Time:0.003550, acce_x:-0.09, acce_y:0.06, acce_z:0.43, gyro_x:103.65, gyro_y:-500.27, gyro_z:-2.84 END OF LOG[0m
+[0;32mI (4200) mpu6050 test: LOGGING DATA Time:0.003560, acce_x:-0.12, acce_y:0.33, acce_z:0.61, gyro_x:65.30, gyro_y:-474.92, gyro_z:133.56 END OF LOG[0m
+[0;32mI (4210) mpu6050 test: LOGGING DATA Time:0.003570, acce_x:-0.04, acce_y:0.09, acce_z:0.64, gyro_x:51.42, gyro_y:-442.37, gyro_z:107.15 END OF LOG[0m
+[0;32mI (4230) mpu6050 test: LOGGING DATA Time:0.003590, acce_x:0.11, acce_y:0.14, acce_z:0.80, gyro_x:57.59, gyro_y:-406.18, gyro_z:71.57 END OF LOG[0m
+[0;32mI (4240) mpu6050 test: LOGGING DATA Time:0.003600, acce_x:0.27, acce_y:0.22, acce_z:0.67, gyro_x:57.88, gyro_y:-354.96, gyro_z:70.12 END OF LOG[0m
+[0;32mI (4250) mpu6050 test: LOGGING DATA Time:0.003610, acce_x:0.42, acce_y:0.13, acce_z:0.80, gyro_x:57.57, gyro_y:-295.88, gyro_z:46.95 END OF LOG[0m
+[0;32mI (4270) mpu6050 test: LOGGING DATA Time:0.003630, acce_x:0.33, acce_y:0.34, acce_z:0.93, gyro_x:37.57, gyro_y:-245.95, gyro_z:15.95 END OF LOG[0m
+[0;32mI (4280) mpu6050 test: LOGGING DATA Time:0.003640, acce_x:0.45, acce_y:0.24, acce_z:0.90, gyro_x:24.72, gyro_y:-204.02, gyro_z:-2.58 END OF LOG[0m
+[0;32mI (4290) mpu6050 test: LOGGING DATA Time:0.003650, acce_x:0.50, acce_y:0.27, acce_z:0.93, gyro_x:23.44, gyro_y:-145.21, gyro_z:-21.27 END OF LOG[0m
+[0;32mI (4310) mpu6050 test: LOGGING DATA Time:0.003670, acce_x:0.33, acce_y:0.38, acce_z:1.00, gyro_x:9.91, gyro_y:-100.37, gyro_z:16.12 END OF LOG[0m
+[0;32mI (4320) mpu6050 test: LOGGING DATA Time:0.003680, acce_x:0.05, acce_y:0.24, acce_z:1.05, gyro_x:2.05, gyro_y:-103.39, gyro_z:40.27 END OF LOG[0m
+[0;32mI (4340) mpu6050 test: LOGGING DATA Time:0.003700, acce_x:-0.16, acce_y:-0.00, acce_z:1.07, gyro_x:18.40, gyro_y:-166.60, gyro_z:11.33 END OF LOG[0m
+[0;32mI (4350) mpu6050 test: LOGGING DATA Time:0.003710, acce_x:-0.01, acce_y:0.11, acce_z:1.00, gyro_x:36.02, gyro_y:-231.79, gyro_z:-19.36 END OF LOG[0m
+[0;32mI (4360) mpu6050 test: LOGGING DATA Time:0.003720, acce_x:0.19, acce_y:0.23, acce_z:0.88, gyro_x:40.11, gyro_y:-264.37, gyro_z:-49.50 END OF LOG[0m
+[0;32mI (4380) mpu6050 test: LOGGING DATA Time:0.003740, acce_x:0.47, acce_y:0.49, acce_z:0.86, gyro_x:25.02, gyro_y:-263.85, gyro_z:-91.36 END OF LOG[0m
+[0;32mI (4390) mpu6050 test: LOGGING DATA Time:0.003750, acce_x:0.67, acce_y:0.58, acce_z:0.82, gyro_x:-9.36, gyro_y:-220.76, gyro_z:-109.07 END OF LOG[0m
+[0;32mI (4400) mpu6050 test: LOGGING DATA Time:0.003760, acce_x:0.57, acce_y:0.69, acce_z:0.95, gyro_x:-62.23, gyro_y:-181.19, gyro_z:-81.07 END OF LOG[0m
+[0;32mI (4420) mpu6050 test: LOGGING DATA Time:0.003780, acce_x:0.42, acce_y:0.35, acce_z:0.93, gyro_x:-84.66, gyro_y:-176.93, gyro_z:-69.22 END OF LOG[0m
+[0;32mI (4430) mpu6050 test: LOGGING DATA Time:0.003790, acce_x:0.45, acce_y:0.24, acce_z:0.91, gyro_x:-61.08, gyro_y:-191.53, gyro_z:-80.56 END OF LOG[0m
+[0;32mI (4440) mpu6050 test: LOGGING DATA Time:0.003800, acce_x:0.73, acce_y:0.14, acce_z:0.80, gyro_x:-41.68, gyro_y:-188.00, gyro_z:-96.02 END OF LOG[0m
+[0;32mI (4460) mpu6050 test: LOGGING DATA Time:0.003820, acce_x:0.94, acce_y:0.40, acce_z:0.85, gyro_x:-43.05, gyro_y:-146.90, gyro_z:-71.77 END OF LOG[0m
+[0;32mI (4470) mpu6050 test: LOGGING DATA Time:0.003830, acce_x:0.92, acce_y:0.23, acce_z:0.80, gyro_x:-35.13, gyro_y:-92.11, gyro_z:-29.31 END OF LOG[0m
+[0;32mI (4490) mpu6050 test: LOGGING DATA Time:0.003850, acce_x:0.71, acce_y:0.23, acce_z:0.82, gyro_x:-11.13, gyro_y:-70.85, gyro_z:-24.56 END OF LOG[0m
+[0;32mI (4500) mpu6050 test: LOGGING DATA Time:0.003860, acce_x:0.57, acce_y:0.34, acce_z:0.85, gyro_x:-0.79, gyro_y:-87.15, gyro_z:-28.20 END OF LOG[0m
+[0;32mI (4510) mpu6050 test: LOGGING DATA Time:0.003870, acce_x:0.59, acce_y:0.51, acce_z:0.90, gyro_x:-11.45, gyro_y:-97.77, gyro_z:-33.33 END OF LOG[0m
+[0;32mI (4530) mpu6050 test: LOGGING DATA Time:0.003890, acce_x:0.72, acce_y:0.57, acce_z:0.82, gyro_x:-56.29, gyro_y:-105.47, gyro_z:-38.69 END OF LOG[0m
+[0;32mI (4540) mpu6050 test: LOGGING DATA Time:0.003900, acce_x:0.67, acce_y:0.46, acce_z:0.79, gyro_x:-94.44, gyro_y:-95.21, gyro_z:-41.18 END OF LOG[0m
+[0;32mI (4550) mpu6050 test: LOGGING DATA Time:0.003910, acce_x:0.73, acce_y:0.50, acce_z:0.75, gyro_x:-129.13, gyro_y:-102.55, gyro_z:-65.19 END OF LOG[0m
+[0;32mI (4570) mpu6050 test: LOGGING DATA Time:0.003930, acce_x:0.88, acce_y:0.29, acce_z:0.72, gyro_x:-144.05, gyro_y:-80.49, gyro_z:-28.35 END OF LOG[0m
+[0;32mI (4580) mpu6050 test: LOGGING DATA Time:0.003940, acce_x:0.85, acce_y:-0.12, acce_z:0.68, gyro_x:-102.52, gyro_y:-50.69, gyro_z:-12.66 END OF LOG[0m
+[0;32mI (4600) mpu6050 test: LOGGING DATA Time:0.003960, acce_x:0.75, acce_y:-0.38, acce_z:0.71, gyro_x:-21.21, gyro_y:-47.74, gyro_z:-0.67 END OF LOG[0m
+[0;32mI (4610) mpu6050 test: LOGGING DATA Time:0.003970, acce_x:0.56, acce_y:0.35, acce_z:0.67, gyro_x:20.32, gyro_y:-47.82, gyro_z:-71.74 END OF LOG[0m
+[0;32mI (4620) mpu6050 test: LOGGING DATA Time:0.003980, acce_x:0.58, acce_y:0.88, acce_z:0.82, gyro_x:-46.18, gyro_y:-64.29, gyro_z:-65.83 END OF LOG[0m
+[0;32mI (4640) mpu6050 test: LOGGING DATA Time:0.004000, acce_x:0.67, acce_y:0.82, acce_z:0.73, gyro_x:-167.16, gyro_y:-153.73, gyro_z:-8.05 END OF LOG[0m
+[0;32mI (4650) mpu6050 test: LOGGING DATA Time:0.004010, acce_x:1.04, acce_y:-0.19, acce_z:0.62, gyro_x:-145.28, gyro_y:-128.23, gyro_z:-28.15 END OF LOG[0m
+[0;32mI (4660) mpu6050 test: LOGGING DATA Time:0.004020, acce_x:1.15, acce_y:-0.46, acce_z:0.55, gyro_x:-53.30, gyro_y:-57.50, gyro_z:-36.43 END OF LOG[0m
+[0;32mI (4680) mpu6050 test: LOGGING DATA Time:0.004040, acce_x:1.00, acce_y:-0.16, acce_z:0.62, gyro_x:18.15, gyro_y:1.68, gyro_z:-34.53 END OF LOG[0m
+[0;32mI (4690) mpu6050 test: LOGGING DATA Time:0.004050, acce_x:0.73, acce_y:0.24, acce_z:0.72, gyro_x:20.56, gyro_y:-10.34, gyro_z:-12.03 END OF LOG[0m
+[0;32mI (4700) mpu6050 test: LOGGING DATA Time:0.004060, acce_x:0.69, acce_y:0.15, acce_z:0.74, gyro_x:16.06, gyro_y:-44.47, gyro_z:-9.73 END OF LOG[0m
+[0;32mI (4720) mpu6050 test: LOGGING DATA Time:0.004080, acce_x:0.75, acce_y:0.06, acce_z:0.66, gyro_x:37.36, gyro_y:-54.84, gyro_z:-39.15 END OF LOG[0m
+[0;32mI (4730) mpu6050 test: LOGGING DATA Time:0.004090, acce_x:0.75, acce_y:0.41, acce_z:0.67, gyro_x:32.60, gyro_y:-45.51, gyro_z:-61.33 END OF LOG[0m
+[0;32mI (4740) mpu6050 test: LOGGING DATA Time:0.004100, acce_x:0.73, acce_y:0.67, acce_z:0.65, gyro_x:-19.36, gyro_y:-49.79, gyro_z:-40.66 END OF LOG[0m
+[0;32mI (4760) mpu6050 test: LOGGING DATA Time:0.004120, acce_x:0.73, acce_y:0.57, acce_z:0.69, gyro_x:-85.60, gyro_y:-80.06, gyro_z:-20.40 END OF LOG[0m
+[0;32mI (4770) mpu6050 test: LOGGING DATA Time:0.004130, acce_x:0.95, acce_y:0.03, acce_z:0.67, gyro_x:-111.89, gyro_y:-113.36, gyro_z:35.80 END OF LOG[0m
+[0;32mI (4790) mpu6050 test: LOGGING DATA Time:0.004150, acce_x:1.20, acce_y:-0.32, acce_z:0.58, gyro_x:-54.79, gyro_y:-53.69, gyro_z:-28.09 END OF LOG[0m
+[0;32mI (4800) mpu6050 test: LOGGING DATA Time:0.004160, acce_x:1.10, acce_y:-0.05, acce_z:0.59, gyro_x:-19.04, gyro_y:-5.08, gyro_z:-1.39 END OF LOG[0m
+[0;32mI (4810) mpu6050 test: LOGGING DATA Time:0.004170, acce_x:0.82, acce_y:0.26, acce_z:0.66, gyro_x:-19.94, gyro_y:1.27, gyro_z:12.24 END OF LOG[0m
+[0;32mI (4830) mpu6050 test: LOGGING DATA Time:0.004190, acce_x:0.72, acce_y:-0.00, acce_z:0.66, gyro_x:-12.12, gyro_y:-25.02, gyro_z:29.28 END OF LOG[0m
+[0;32mI (4840) mpu6050 test: LOGGING DATA Time:0.004200, acce_x:0.41, acce_y:0.39, acce_z:0.92, gyro_x:-30.40, gyro_y:-91.45, gyro_z:-6.72 END OF LOG[0m
+[0;32mI (4850) mpu6050 test: LOGGING DATA Time:0.004210, acce_x:1.00, acce_y:-0.23, acce_z:0.57, gyro_x:-26.21, gyro_y:-127.95, gyro_z:-19.98 END OF LOG[0m
+[0;32mI (4870) mpu6050 test: LOGGING DATA Time:0.004230, acce_x:1.28, acce_y:-0.11, acce_z:0.56, gyro_x:20.05, gyro_y:-59.91, gyro_z:-34.81 END OF LOG[0m
+[0;32mI (4880) mpu6050 test: LOGGING DATA Time:0.004240, acce_x:1.11, acce_y:0.21, acce_z:0.48, gyro_x:43.92, gyro_y:31.45, gyro_z:8.26 END OF LOG[0m
+[0;32mI (4890) mpu6050 test: LOGGING DATA Time:0.004250, acce_x:0.74, acce_y:0.64, acce_z:0.59, gyro_x:2.75, gyro_y:8.11, gyro_z:-25.18 END OF LOG[0m
+[0;32mI (4910) mpu6050 test: LOGGING DATA Time:0.004270, acce_x:0.60, acce_y:0.48, acce_z:0.59, gyro_x:-28.23, gyro_y:-24.73, gyro_z:27.05 END OF LOG[0m
+[0;32mI (4920) mpu6050 test: LOGGING DATA Time:0.004280, acce_x:0.63, acce_y:0.27, acce_z:0.61, gyro_x:-30.08, gyro_y:-75.82, gyro_z:26.29 END OF LOG[0m
+[0;32mI (4930) mpu6050 test: LOGGING DATA Time:0.004290, acce_x:0.95, acce_y:0.08, acce_z:0.54, gyro_x:-16.18, gyro_y:-93.36, gyro_z:-0.89 END OF LOG[0m
+[0;32mI (4950) mpu6050 test: LOGGING DATA Time:0.004310, acce_x:1.25, acce_y:0.08, acce_z:0.46, gyro_x:-2.73, gyro_y:-60.73, gyro_z:11.44 END OF LOG[0m
+[0;32mI (4960) mpu6050 test: LOGGING DATA Time:0.004320, acce_x:1.30, acce_y:0.18, acce_z:0.41, gyro_x:14.64, gyro_y:11.28, gyro_z:18.61 END OF LOG[0m
+[0;32mI (4980) mpu6050 test: LOGGING DATA Time:0.004340, acce_x:1.24, acce_y:0.20, acce_z:0.95, gyro_x:34.60, gyro_y:84.49, gyro_z:24.98 END OF LOG[0m
+[0;32mI (4990) mpu6050 test: LOGGING DATA Time:0.004350, acce_x:0.73, acce_y:0.46, acce_z:0.59, gyro_x:-33.42, gyro_y:-4.46, gyro_z:61.25 END OF LOG[0m
+[0;32mI (5000) mpu6050 test: LOGGING DATA Time:0.004360, acce_x:0.79, acce_y:0.26, acce_z:0.61, gyro_x:-31.80, gyro_y:-11.36, gyro_z:34.96 END OF LOG[0m
+[0;32mI (5020) mpu6050 test: LOGGING DATA Time:0.004380, acce_x:0.84, acce_y:0.22, acce_z:0.59, gyro_x:-24.92, gyro_y:-11.83, gyro_z:23.08 END OF LOG[0m
+[0;32mI (5030) mpu6050 test: LOGGING DATA Time:0.004390, acce_x:0.88, acce_y:0.27, acce_z:0.58, gyro_x:-37.34, gyro_y:-18.09, gyro_z:32.41 END OF LOG[0m
+[0;32mI (5040) mpu6050 test: LOGGING DATA Time:0.004400, acce_x:0.96, acce_y:0.10, acce_z:0.82, gyro_x:-53.94, gyro_y:-69.21, gyro_z:13.01 END OF LOG[0m
+[0;32mI (5060) mpu6050 test: LOGGING DATA Time:0.004420, acce_x:1.36, acce_y:-0.38, acce_z:0.45, gyro_x:7.15, gyro_y:9.42, gyro_z:-10.37 END OF LOG[0m
+[0;32mI (5070) mpu6050 test: LOGGING DATA Time:0.004430, acce_x:1.21, acce_y:0.03, acce_z:0.54, gyro_x:39.77, gyro_y:72.93, gyro_z:-15.85 END OF LOG[0m
+[0;32mI (5080) mpu6050 test: LOGGING DATA Time:0.004440, acce_x:0.92, acce_y:0.26, acce_z:0.61, gyro_x:23.21, gyro_y:79.33, gyro_z:8.35 END OF LOG[0m
+[0;32mI (5100) mpu6050 test: LOGGING DATA Time:0.004460, acce_x:0.75, acce_y:0.10, acce_z:0.63, gyro_x:13.15, gyro_y:55.21, gyro_z:12.64 END OF LOG[0m
+[0;32mI (5110) mpu6050 test: LOGGING DATA Time:0.004470, acce_x:0.80, acce_y:-0.02, acce_z:0.63, gyro_x:23.73, gyro_y:42.26, gyro_z:-5.95 END OF LOG[0m
+[0;32mI (5120) mpu6050 test: LOGGING DATA Time:0.004480, acce_x:0.90, acce_y:0.05, acce_z:0.64, gyro_x:32.17, gyro_y:49.79, gyro_z:-7.63 END OF LOG[0m
+[0;32mI (5140) mpu6050 test: LOGGING DATA Time:0.004500, acce_x:0.94, acce_y:0.15, acce_z:0.66, gyro_x:27.57, gyro_y:73.97, gyro_z:8.12 END OF LOG[0m
+[0;32mI (5150) mpu6050 test: LOGGING DATA Time:0.004510, acce_x:0.93, acce_y:0.19, acce_z:0.64, gyro_x:11.56, gyro_y:98.47, gyro_z:22.53 END OF LOG[0m
+[0;32mI (5160) mpu6050 test: LOGGING DATA Time:0.004520, acce_x:0.92, acce_y:0.29, acce_z:0.64, gyro_x:-16.70, gyro_y:116.55, gyro_z:27.08 END OF LOG[0m
+[0;32mI (5180) mpu6050 test: LOGGING DATA Time:0.004540, acce_x:0.92, acce_y:0.32, acce_z:0.62, gyro_x:-49.07, gyro_y:155.47, gyro_z:47.05 END OF LOG[0m
+[0;32mI (5190) mpu6050 test: LOGGING DATA Time:0.004550, acce_x:0.75, acce_y:0.23, acce_z:0.63, gyro_x:-58.81, gyro_y:182.44, gyro_z:45.66 END OF LOG[0m
+[0;32mI (5200) mpu6050 test: LOGGING DATA Time:0.004560, acce_x:0.62, acce_y:-0.03, acce_z:0.67, gyro_x:-40.63, gyro_y:187.44, gyro_z:50.06 END OF LOG[0m
+[0;32mI (5220) mpu6050 test: LOGGING DATA Time:0.004580, acce_x:0.77, acce_y:-0.08, acce_z:0.70, gyro_x:-14.03, gyro_y:187.82, gyro_z:36.40 END OF LOG[0m
+[0;32mI (5230) mpu6050 test: LOGGING DATA Time:0.004590, acce_x:1.06, acce_y:-0.30, acce_z:0.65, gyro_x:20.52, gyro_y:222.82, gyro_z:6.90 END OF LOG[0m
+[0;32mI (5240) mpu6050 test: LOGGING DATA Time:0.004600, acce_x:1.49, acce_y:-0.95, acce_z:0.12, gyro_x:85.57, gyro_y:327.66, gyro_z:-90.53 END OF LOG[0m
+[0;32mI (5260) mpu6050 test: LOGGING DATA Time:0.004620, acce_x:1.28, acce_y:-0.54, acce_z:0.30, gyro_x:219.51, gyro_y:457.97, gyro_z:-16.73 END OF LOG[0m
+[0;32mI (5270) mpu6050 test: LOGGING DATA Time:0.004630, acce_x:0.50, acce_y:0.54, acce_z:0.31, gyro_x:284.09, gyro_y:500.26, gyro_z:200.03 END OF LOG[0m
+[0;32mI (5290) mpu6050 test: LOGGING DATA Time:0.004650, acce_x:-0.03, acce_y:1.44, acce_z:0.60, gyro_x:199.01, gyro_y:493.02, gyro_z:103.25 END OF LOG[0m
+[0;32mI (5300) mpu6050 test: LOGGING DATA Time:0.004660, acce_x:-0.29, acce_y:1.82, acce_z:0.90, gyro_x:21.45, gyro_y:389.59, gyro_z:79.39 END OF LOG[0m
+[0;32mI (5310) mpu6050 test: LOGGING DATA Time:0.004670, acce_x:-0.37, acce_y:1.33, acce_z:1.14, gyro_x:-129.42, gyro_y:270.18, gyro_z:48.20 END OF LOG[0m
+[0;32mI (5330) mpu6050 test: LOGGING DATA Time:0.004690, acce_x:-0.23, acce_y:0.26, acce_z:1.08, gyro_x:-153.02, gyro_y:174.00, gyro_z:57.77 END OF LOG[0m
+[0;32mI (5340) mpu6050 test: LOGGING DATA Time:0.004700, acce_x:-0.12, acce_y:-0.50, acce_z:1.16, gyro_x:-79.13, gyro_y:127.76, gyro_z:34.47 END OF LOG[0m
+[0;32mI (5350) mpu6050 test: LOGGING DATA Time:0.004710, acce_x:-0.11, acce_y:-0.42, acce_z:1.27, gyro_x:8.09, gyro_y:78.72, gyro_z:-6.09 END OF LOG[0m
+[0;32mI (5370) mpu6050 test: LOGGING DATA Time:0.004730, acce_x:-0.07, acce_y:0.06, acce_z:1.30, gyro_x:27.47, gyro_y:21.91, gyro_z:-30.14 END OF LOG[0m
+[0;32mI (5380) mpu6050 test: LOGGING DATA Time:0.004740, acce_x:0.05, acce_y:0.23, acce_z:1.18, gyro_x:15.53, gyro_y:-6.31, gyro_z:-2.56 END OF LOG[0m
+[0;32mI (5390) mpu6050 test: LOGGING DATA Time:0.004750, acce_x:0.14, acce_y:0.18, acce_z:1.10, gyro_x:12.26, gyro_y:-14.31, gyro_z:-2.89 END OF LOG[0m
+[0;32mI (5410) mpu6050 test: LOGGING DATA Time:0.004770, acce_x:0.23, acce_y:0.12, acce_z:1.03, gyro_x:9.86, gyro_y:9.74, gyro_z:-15.02 END OF LOG[0m
+[0;32mI (5420) mpu6050 test: LOGGING DATA Time:0.004780, acce_x:0.14, acce_y:0.05, acce_z:0.95, gyro_x:-2.58, gyro_y:44.99, gyro_z:-11.98 END OF LOG[0m
+[0;32mI (5430) mpu6050 test: LOGGING DATA Time:0.004790, acce_x:-0.08, acce_y:-0.04, acce_z:0.96, gyro_x:-4.24, gyro_y:62.79, gyro_z:-33.98 END OF LOG[0m
+[0;32mI (5450) mpu6050 test: LOGGING DATA Time:0.004810, acce_x:-0.24, acce_y:-0.21, acce_z:1.03, gyro_x:26.56, gyro_y:26.14, gyro_z:-19.53 END OF LOG[0m
+[0;32mI (5460) mpu6050 test: LOGGING DATA Time:0.004820, acce_x:-0.22, acce_y:-0.02, acce_z:1.02, gyro_x:60.17, gyro_y:-12.31, gyro_z:-35.22 END OF LOG[0m
+[0;32mI (5480) mpu6050 test: LOGGING DATA Time:0.004840, acce_x:-0.10, acce_y:0.16, acce_z:1.08, gyro_x:55.79, gyro_y:-47.33, gyro_z:-16.02 END OF LOG[0m
+[0;32mI (5490) mpu6050 test: LOGGING DATA Time:0.004850, acce_x:0.01, acce_y:0.36, acce_z:0.76, gyro_x:57.79, gyro_y:-31.60, gyro_z:15.57 END OF LOG[0m
+[0;32mI (5500) mpu6050 test: LOGGING DATA Time:0.004860, acce_x:2.24, acce_y:4.00, acce_z:0.86, gyro_x:-396.63, gyro_y:243.63, gyro_z:-500.27 END OF LOG[0m
+[0;32mI (5520) mpu6050 test: LOGGING DATA Time:0.004880, acce_x:0.26, acce_y:-1.82, acce_z:0.47, gyro_x:-236.43, gyro_y:291.33, gyro_z:278.70 END OF LOG[0m
+[0;32mI (5530) mpu6050 test: LOGGING DATA Time:0.004890, acce_x:0.04, acce_y:-0.64, acce_z:0.82, gyro_x:-68.64, gyro_y:345.25, gyro_z:-174.18 END OF LOG[0m
+[0;32mI (5540) mpu6050 test: LOGGING DATA Time:0.004900, acce_x:-0.38, acce_y:0.20, acce_z:1.04, gyro_x:-65.60, gyro_y:300.92, gyro_z:182.60 END OF LOG[0m
+[0;32mI (5560) mpu6050 test: LOGGING DATA Time:0.004920, acce_x:-0.42, acce_y:0.05, acce_z:1.02, gyro_x:-68.11, gyro_y:268.69, gyro_z:108.76 END OF LOG[0m
+[0;32mI (5570) mpu6050 test: LOGGING DATA Time:0.004930, acce_x:-0.70, acce_y:0.05, acce_z:1.11, gyro_x:-63.34, gyro_y:219.24, gyro_z:104.41 END OF LOG[0m
+[0;32mI (5580) mpu6050 test: LOGGING DATA Time:0.004940, acce_x:-0.87, acce_y:-0.12, acce_z:1.14, gyro_x:-44.29, gyro_y:118.46, gyro_z:126.75 END OF LOG[0m
+[0;32mI (5600) mpu6050 test: LOGGING DATA Time:0.004960, acce_x:-0.67, acce_y:0.06, acce_z:1.22, gyro_x:-32.75, gyro_y:18.14, gyro_z:15.39 END OF LOG[0m
+[0;32mI (5610) mpu6050 test: LOGGING DATA Time:0.004970, acce_x:-0.03, acce_y:0.34, acce_z:1.17, gyro_x:-48.78, gyro_y:-5.22, gyro_z:31.15 END OF LOG[0m
+[0;32mI (5630) mpu6050 test: LOGGING DATA Time:0.004990, acce_x:0.44, acce_y:0.40, acce_z:1.04, gyro_x:-78.26, gyro_y:83.51, gyro_z:33.57 END OF LOG[0m
+[0;32mI (5640) mpu6050 test: LOGGING DATA Time:0.005000, acce_x:0.43, acce_y:0.47, acce_z:0.99, gyro_x:-119.97, gyro_y:197.88, gyro_z:53.63 END OF LOG[0m
+[0;32mI (5650) mpu6050 test: LOGGING DATA Time:0.005010, acce_x:0.07, acce_y:0.14, acce_z:0.80, gyro_x:-132.52, gyro_y:295.40, gyro_z:208.31 END OF LOG[0m
+[0;32mI (5670) mpu6050 test: LOGGING DATA Time:0.005030, acce_x:-0.56, acce_y:-0.12, acce_z:0.78, gyro_x:-106.96, gyro_y:317.83, gyro_z:153.21 END OF LOG[0m
+[0;32mI (5680) mpu6050 test: LOGGING DATA Time:0.005040, acce_x:-0.78, acce_y:0.15, acce_z:0.89, gyro_x:-106.15, gyro_y:262.70, gyro_z:99.42 END OF LOG[0m
+[0;32mI (5690) mpu6050 test: LOGGING DATA Time:0.005050, acce_x:-0.50, acce_y:0.34, acce_z:0.79, gyro_x:-140.76, gyro_y:221.89, gyro_z:120.38 END OF LOG[0m
+[0;32mI (5710) mpu6050 test: LOGGING DATA Time:0.005070, acce_x:-0.24, acce_y:0.25, acce_z:0.54, gyro_x:-169.82, gyro_y:279.22, gyro_z:189.51 END OF LOG[0m
+[0;32mI (5720) mpu6050 test: LOGGING DATA Time:0.005080, acce_x:-0.47, acce_y:-0.17, acce_z:0.43, gyro_x:-147.98, gyro_y:348.85, gyro_z:194.17 END OF LOG[0m
+[0;32mI (5740) mpu6050 test: LOGGING DATA Time:0.005100, acce_x:-0.98, acce_y:-0.28, acce_z:0.49, gyro_x:-96.46, gyro_y:348.73, gyro_z:128.35 END OF LOG[0m
+[0;32mI (5750) mpu6050 test: LOGGING DATA Time:0.005110, acce_x:-1.39, acce_y:-0.28, acce_z:0.53, gyro_x:-47.77, gyro_y:274.84, gyro_z:85.34 END OF LOG[0m
+[0;32mI (5760) mpu6050 test: LOGGING DATA Time:0.005120, acce_x:-1.52, acce_y:-0.05, acce_z:0.62, gyro_x:-30.12, gyro_y:140.58, gyro_z:11.08 END OF LOG[0m
+[0;32mI (5780) mpu6050 test: LOGGING DATA Time:0.005140, acce_x:-1.20, acce_y:0.17, acce_z:0.67, gyro_x:-53.57, gyro_y:41.24, gyro_z:21.76 END OF LOG[0m
+[0;32mI (5790) mpu6050 test: LOGGING DATA Time:0.005150, acce_x:-0.54, acce_y:0.09, acce_z:0.54, gyro_x:-78.67, gyro_y:45.65, gyro_z:3.11 END OF LOG[0m
+[0;32mI (5800) mpu6050 test: LOGGING DATA Time:0.005160, acce_x:-0.09, acce_y:-0.03, acce_z:0.37, gyro_x:-86.50, gyro_y:160.98, gyro_z:37.19 END OF LOG[0m
+[0;32mI (5820) mpu6050 test: LOGGING DATA Time:0.005180, acce_x:-0.43, acce_y:-0.13, acce_z:0.33, gyro_x:-76.70, gyro_y:288.46, gyro_z:61.18 END OF LOG[0m
+[0;32mI (5830) mpu6050 test: LOGGING DATA Time:0.005190, acce_x:-1.16, acce_y:-0.29, acce_z:0.30, gyro_x:-38.98, gyro_y:318.47, gyro_z:69.05 END OF LOG[0m
+[0;32mI (5840) mpu6050 test: LOGGING DATA Time:0.005200, acce_x:-1.70, acce_y:-0.07, acce_z:0.36, gyro_x:-15.50, gyro_y:208.52, gyro_z:19.44 END OF LOG[0m
+[0;32mI (5860) mpu6050 test: LOGGING DATA Time:0.005220, acce_x:-1.71, acce_y:0.03, acce_z:0.44, gyro_x:-12.32, gyro_y:51.33, gyro_z:-32.32 END OF LOG[0m
+[0;32mI (5870) mpu6050 test: LOGGING DATA Time:0.005230, acce_x:-0.99, acce_y:0.13, acce_z:0.45, gyro_x:-27.16, gyro_y:-37.60, gyro_z:-77.47 END OF LOG[0m
+[0;32mI (5890) mpu6050 test: LOGGING DATA Time:0.005250, acce_x:-0.12, acce_y:-0.07, acce_z:0.35, gyro_x:-31.54, gyro_y:55.88, gyro_z:-27.30 END OF LOG[0m
+[0;32mI (5900) mpu6050 test: LOGGING DATA Time:0.005260, acce_x:-0.01, acce_y:-0.19, acce_z:0.16, gyro_x:-10.53, gyro_y:241.44, gyro_z:-17.13 END OF LOG[0m
+[0;32mI (5910) mpu6050 test: LOGGING DATA Time:0.005270, acce_x:-0.80, acce_y:-0.05, acce_z:0.02, gyro_x:-2.58, gyro_y:352.89, gyro_z:40.23 END OF LOG[0m
+[0;32mI (5930) mpu6050 test: LOGGING DATA Time:0.005290, acce_x:-1.61, acce_y:-0.06, acce_z:0.03, gyro_x:0.44, gyro_y:293.36, gyro_z:43.36 END OF LOG[0m
+[0;32mI (5940) mpu6050 test: LOGGING DATA Time:0.005300, acce_x:-1.89, acce_y:-0.11, acce_z:0.15, gyro_x:6.85, gyro_y:131.27, gyro_z:5.33 END OF LOG[0m
+[0;32mI (5950) mpu6050 test: LOGGING DATA Time:0.005310, acce_x:-1.52, acce_y:-0.13, acce_z:0.17, gyro_x:18.67, gyro_y:8.79, gyro_z:-41.92 END OF LOG[0m
+[0;32mI (5970) mpu6050 test: LOGGING DATA Time:0.005330, acce_x:-0.92, acce_y:-0.07, acce_z:0.06, gyro_x:29.07, gyro_y:-3.42, gyro_z:-50.49 END OF LOG[0m
+[0;32mI (5980) mpu6050 test: LOGGING DATA Time:0.005340, acce_x:-0.76, acce_y:0.11, acce_z:0.01, gyro_x:18.70, gyro_y:47.16, gyro_z:-12.89 END OF LOG[0m
+[0;32mI (5990) mpu6050 test: LOGGING DATA Time:0.005350, acce_x:-1.10, acce_y:0.10, acce_z:0.02, gyro_x:0.72, gyro_y:55.83, gyro_z:28.31 END OF LOG[0m
+[0;32mI (6010) mpu6050 test: LOGGING DATA Time:0.005370, acce_x:-1.49, acce_y:-0.00, acce_z:0.05, gyro_x:-6.35, gyro_y:-5.02, gyro_z:48.61 END OF LOG[0m
+[0;32mI (6020) mpu6050 test: LOGGING DATA Time:0.005380, acce_x:-1.79, acce_y:0.05, acce_z:0.08, gyro_x:-13.74, gyro_y:-121.71, gyro_z:67.37 END OF LOG[0m
+[0;32mI (6040) mpu6050 test: LOGGING DATA Time:0.005400, acce_x:-1.78, acce_y:0.13, acce_z:-0.00, gyro_x:-33.10, gyro_y:-243.73, gyro_z:91.71 END OF LOG[0m
+[0;32mI (6050) mpu6050 test: LOGGING DATA Time:0.005410, acce_x:-1.89, acce_y:-0.24, acce_z:-0.07, gyro_x:-38.12, gyro_y:-380.92, gyro_z:172.44 END OF LOG[0m
+[0;32mI (6060) mpu6050 test: LOGGING DATA Time:0.005420, acce_x:-1.65, acce_y:-0.96, acce_z:0.54, gyro_x:31.73, gyro_y:-499.92, gyro_z:127.08 END OF LOG[0m
+[0;32mI (6080) mpu6050 test: LOGGING DATA Time:0.005440, acce_x:-1.21, acce_y:-1.54, acce_z:-0.15, gyro_x:250.47, gyro_y:-500.27, gyro_z:-248.93 END OF LOG[0m
+[0;32mI (6090) mpu6050 test: LOGGING DATA Time:0.005450, acce_x:-0.19, acce_y:0.23, acce_z:-0.18, gyro_x:381.86, gyro_y:-479.59, gyro_z:-408.06 END OF LOG[0m
+[0;32mI (6110) mpu6050 test: LOGGING DATA Time:0.005470, acce_x:0.09, acce_y:1.38, acce_z:0.22, gyro_x:274.85, gyro_y:-319.95, gyro_z:-240.75 END OF LOG[0m
+[0;32mI (6120) mpu6050 test: LOGGING DATA Time:0.005480, acce_x:0.11, acce_y:1.55, acce_z:0.62, gyro_x:70.53, gyro_y:-203.51, gyro_z:11.73 END OF LOG[0m
+[0;32mI (6130) mpu6050 test: LOGGING DATA Time:0.005490, acce_x:0.11, acce_y:0.73, acce_z:0.67, gyro_x:-69.47, gyro_y:-94.73, gyro_z:173.04 END OF LOG[0m
+[0;32mI (6150) mpu6050 test: LOGGING DATA Time:0.005510, acce_x:-0.11, acce_y:-0.07, acce_z:0.53, gyro_x:-81.57, gyro_y:36.75, gyro_z:147.08 END OF LOG[0m
+[0;32mI (6160) mpu6050 test: LOGGING DATA Time:0.005520, acce_x:-0.54, acce_y:-0.21, acce_z:0.53, gyro_x:-39.59, gyro_y:100.93, gyro_z:47.68 END OF LOG[0m
+[0;32mI (6170) mpu6050 test: LOGGING DATA Time:0.005530, acce_x:-0.99, acce_y:0.03, acce_z:0.60, gyro_x:-17.56, gyro_y:83.63, gyro_z:-1.15 END OF LOG[0m
+[0;32mI (6190) mpu6050 test: LOGGING DATA Time:0.005550, acce_x:-1.18, acce_y:0.15, acce_z:0.70, gyro_x:-25.19, gyro_y:8.64, gyro_z:12.73 END OF LOG[0m
+[0;32mI (6200) mpu6050 test: LOGGING DATA Time:0.005560, acce_x:-1.10, acce_y:-0.05, acce_z:0.74, gyro_x:-35.16, gyro_y:-51.83, gyro_z:49.05 END OF LOG[0m
+[0;32mI (6210) mpu6050 test: LOGGING DATA Time:0.005570, acce_x:-0.87, acce_y:-0.29, acce_z:0.68, gyro_x:-13.01, gyro_y:-65.37, gyro_z:26.43 END OF LOG[0m
+[0;32mI (6230) mpu6050 test: LOGGING DATA Time:0.005590, acce_x:-0.71, acce_y:-0.20, acce_z:0.61, gyro_x:23.07, gyro_y:-50.32, gyro_z:-33.73 END OF LOG[0m
+[0;32mI (6240) mpu6050 test: LOGGING DATA Time:0.005600, acce_x:-0.67, acce_y:0.14, acce_z:0.71, gyro_x:40.52, gyro_y:-42.69, gyro_z:-73.05 END OF LOG[0m
+[0;32mI (6260) mpu6050 test: LOGGING DATA Time:0.005620, acce_x:-0.61, acce_y:0.37, acce_z:0.71, gyro_x:23.77, gyro_y:-40.89, gyro_z:-49.65 END OF LOG[0m
+[0;32mI (6270) mpu6050 test: LOGGING DATA Time:0.005630, acce_x:-0.56, acce_y:0.35, acce_z:0.71, gyro_x:1.51, gyro_y:-31.34, gyro_z:-37.34 END OF LOG[0m
+[0;32mI (6280) mpu6050 test: LOGGING DATA Time:0.005640, acce_x:-0.51, acce_y:0.22, acce_z:0.79, gyro_x:-9.15, gyro_y:-16.15, gyro_z:-36.11 END OF LOG[0m
+[0;32mI (6300) mpu6050 test: LOGGING DATA Time:0.005660, acce_x:-0.44, acce_y:0.03, acce_z:0.91, gyro_x:-18.66, gyro_y:15.15, gyro_z:-6.79 END OF LOG[0m
+[0;32mI (6310) mpu6050 test: LOGGING DATA Time:0.005670, acce_x:-0.47, acce_y:-0.08, acce_z:0.85, gyro_x:-25.33, gyro_y:61.80, gyro_z:19.37 END OF LOG[0m
+[0;32mI (6320) mpu6050 test: LOGGING DATA Time:0.005680, acce_x:-0.75, acce_y:-0.15, acce_z:0.75, gyro_x:-18.93, gyro_y:97.48, gyro_z:20.99 END OF LOG[0m
+[0;32mI (6340) mpu6050 test: LOGGING DATA Time:0.005700, acce_x:-1.05, acce_y:-0.09, acce_z:0.77, gyro_x:-4.44, gyro_y:64.64, gyro_z:9.94 END OF LOG[0m
+[0;32mI (6350) mpu6050 test: LOGGING DATA Time:0.005710, acce_x:-1.10, acce_y:-0.02, acce_z:0.72, gyro_x:12.00, gyro_y:2.44, gyro_z:-20.43 END OF LOG[0m
+[0;32mI (6360) mpu6050 test: LOGGING DATA Time:0.005720, acce_x:-4.00, acce_y:-0.51, acce_z:4.00, gyro_x:66.09, gyro_y:-229.79, gyro_z:500.26 END OF LOG[0m
+[0;32mI (6380) mpu6050 test: LOGGING DATA Time:0.005740, acce_x:-2.18, acce_y:0.29, acce_z:0.21, gyro_x:95.01, gyro_y:-489.30, gyro_z:-134.14 END OF LOG[0m
+[0;32mI (6390) mpu6050 test: LOGGING DATA Time:0.005750, acce_x:-1.73, acce_y:-0.51, acce_z:0.54, gyro_x:65.79, gyro_y:-500.27, gyro_z:81.48 END OF LOG[0m
+[0;32mI (6410) mpu6050 test: LOGGING DATA Time:0.005770, acce_x:-0.48, acce_y:-0.28, acce_z:0.08, gyro_x:134.08, gyro_y:-500.27, gyro_z:15.18 END OF LOG[0m
+[0;32mI (6420) mpu6050 test: LOGGING DATA Time:0.005780, acce_x:0.00, acce_y:0.26, acce_z:0.29, gyro_x:127.71, gyro_y:-500.27, gyro_z:63.50 END OF LOG[0m
+[0;32mI (6430) mpu6050 test: LOGGING DATA Time:0.005790, acce_x:0.27, acce_y:0.38, acce_z:0.29, gyro_x:88.44, gyro_y:-500.27, gyro_z:162.31 END OF LOG[0m
+[0;32mI (6450) mpu6050 test: LOGGING DATA Time:0.005810, acce_x:0.12, acce_y:0.09, acce_z:0.71, gyro_x:62.20, gyro_y:-500.27, gyro_z:226.87 END OF LOG[0m
+[0;32mI (6460) mpu6050 test: LOGGING DATA Time:0.005820, acce_x:-0.01, acce_y:0.17, acce_z:0.40, gyro_x:89.59, gyro_y:-500.27, gyro_z:-3.76 END OF LOG[0m
+[0;32mI (6470) mpu6050 test: LOGGING DATA Time:0.005830, acce_x:0.04, acce_y:0.29, acce_z:0.64, gyro_x:73.02, gyro_y:-500.27, gyro_z:171.39 END OF LOG[0m
+[0;32mI (6490) mpu6050 test: LOGGING DATA Time:0.005850, acce_x:0.84, acce_y:0.35, acce_z:0.57, gyro_x:71.01, gyro_y:-500.27, gyro_z:2.20 END OF LOG[0m
+[0;32mI (6500) mpu6050 test: LOGGING DATA Time:0.005860, acce_x:1.80, acce_y:0.74, acce_z:0.50, gyro_x:21.97, gyro_y:-421.69, gyro_z:-63.85 END OF LOG[0m
+[0;32mI (6510) mpu6050 test: LOGGING DATA Time:0.005870, acce_x:1.79, acce_y:0.25, acce_z:0.76, gyro_x:19.51, gyro_y:-162.82, gyro_z:29.98 END OF LOG[0m
+[0;32mI (6530) mpu6050 test: LOGGING DATA Time:0.005890, acce_x:0.85, acce_y:0.37, acce_z:0.85, gyro_x:10.73, gyro_y:-52.96, gyro_z:5.62 END OF LOG[0m
+[0;32mI (6540) mpu6050 test: LOGGING DATA Time:0.005900, acce_x:0.65, acce_y:0.37, acce_z:0.84, gyro_x:-9.71, gyro_y:-49.98, gyro_z:4.24 END OF LOG[0m
+[0;32mI (6550) mpu6050 test: LOGGING DATA Time:0.005910, acce_x:0.63, acce_y:0.43, acce_z:0.82, gyro_x:-23.91, gyro_y:-51.21, gyro_z:-65.63 END OF LOG[0m
+[0;32mI (6570) mpu6050 test: LOGGING DATA Time:0.005930, acce_x:0.89, acce_y:1.17, acce_z:0.91, gyro_x:-131.25, gyro_y:-27.51, gyro_z:-178.76 END OF LOG[0m
+[0;32mI (6580) mpu6050 test: LOGGING DATA Time:0.005940, acce_x:1.59, acce_y:0.63, acce_z:0.68, gyro_x:-212.69, gyro_y:91.44, gyro_z:-252.12 END OF LOG[0m
+[0;32mI (6600) mpu6050 test: LOGGING DATA Time:0.005960, acce_x:1.35, acce_y:-0.07, acce_z:0.63, gyro_x:-204.40, gyro_y:272.85, gyro_z:-47.13 END OF LOG[0m
+[0;32mI (6610) mpu6050 test: LOGGING DATA Time:0.005970, acce_x:0.32, acce_y:-0.77, acce_z:0.75, gyro_x:-87.98, gyro_y:332.00, gyro_z:-2.18 END OF LOG[0m
+[0;32mI (6620) mpu6050 test: LOGGING DATA Time:0.005980, acce_x:-0.64, acce_y:-0.13, acce_z:1.05, gyro_x:-26.63, gyro_y:217.82, gyro_z:-83.36 END OF LOG[0m
+[0;32mI (6640) mpu6050 test: LOGGING DATA Time:0.006000, acce_x:-0.47, acce_y:0.41, acce_z:1.20, gyro_x:-52.60, gyro_y:-2.70, gyro_z:-144.02 END OF LOG[0m
+[0;32mI (6650) mpu6050 test: LOGGING DATA Time:0.006010, acce_x:0.84, acce_y:0.53, acce_z:1.18, gyro_x:-102.49, gyro_y:-78.17, gyro_z:-174.96 END OF LOG[0m
+[0;32mI (6660) mpu6050 test: LOGGING DATA Time:0.006020, acce_x:2.38, acce_y:0.31, acce_z:0.77, gyro_x:-122.75, gyro_y:107.15, gyro_z:-45.59 END OF LOG[0m
+[0;32mI (6680) mpu6050 test: LOGGING DATA Time:0.006040, acce_x:2.14, acce_y:0.36, acce_z:0.01, gyro_x:-106.79, gyro_y:500.26, gyro_z:104.87 END OF LOG[0m
+[0;32mI (6690) mpu6050 test: LOGGING DATA Time:0.006050, acce_x:0.49, acce_y:0.24, acce_z:0.37, gyro_x:-116.32, gyro_y:500.26, gyro_z:125.01 END OF LOG[0m
+[0;32mI (6710) mpu6050 test: LOGGING DATA Time:0.006070, acce_x:-0.47, acce_y:-0.09, acce_z:0.69, gyro_x:-107.80, gyro_y:500.26, gyro_z:139.82 END OF LOG[0m
+[0;32mI (6720) mpu6050 test: LOGGING DATA Time:0.006080, acce_x:-1.24, acce_y:-0.30, acce_z:0.70, gyro_x:-49.51, gyro_y:500.26, gyro_z:99.08 END OF LOG[0m
+[0;32mI (6730) mpu6050 test: LOGGING DATA Time:0.006090, acce_x:-1.59, acce_y:-0.01, acce_z:0.88, gyro_x:-8.89, gyro_y:321.01, gyro_z:31.16 END OF LOG[0m
+[0;32mI (6750) mpu6050 test: LOGGING DATA Time:0.006110, acce_x:-1.56, acce_y:0.27, acce_z:1.18, gyro_x:-15.68, gyro_y:91.37, gyro_z:20.14 END OF LOG[0m
+[0;32mI (6760) mpu6050 test: LOGGING DATA Time:0.006120, acce_x:-1.13, acce_y:-0.01, acce_z:1.10, gyro_x:-18.15, gyro_y:-72.41, gyro_z:36.50 END OF LOG[0m
+[0;32mI (6770) mpu6050 test: LOGGING DATA Time:0.006130, acce_x:-0.52, acce_y:-0.12, acce_z:1.01, gyro_x:-2.43, gyro_y:-129.07, gyro_z:-8.20 END OF LOG[0m
+[0;32mI (6790) mpu6050 test: LOGGING DATA Time:0.006150, acce_x:-0.11, acce_y:-0.12, acce_z:1.02, gyro_x:20.15, gyro_y:-109.86, gyro_z:-15.45 END OF LOG[0m
+[0;32mI (6800) mpu6050 test: LOGGING DATA Time:0.006160, acce_x:-0.32, acce_y:0.15, acce_z:0.79, gyro_x:33.91, gyro_y:-50.81, gyro_z:-64.09 END OF LOG[0m
+[0;32mI (6820) mpu6050 test: LOGGING DATA Time:0.006180, acce_x:-1.25, acce_y:0.09, acce_z:1.47, gyro_x:34.52, gyro_y:-127.63, gyro_z:74.03 END OF LOG[0m
+[0;32mI (6830) mpu6050 test: LOGGING DATA Time:0.006190, acce_x:-0.87, acce_y:-0.13, acce_z:1.24, gyro_x:56.56, gyro_y:-315.37, gyro_z:-131.15 END OF LOG[0m
+[0;32mI (6840) mpu6050 test: LOGGING DATA Time:0.006200, acce_x:0.13, acce_y:0.25, acce_z:0.92, gyro_x:68.92, gyro_y:-353.08, gyro_z:-113.22 END OF LOG[0m
+[0;32mI (6860) mpu6050 test: LOGGING DATA Time:0.006220, acce_x:2.02, acce_y:0.62, acce_z:0.31, gyro_x:12.90, gyro_y:-105.97, gyro_z:25.22 END OF LOG[0m
+[0;32mI (6870) mpu6050 test: LOGGING DATA Time:0.006230, acce_x:1.36, acce_y:0.36, acce_z:0.92, gyro_x:-27.80, gyro_y:180.14, gyro_z:60.17 END OF LOG[0m
+[0;32mI (6880) mpu6050 test: LOGGING DATA Time:0.006240, acce_x:0.51, acce_y:0.19, acce_z:0.85, gyro_x:-39.40, gyro_y:313.02, gyro_z:136.21 END OF LOG[0m
+[0;32mI (6900) mpu6050 test: LOGGING DATA Time:0.006260, acce_x:-0.31, acce_y:0.20, acce_z:0.96, gyro_x:-46.46, gyro_y:321.95, gyro_z:76.43 END OF LOG[0m
+[0;32mI (6910) mpu6050 test: LOGGING DATA Time:0.006270, acce_x:-0.74, acce_y:0.08, acce_z:0.99, gyro_x:-49.25, gyro_y:246.00, gyro_z:101.24 END OF LOG[0m
+[0;32mI (6920) mpu6050 test: LOGGING DATA Time:0.006280, acce_x:-0.94, acce_y:-0.09, acce_z:1.04, gyro_x:-29.48, gyro_y:144.09, gyro_z:65.79 END OF LOG[0m
+[0;32mI (6940) mpu6050 test: LOGGING DATA Time:0.006300, acce_x:-0.89, acce_y:-0.12, acce_z:1.12, gyro_x:-10.49, gyro_y:41.69, gyro_z:49.07 END OF LOG[0m
+[0;32mI (6950) mpu6050 test: LOGGING DATA Time:0.006310, acce_x:-0.68, acce_y:-0.20, acce_z:1.09, gyro_x:11.57, gyro_y:-33.34, gyro_z:38.63 END OF LOG[0m
+[0;32mI (6970) mpu6050 test: LOGGING DATA Time:0.006330, acce_x:-0.42, acce_y:-0.02, acce_z:0.99, gyro_x:31.92, gyro_y:-56.69, gyro_z:-3.50 END OF LOG[0m
+[0;32mI (6980) mpu6050 test: LOGGING DATA Time:0.006340, acce_x:4.00, acce_y:4.00, acce_z:-2.26, gyro_x:-417.21, gyro_y:366.84, gyro_z:-500.27 END OF LOG[0m
+[0;32mI (6990) mpu6050 test: LOGGING DATA Time:0.006350, acce_x:2.67, acce_y:-0.35, acce_z:-0.85, gyro_x:-319.40, gyro_y:500.26, gyro_z:500.26 END OF LOG[0m
+[0;32mI (7010) mpu6050 test: LOGGING DATA Time:0.006370, acce_x:0.58, acce_y:-1.38, acce_z:-1.37, gyro_x:-154.14, gyro_y:500.26, gyro_z:-198.95 END OF LOG[0m
+[0;32mI (7020) mpu6050 test: LOGGING DATA Time:0.006380, acce_x:-1.38, acce_y:0.09, acce_z:-1.67, gyro_x:-129.63, gyro_y:500.26, gyro_z:95.82 END OF LOG[0m
+[0;32mI (7030) mpu6050 test: LOGGING DATA Time:0.006390, acce_x:-2.86, acce_y:-0.18, acce_z:-1.78, gyro_x:-98.99, gyro_y:500.26, gyro_z:20.55 END OF LOG[0m
+[0;32mI (7050) mpu6050 test: LOGGING DATA Time:0.006410, acce_x:-4.00, acce_y:-0.73, acce_z:-0.55, gyro_x:-12.73, gyro_y:500.26, gyro_z:117.92 END OF LOG[0m
+[0;32mI (7060) mpu6050 test: LOGGING DATA Time:0.006420, acce_x:-3.29, acce_y:-0.55, acce_z:0.15, gyro_x:66.08, gyro_y:53.18, gyro_z:-194.98 END OF LOG[0m
+[0;32mI (7080) mpu6050 test: LOGGING DATA Time:0.006440, acce_x:-1.59, acce_y:0.14, acce_z:0.05, gyro_x:54.84, gyro_y:-126.40, gyro_z:-141.66 END OF LOG[0m
+[0;32mI (7090) mpu6050 test: LOGGING DATA Time:0.006450, acce_x:-0.36, acce_y:0.27, acce_z:-0.02, gyro_x:7.01, gyro_y:-65.33, gyro_z:-28.55 END OF LOG[0m
+[0;32mI (7100) mpu6050 test: LOGGING DATA Time:0.006460, acce_x:-0.59, acce_y:-0.12, acce_z:-0.08, gyro_x:5.22, gyro_y:76.76, gyro_z:58.70 END OF LOG[0m
+[0;32mI (7120) mpu6050 test: LOGGING DATA Time:0.006480, acce_x:-1.67, acce_y:-0.07, acce_z:0.06, gyro_x:2.20, gyro_y:29.59, gyro_z:76.73 END OF LOG[0m
+[0;32mI (7130) mpu6050 test: LOGGING DATA Time:0.006490, acce_x:-2.25, acce_y:-0.01, acce_z:0.11, gyro_x:-27.54, gyro_y:-154.89, gyro_z:121.57 END OF LOG[0m
+[0;32mI (7140) mpu6050 test: LOGGING DATA Time:0.006500, acce_x:-1.99, acce_y:-0.19, acce_z:0.04, gyro_x:-39.22, gyro_y:-348.81, gyro_z:123.77 END OF LOG[0m
+[0;32mI (7160) mpu6050 test: LOGGING DATA Time:0.006520, acce_x:-1.48, acce_y:-0.33, acce_z:-0.04, gyro_x:3.10, gyro_y:-415.31, gyro_z:70.90 END OF LOG[0m
+[0;32mI (7170) mpu6050 test: LOGGING DATA Time:0.006530, acce_x:-1.33, acce_y:-0.36, acce_z:0.31, gyro_x:53.54, gyro_y:-500.27, gyro_z:46.31 END OF LOG[0m
+[0;32mI (7190) mpu6050 test: LOGGING DATA Time:0.006550, acce_x:-0.83, acce_y:-0.42, acce_z:0.04, gyro_x:129.10, gyro_y:-500.27, gyro_z:-90.14 END OF LOG[0m
+[0;32mI (7200) mpu6050 test: LOGGING DATA Time:0.006560, acce_x:-0.18, acce_y:0.11, acce_z:0.13, gyro_x:166.14, gyro_y:-443.27, gyro_z:-191.27 END OF LOG[0m
+[0;32mI (7210) mpu6050 test: LOGGING DATA Time:0.006570, acce_x:0.09, acce_y:0.62, acce_z:0.37, gyro_x:100.89, gyro_y:-299.71, gyro_z:-73.57 END OF LOG[0m
+[0;32mI (7230) mpu6050 test: LOGGING DATA Time:0.006590, acce_x:0.64, acce_y:0.76, acce_z:1.59, gyro_x:-53.19, gyro_y:-363.02, gyro_z:46.69 END OF LOG[0m
+[0;32mI (7240) mpu6050 test: LOGGING DATA Time:0.006600, acce_x:3.80, acce_y:0.11, acce_z:-0.23, gyro_x:-83.91, gyro_y:315.25, gyro_z:127.11 END OF LOG[0m
+[0;32mI (7250) mpu6050 test: LOGGING DATA Time:0.006610, acce_x:2.11, acce_y:-0.76, acce_z:-0.96, gyro_x:29.83, gyro_y:500.26, gyro_z:-66.23 END OF LOG[0m
+[0;32mI (7270) mpu6050 test: LOGGING DATA Time:0.006630, acce_x:-1.76, acce_y:1.16, acce_z:-1.45, gyro_x:2.29, gyro_y:500.26, gyro_z:52.21 END OF LOG[0m
+[0;32mI (7280) mpu6050 test: LOGGING DATA Time:0.006640, acce_x:-4.00, acce_y:0.58, acce_z:-0.32, gyro_x:-78.99, gyro_y:500.26, gyro_z:29.92 END OF LOG[0m
+[0;32mI (7300) mpu6050 test: LOGGING DATA Time:0.006660, acce_x:-2.96, acce_y:-0.26, acce_z:0.17, gyro_x:-117.40, gyro_y:164.32, gyro_z:27.60 END OF LOG[0m
+[0;32mI (7310) mpu6050 test: LOGGING DATA Time:0.006670, acce_x:-0.38, acce_y:-0.48, acce_z:-0.33, gyro_x:-38.92, gyro_y:157.48, gyro_z:-9.48 END OF LOG[0m
+[0;32mI (7320) mpu6050 test: LOGGING DATA Time:0.006680, acce_x:0.26, acce_y:0.47, acce_z:-0.52, gyro_x:-45.27, gyro_y:381.83, gyro_z:160.27 END OF LOG[0m
+[0;32mI (7340) mpu6050 test: LOGGING DATA Time:0.006700, acce_x:-0.13, acce_y:0.82, acce_z:-1.71, gyro_x:-117.39, gyro_y:500.26, gyro_z:283.39 END OF LOG[0m
+[0;32mI (7350) mpu6050 test: LOGGING DATA Time:0.006710, acce_x:-1.89, acce_y:1.54, acce_z:-0.98, gyro_x:-245.88, gyro_y:500.26, gyro_z:449.86 END OF LOG[0m
+[0;32mI (7360) mpu6050 test: LOGGING DATA Time:0.006720, acce_x:-3.51, acce_y:2.25, acce_z:-4.00, gyro_x:-450.38, gyro_y:500.26, gyro_z:-500.27 END OF LOG[0m
+[0;32mI (7380) mpu6050 test: LOGGING DATA Time:0.006740, acce_x:-4.00, acce_y:-1.90, acce_z:-4.00, gyro_x:-324.79, gyro_y:-500.27, gyro_z:-288.41 END OF LOG[0m
+[0;32mI (7390) mpu6050 test: LOGGING DATA Time:0.006750, acce_x:-1.04, acce_y:-1.41, acce_z:-4.00, gyro_x:135.47, gyro_y:-500.27, gyro_z:-373.79 END OF LOG[0m
+[0;32mI (7410) mpu6050 test: LOGGING DATA Time:0.006770, acce_x:1.41, acce_y:-0.42, acce_z:-3.16, gyro_x:434.38, gyro_y:-500.27, gyro_z:-500.27 END OF LOG[0m
+[0;32mI (7420) mpu6050 test: LOGGING DATA Time:0.006780, acce_x:2.17, acce_y:1.54, acce_z:-1.08, gyro_x:429.04, gyro_y:-500.27, gyro_z:-500.27 END OF LOG[0m
+[0;32mI (7430) mpu6050 test: LOGGING DATA Time:0.006790, acce_x:1.92, acce_y:2.47, acce_z:0.51, gyro_x:146.38, gyro_y:-231.40, gyro_z:-134.69 END OF LOG[0m
+[0;32mI (7450) mpu6050 test: END OF DATA[0m
+[0;32mI (7450) main_task: Returned from app_main()[0m
+[0;32mI (30290) GATTS_DEMO: ESP_GATTS_CONNECT_EVT, conn_id 0, remote c8:89:f3:a8:aa:bb:[0m
+[0;32mI (30290) GATTS_DEMO: CONNECT_EVT, conn_id 0, remote c8:89:f3:a8:aa:bb:[0m
+[0;32mI (30350) GATTS_DEMO: ESP_GATTS_MTU_EVT, MTU 500[0m
+[0;32mI (30350) GATTS_DEMO: ESP_GATTS_MTU_EVT, MTU 500[0m
+[0;32mI (30650) GATTS_DEMO: update connection params status = 0, min_int = 16, max_int = 32,conn_int = 24,latency = 0, timeout = 400[0m
+[0;32mI (31130) GATTS_DEMO: GATT_READ_EVT, conn_id 0, trans_id 2, handle 42[0m
+[0;33mW (36200) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (36200) GATTS_DEMO: ESP_GATTS_DISCONNECT_EVT, disconnect reason 0x13[0m

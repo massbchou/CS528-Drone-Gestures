@@ -1,0 +1,53 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32s3
+Processing 2 dependencies:
+[1/2] espressif/mpu6050 (1.2.0)
+[2/2] idf (5.2.1)
+-- Project sdkconfig file /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/sdkconfig
+Loading defaults file /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/sdkconfig.defaults...
+Loading defaults file /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/sdkconfig.defaults.esp32s3...
+-- Compiler supported targets: xtensa-esp-elf
+-- App "project-name" version: 7d034a5-dirty
+-- Adding linker script /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /Users/benchou/esp/esp-idf/components/esp_system/ld/esp32s3/sections.ld.in
+-- Adding linker script /Users/benchou/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script /Users/benchou/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script /Users/benchou/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script /Users/benchou/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.newlib.ld
+-- Adding linker script /Users/benchou/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script /Users/benchou/esp/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump espressif__mpu6050 esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport touch_element ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /Users/benchou/esp/esp-idf/components/app_trace /Users/benchou/esp/esp-idf/components/app_update /Users/benchou/esp/esp-idf/components/bootloader /Users/benchou/esp/esp-idf/components/bootloader_support /Users/benchou/esp/esp-idf/components/bt /Users/benchou/esp/esp-idf/components/cmock /Users/benchou/esp/esp-idf/components/console /Users/benchou/esp/esp-idf/components/cxx /Users/benchou/esp/esp-idf/components/driver /Users/benchou/esp/esp-idf/components/efuse /Users/benchou/esp/esp-idf/components/esp-tls /Users/benchou/esp/esp-idf/components/esp_adc /Users/benchou/esp/esp-idf/components/esp_app_format /Users/benchou/esp/esp-idf/components/esp_bootloader_format /Users/benchou/esp/esp-idf/components/esp_coex /Users/benchou/esp/esp-idf/components/esp_common /Users/benchou/esp/esp-idf/components/esp_eth /Users/benchou/esp/esp-idf/components/esp_event /Users/benchou/esp/esp-idf/components/esp_gdbstub /Users/benchou/esp/esp-idf/components/esp_hid /Users/benchou/esp/esp-idf/components/esp_http_client /Users/benchou/esp/esp-idf/components/esp_http_server /Users/benchou/esp/esp-idf/components/esp_https_ota /Users/benchou/esp/esp-idf/components/esp_https_server /Users/benchou/esp/esp-idf/components/esp_hw_support /Users/benchou/esp/esp-idf/components/esp_lcd /Users/benchou/esp/esp-idf/components/esp_local_ctrl /Users/benchou/esp/esp-idf/components/esp_mm /Users/benchou/esp/esp-idf/components/esp_netif /Users/benchou/esp/esp-idf/components/esp_netif_stack /Users/benchou/esp/esp-idf/components/esp_partition /Users/benchou/esp/esp-idf/components/esp_phy /Users/benchou/esp/esp-idf/components/esp_pm /Users/benchou/esp/esp-idf/components/esp_psram /Users/benchou/esp/esp-idf/components/esp_ringbuf /Users/benchou/esp/esp-idf/components/esp_rom /Users/benchou/esp/esp-idf/components/esp_system /Users/benchou/esp/esp-idf/components/esp_timer /Users/benchou/esp/esp-idf/components/esp_wifi /Users/benchou/esp/esp-idf/components/espcoredump /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/managed_components/espressif__mpu6050 /Users/benchou/esp/esp-idf/components/esptool_py /Users/benchou/esp/esp-idf/components/fatfs /Users/benchou/esp/esp-idf/components/freertos /Users/benchou/esp/esp-idf/components/hal /Users/benchou/esp/esp-idf/components/heap /Users/benchou/esp/esp-idf/components/http_parser /Users/benchou/esp/esp-idf/components/idf_test /Users/benchou/esp/esp-idf/components/ieee802154 /Users/benchou/esp/esp-idf/components/json /Users/benchou/esp/esp-idf/components/log /Users/benchou/esp/esp-idf/components/lwip /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/main /Users/benchou/esp/esp-idf/components/mbedtls /Users/benchou/esp/esp-idf/components/mqtt /Users/benchou/esp/esp-idf/components/newlib /Users/benchou/esp/esp-idf/components/nvs_flash /Users/benchou/esp/esp-idf/components/nvs_sec_provider /Users/benchou/esp/esp-idf/components/openthread /Users/benchou/esp/esp-idf/components/partition_table /Users/benchou/esp/esp-idf/components/perfmon /Users/benchou/esp/esp-idf/components/protobuf-c /Users/benchou/esp/esp-idf/components/protocomm /Users/benchou/esp/esp-idf/components/pthread /Users/benchou/esp/esp-idf/components/sdmmc /Users/benchou/esp/esp-idf/components/soc /Users/benchou/esp/esp-idf/components/spi_flash /Users/benchou/esp/esp-idf/components/spiffs /Users/benchou/esp/esp-idf/components/tcp_transport /Users/benchou/esp/esp-idf/components/touch_element /Users/benchou/esp/esp-idf/components/ulp /Users/benchou/esp/esp-idf/components/unity /Users/benchou/esp/esp-idf/components/usb /Users/benchou/esp/esp-idf/components/vfs /Users/benchou/esp/esp-idf/components/wear_levelling /Users/benchou/esp/esp-idf/components/wifi_provisioning /Users/benchou/esp/esp-idf/components/wpa_supplicant /Users/benchou/esp/esp-idf/components/xtensa
+-- Configuring done (3.6s)
+-- Generating done (0.3s)
+-- Build files have been written to: /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader/esp-idf/esptool_py && /Users/benchou/.espressif/python_env/idf5.2_py3.11_env/bin/python /Users/benchou/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader/bootloader.bin
+Bootloader binary size 0x5250 bytes. 0x2db0 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj
+[5/10] Linking C static library esp-idf/esp_app_format/libesp_app_format.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable project-name.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/project-name.bin
+[9/10] cd /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/esptool_py && /Users/benchou/.espressif/python_env/idf5.2_py3.11_env/bin/python /Users/benchou/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/partition_table/partition-table.bin /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/project-name.bin
+project-name.bin binary size 0xbc4e0 bytes. Smallest app partition is 0x100000 bytes. 0x43b20 bytes (26%) free.
+[9/10] cd /Users/benchou/esp/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -D IDF_PATH=/Users/benchou/esp/esp-idf -D "SERIAL_TOOL=/Users/benchou/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/Users/benchou/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build -P /Users/benchou/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbserial-10 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 project-name.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/cu.usbserial-10
+
+A fatal error occurred: Could not open /dev/cu.usbserial-10, the port is busy or doesn't exist.
+([Errno 2] could not open port /dev/cu.usbserial-10: [Errno 2] No such file or directory: '/dev/cu.usbserial-10')
+
+Hint: Check if the port is correct and ESP connected
+
+FAILED: CMakeFiles/flash /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/CMakeFiles/flash 
+cd /Users/benchou/esp/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -D IDF_PATH=/Users/benchou/esp/esp-idf -D "SERIAL_TOOL=/Users/benchou/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/Users/benchou/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build -P /Users/benchou/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.
