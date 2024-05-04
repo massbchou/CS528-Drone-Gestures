@@ -40,6 +40,8 @@
 #define BUFFER_SIZE 25
 float measurements[BUFFER_SIZE][6];
 int insertIndex = 0;
+//Fallback measurements encoded as a string to send
+char fallback[] = "0.0,0.0,0.0,0.0,0.0,0.0";
 
 //mpu imports
 #include <stdio.h>
@@ -373,10 +375,15 @@ static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_i
         //                             ESP_GATT_OK, &rsp);
         rsp.attr_value.handle = param->read.handle;
         
-        memcpy(rsp.attr_value.value, measurements, sizeof(measurements));
-        rsp.attr_value.len = BUFFER_SIZE;
-        memset(measurements, 0, sizeof(measurements));
-        insertIndex = 0;
+        //send the measurements
+        // memcpy(rsp.attr_value.value, measurements, sizeof(measurements));
+        // rsp.attr_value.len = BUFFER_SIZE;
+        // memset(measurements, 0, sizeof(measurements));
+        // insertIndex = 0;
+
+        //send the fallback
+        memcpy(rsp.attr_value.value, fallback, sizeof(fallback));
+        rsp.attr_value.len = strlen(fallback);
 
         // esp_ble_gatts_send_indicate(gatts_if, param->read.conn_id, gl_profile_tab[PROFILE_A_APP_ID].char_handle,
         //                                         sizeof(measurements), measurements, false)
@@ -830,6 +837,8 @@ void recordData(esp_err_t ret, mpu6050_handle_t mpu6050, mpu6050_acce_value_t ac
 
         float newMeasurement[6] = {acce.acce_x, acce.acce_y, acce.acce_z, gyro.gyro_x, gyro.gyro_y, gyro.gyro_z};
         insertMeasurement(newMeasurement);
+        //string representation of the data
+        fallback = std::to_string(acce.acce_x) + "," + std::to_string(acce.acce_y) + "," + std::to_string(acce.acce_z) + "," + std::to_string(gyro.gyro_x) + "," + std::to_string(gyro.gyro_y) + "," + std::to_string(gyro.gyro_z);
 
         counter++; 
     }
