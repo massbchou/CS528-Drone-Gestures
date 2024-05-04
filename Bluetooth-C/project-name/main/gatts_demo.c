@@ -36,6 +36,11 @@
 
 #define GATTS_TAG "GATTS_DEMO"
 
+//defs and imports to send data
+#define BUFFER_SIZE 25
+float measurements[BUFFER_SIZE][6];
+int insertIndex = 0;
+
 //mpu imports
 #include <stdio.h>
 #include "unity.h"
@@ -367,18 +372,15 @@ static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_i
         // esp_ble_gatts_send_response(gatts_if, param->read.conn_id, param->read.trans_id,
         //                             ESP_GATT_OK, &rsp);
         rsp.attr_value.handle = param->read.handle;
-        rsp.attr_value.len = 11;
-        rsp.attr_value.value[0] = 'H';
-        rsp.attr_value.value[1] = 'e';
-        rsp.attr_value.value[2] = 'l';
-        rsp.attr_value.value[3] = 'l';
-        rsp.attr_value.value[4] = 'o';
-        rsp.attr_value.value[5] = ' ';
-        rsp.attr_value.value[6] = 'W';
-        rsp.attr_value.value[7] = 'o';
-        rsp.attr_value.value[8] = 'r';
-        rsp.attr_value.value[9] = 'l';
-        rsp.attr_value.value[10] = 'd';
+        
+        memcpy(rsp.attr_value.value, measurements, sizeof(measurements));
+        rsp.attr_value.len = BUFFER_SIZE;
+        memset(measurements, 0, sizeof(measurements));
+        insertIndex = 0;
+
+        // esp_ble_gatts_send_indicate(gatts_if, param->read.conn_id, gl_profile_tab[PROFILE_A_APP_ID].char_handle,
+        //                                         sizeof(measurements), measurements, false)
+
         esp_ble_gatts_send_response(gatts_if, param->read.conn_id, param->read.trans_id, ESP_GATT_OK, &rsp);
         break;
     }
@@ -518,6 +520,14 @@ static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_i
         if (param->conf.status != ESP_GATT_OK){
             esp_log_buffer_hex(GATTS_TAG, param->conf.value, param->conf.len);
         }
+        for (int i = 0; i < 100; i++) {
+            uint8_t data[] = {'H', 'e', 'l', 'l', 'o'};
+            esp_ble_gatts_send_indicate(gatts_if, param->read.conn_id, gl_profile_tab[PROFILE_A_APP_ID].char_handle,
+                                        sizeof(data), data, false);
+            ESP_LOGI(GATTS_TAG, "Sent data");
+            vTaskDelay(1000 / portTICK_PERIOD_MS); // Delay for 1 second
+        }
+
         break;
     case ESP_GATTS_OPEN_EVT:
     case ESP_GATTS_CANCEL_OPEN_EVT:
@@ -786,13 +796,23 @@ static void i2c_sensor_mpu6050_init(void)
     }
 }
 
-void sendData(esp_err_t ret, mpu6050_handle_t mpu6050, mpu6050_acce_value_t acce, mpu6050_gyro_value_t gyro) {
+void insertMeasurement(float newMeasurement[6]) {
+    // Copy newMeasurement into measurements at insertIndex
+    for(int i = 0; i < 6; i++) {
+        measurements[insertIndex][i] = newMeasurement[i];
+    }
+
+    // Increment insertIndex and wrap around if necessary
+    insertIndex = (insertIndex + 1) % BUFFER_SIZE;
+}
+
+void recordData(esp_err_t ret, mpu6050_handle_t mpu6050, mpu6050_acce_value_t acce, mpu6050_gyro_value_t gyro) {
     int counter = 0;
     int samples = 500;
     clock_t start = clock();
     double time = 0.0;
-
-    while (counter < samples) {
+    //
+    while (true) {
         ret = mpu6050_get_acce(mpu6050, &acce);
         if (ret != ESP_OK) {
             ESP_LOGE(TAG, "Failed to get accelerometer data");
@@ -808,13 +828,14 @@ void sendData(esp_err_t ret, mpu6050_handle_t mpu6050, mpu6050_acce_value_t acce
         ESP_LOGI(TAG, "LOGGING DATA Time:%.6f, acce_x:%.2f, acce_y:%.2f, acce_z:%.2f, gyro_x:%.2f, gyro_y:%.2f, gyro_z:%.2f END OF LOG",
              time, acce.acce_x, acce.acce_y, acce.acce_z, gyro.gyro_x, gyro.gyro_y, gyro.gyro_z);
 
+        float newMeasurement[6] = {acce.acce_x, acce.acce_y, acce.acce_z, gyro.gyro_x, gyro.gyro_y, gyro.gyro_z};
+        insertMeasurement(newMeasurement);
+
         counter++; 
     }
     //send an end of data message
     ESP_LOGI(TAG, "END OF DATA");
 }
-
-
 
 
 
@@ -893,7 +914,9 @@ void app_main(void)
         ESP_LOGE(TAG, "Failed to get MPU6050 device ID");
     }
 
-    sendData(ret, mpu6050, acce, gyro);
+    recordData(ret, mpu6050, acce, gyro);
+
+
     mpu6050_delete(mpu6050);
     ret = i2c_driver_delete(I2C_MASTER_NUM);
     if (ret != ESP_OK) {
