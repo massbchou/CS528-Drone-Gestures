@@ -43,13 +43,16 @@ async def connect_to_device():
                             print("Characteristic:", characteristic)
                     
                     #print("First UUID:", first_uuid)
-                    data = await client.read_gatt_char("0000ff01-0000-1000-8000-00805f9b34fb") #Hardcoded UUID
-                    # data = await client.start_notify("0000ff01-0000-1000-8000-00805f9b34fb", lambda c, x: print("Received data:", x.decode("utf-8")))
-                    # while(True):
-                    #     await asyncio.sleep(1)
-                    print("Recieved ByteArray:", data)
-                    # data = struct.unpack('<f', data)
-                    print("Received data:", data)
+                    c = 0
+                    while (c < 10):
+                        data = await client.read_gatt_char("0000ff01-0000-1000-8000-00805f9b34fb") #Hardcoded UUID
+                        # data = await client.start_notify("0000ff01-0000-1000-8000-00805f9b34fb", lambda c, x: print("Received data:", x.decode("utf-8")))
+                        # while(True):
+                        #     await asyncio.sleep(1)
+                        print("Recieved ByteArray:", data.decode("utf-8"))
+                        # data = struct.unpack('<f', data)
+                        print("Received data:", data)
+                        c += 1
                     # disconnect after 5 seconds
                     #await asyncio.sleep(5)
                         

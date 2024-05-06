@@ -41,7 +41,7 @@
 float measurements[BUFFER_SIZE][6];
 int insertIndex = 0;
 //Fallback measurements encoded as a string to send
-char fallback[] = "0.0,0.0,0.0,0.0,0.0,0.0";
+char fallback[100];
 
 //mpu imports
 #include <stdio.h>
@@ -832,13 +832,17 @@ void recordData(esp_err_t ret, mpu6050_handle_t mpu6050, mpu6050_acce_value_t ac
         clock_t currentTime = clock();
         time = (double)(currentTime - start) / CLOCKS_PER_SEC;
 
-        ESP_LOGI(TAG, "LOGGING DATA Time:%.6f, acce_x:%.2f, acce_y:%.2f, acce_z:%.2f, gyro_x:%.2f, gyro_y:%.2f, gyro_z:%.2f END OF LOG",
-             time, acce.acce_x, acce.acce_y, acce.acce_z, gyro.gyro_x, gyro.gyro_y, gyro.gyro_z);
+        // ESP_LOGI(TAG, "LOGGING DATA Time:%.6f, acce_x:%.2f, acce_y:%.2f, acce_z:%.2f, gyro_x:%.2f, gyro_y:%.2f, gyro_z:%.2f END OF LOG",
+        //      time, acce.acce_x, acce.acce_y, acce.acce_z, gyro.gyro_x, gyro.gyro_y, gyro.gyro_z);
 
         float newMeasurement[6] = {acce.acce_x, acce.acce_y, acce.acce_z, gyro.gyro_x, gyro.gyro_y, gyro.gyro_z};
         insertMeasurement(newMeasurement);
         //string representation of the data
-        fallback = std::to_string(acce.acce_x) + "," + std::to_string(acce.acce_y) + "," + std::to_string(acce.acce_z) + "," + std::to_string(gyro.gyro_x) + "," + std::to_string(gyro.gyro_y) + "," + std::to_string(gyro.gyro_z);
+        sprintf(fallback, "%.2f,%.2f,%.2f,%.2f,%.2f,%.2f",
+             acce.acce_x, acce.acce_y, acce.acce_z, gyro.gyro_x, gyro.gyro_y, gyro.gyro_z);
+
+        //log fallback
+        ESP_LOGI(TAG, "FALLBACK: %s", fallback);
 
         counter++; 
     }
