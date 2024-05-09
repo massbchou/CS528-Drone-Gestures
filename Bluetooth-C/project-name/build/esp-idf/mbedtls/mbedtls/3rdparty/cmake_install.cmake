@@ -1,4 +1,4 @@
-# Install script for directory: /Users/benchou/esp/esp-idf/components/mbedtls/mbedtls/3rdparty
+# Install script for directory: /Users/nicolekaldus/esp/esp-idf/components/mbedtls/mbedtls/3rdparty
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,13 +34,13 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Users/benchou/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-objdump")
+  set(CMAKE_OBJDUMP "/Users/nicolekaldus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/mbedtls/mbedtls/3rdparty/everest/cmake_install.cmake")
-  include("/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/mbedtls/mbedtls/3rdparty/p256-m/cmake_install.cmake")
+  include("/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/mbedtls/mbedtls/3rdparty/everest/cmake_install.cmake")
+  include("/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/mbedtls/mbedtls/3rdparty/p256-m/cmake_install.cmake")
 
 endif()
 

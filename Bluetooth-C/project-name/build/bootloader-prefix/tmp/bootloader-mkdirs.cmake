@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/Users/benchou/esp/esp-idf/components/bootloader/subproject"
-  "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader"
-  "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix"
-  "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/tmp"
-  "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp"
-  "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src"
-  "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp"
+  "/Users/nicolekaldus/esp/esp-idf/components/bootloader/subproject"
+  "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader"
+  "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix"
+  "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/tmp"
+  "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp"
+  "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src"
+  "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

@@ -1,0 +1,39 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader/esp-idf/esptool_py && /Users/nicolekaldus/.espressif/python_env/idf5.3_py3.11_env/bin/python /Users/nicolekaldus/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader/bootloader.bin
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/gatts_demo.c.obj
+/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/main/gatts_demo.c: In function 'gatts_profile_a_event_handler':
+/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/main/gatts_demo.c:332:9: warning: 'esp_ble_gap_set_device_name' is deprecated: Please use esp_bt_dev_set_device_name [-Wdeprecated-declarations]
+  332 |         esp_err_t set_dev_name_ret = esp_ble_gap_set_device_name(TEST_DEVICE_NAME);
+      |         ^~~~~~~~~
+In file included from /Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/main/gatts_demo.c:29:
+/Users/nicolekaldus/esp/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h:1729:11: note: declared here
+ 1729 | esp_err_t esp_ble_gap_set_device_name(const char *name) __attribute__((deprecated("Please use esp_bt_dev_set_device_name")));
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/main/gatts_demo.c: In function 'recordData':
+/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/main/gatts_demo.c:820:12: warning: variable 'time' set but not used [-Wunused-but-set-variable]
+  820 |     double time = 0.0;
+      |            ^~~~
+/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/main/gatts_demo.c:818:9: warning: unused variable 'samples' [-Wunused-variable]
+  818 |     int samples = 500;
+      |         ^~~~~~~
+/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/main/gatts_demo.c: In function 'gatts_profile_b_event_handler':
+/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/main/gatts_demo.c:560:30: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  560 |     case ESP_GATTS_READ_EVT: {
+      |                              ^
+/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/main/gatts_demo.c:579:5: note: here
+  579 |     case ESP_GATTS_WRITE_EVT: {
+      |     ^~~~
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable project-name.elf
+[8/9] Generating binary image from built executable
+esptool.py vv4.8.dev1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/project-name.bin
+[9/9] cd /Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/esptool_py && /Users/nicolekaldus/.espressif/python_env/idf5.3_py3.11_env/bin/python /Users/nicolekaldus/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/partition_table/partition-table.bin /Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/project-name.bin
+project-name.bin binary size 0xbd350 bytes. Smallest app partition is 0x100000 bytes. 0x42cb0 bytes (26%) free.

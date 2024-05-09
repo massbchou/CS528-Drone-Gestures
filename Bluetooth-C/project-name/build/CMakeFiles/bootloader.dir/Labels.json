@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/CMakeFiles/bootloader"
+			"file" : "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/CMakeFiles/bootloader.rule"
+			"file" : "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

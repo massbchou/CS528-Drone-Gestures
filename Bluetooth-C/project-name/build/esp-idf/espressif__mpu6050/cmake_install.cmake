@@ -1,4 +1,4 @@
-# Install script for directory: /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/managed_components/espressif__mpu6050
+# Install script for directory: /Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/managed_components/espressif__mpu6050
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,6 +34,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Users/benchou/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-objdump")
+  set(CMAKE_OBJDUMP "/Users/nicolekaldus/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-objdump")
 endif()
 

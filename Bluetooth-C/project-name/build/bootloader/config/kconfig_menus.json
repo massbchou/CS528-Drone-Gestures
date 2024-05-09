@@ -573,6 +573,36 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "SOC_RNG_SUPPORTED",
+        "name": "SOC_RNG_SUPPORTED",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "SOC_LIGHT_SLEEP_SUPPORTED",
+        "name": "SOC_LIGHT_SLEEP_SUPPORTED",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "SOC_DEEP_SLEEP_SUPPORTED",
+        "name": "SOC_DEEP_SLEEP_SUPPORTED",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "SOC_XTAL_SUPPORT_40M",
         "name": "SOC_XTAL_SUPPORT_40M",
         "range": null,
@@ -2253,11 +2283,11 @@
         "children": [],
         "depends_on": null,
         "help": null,
-        "id": "SOC_TOUCH_VERSION_2",
-        "name": "SOC_TOUCH_VERSION_2",
+        "id": "SOC_TOUCH_SENSOR_VERSION",
+        "name": "SOC_TOUCH_SENSOR_VERSION",
         "range": null,
         "title": null,
-        "type": "bool"
+        "type": "int"
     },
     {
         "children": [],
@@ -2293,21 +2323,11 @@
         "children": [],
         "depends_on": null,
         "help": null,
-        "id": "SOC_TOUCH_PAD_THRESHOLD_MAX",
-        "name": "SOC_TOUCH_PAD_THRESHOLD_MAX",
+        "id": "SOC_TOUCH_SAMPLER_NUM",
+        "name": "SOC_TOUCH_SAMPLER_NUM",
         "range": null,
         "title": null,
-        "type": "hex"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
-        "id": "SOC_TOUCH_PAD_MEASURE_WAIT_MAX",
-        "name": "SOC_TOUCH_PAD_MEASURE_WAIT_MAX",
-        "range": null,
-        "title": null,
-        "type": "hex"
+        "type": "int"
     },
     {
         "children": [],
@@ -3593,6 +3613,46 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "IDF_TARGET_ESP32C5",
+        "name": "IDF_TARGET_ESP32C5",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "depends_on": "<choice IDF_TARGET_ESP32C5_VERSION>",
+                "help": null,
+                "id": "IDF_TARGET_ESP32C5_BETA3_VERSION",
+                "name": "IDF_TARGET_ESP32C5_BETA3_VERSION",
+                "range": null,
+                "title": "ESP32-C5 beta3",
+                "type": "bool"
+            },
+            {
+                "children": [],
+                "depends_on": "<choice IDF_TARGET_ESP32C5_VERSION>",
+                "help": null,
+                "id": "IDF_TARGET_ESP32C5_MP_VERSION",
+                "name": "IDF_TARGET_ESP32C5_MP_VERSION",
+                "range": null,
+                "title": "ESP32-C5 MP",
+                "type": "bool"
+            }
+        ],
+        "depends_on": "IDF_TARGET_ESP32C5",
+        "help": "ESP32-C5 will support two versions for a period.\nThis option is for internal use only.\nSelect the one that matches your chip model.",
+        "id": "esp32-c5-version",
+        "name": "IDF_TARGET_ESP32C5_VERSION",
+        "title": "ESP32-C5 version",
+        "type": "choice"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "IDF_TARGET_ESP32P4",
         "name": "IDF_TARGET_ESP32P4",
         "range": null,
@@ -3605,6 +3665,16 @@
         "help": null,
         "id": "IDF_TARGET_ESP32H2",
         "name": "IDF_TARGET_ESP32H2",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "IDF_TARGET_ESP32C61",
+        "name": "IDF_TARGET_ESP32C61",
         "range": null,
         "title": null,
         "type": "bool"
@@ -3964,7 +4034,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "!IDF_ENV_BRINGUP",
+                        "depends_on": null,
                         "help": "Perform the startup flow recommended by XMC. Please consult XMC for the details of this flow.\nXMC chips will be forbidden to be used, when this option is disabled.\n\nDON'T DISABLE THIS UNLESS YOU KNOW WHAT YOU ARE DOING.\n\ncomment \"Features below require specific hardware (READ DOCS FIRST!)\"",
                         "id": "BOOTLOADER_FLASH_XMC_SUPPORT",
                         "name": "BOOTLOADER_FLASH_XMC_SUPPORT",
@@ -4195,7 +4265,7 @@
                     {
                         "children": [],
                         "depends_on": "BOOTLOADER_WDT_ENABLE",
-                        "help": "If this option is set, the ESP-IDF app must explicitly reset, feed, or disable the rtc_wdt in\nthe app's own code.\nIf this option is not set (default), then rtc_wdt will be disabled by ESP-IDF before calling\nthe app_main() function.\n\nUse function rtc_wdt_feed() for resetting counter of rtc_wdt.\nUse function rtc_wdt_disable() for disabling rtc_wdt.",
+                        "help": "If this option is set, the ESP-IDF app must explicitly reset, feed, or disable the rtc_wdt in\nthe app's own code.\nIf this option is not set (default), then rtc_wdt will be disabled by ESP-IDF before calling\nthe app_main() function.\n\nUse function wdt_hal_feed() for resetting counter of RTC_WDT.\nFor esp32/s2 you can also use rtc_wdt_feed().\n\nUse function wdt_hal_disable() for disabling RTC_WDT.\nFor esp32/s2 you can also use rtc_wdt_disable().",
                         "id": "BOOTLOADER_WDT_DISABLE_IN_USER_CODE",
                         "name": "BOOTLOADER_WDT_DISABLE_IN_USER_CODE",
                         "range": null,
@@ -4863,7 +4933,7 @@
                     {
                         "children": [],
                         "depends_on": "SECURE_BOOT_INSECURE && SOC_EFUSE_REVOKE_BOOT_KEY_DIGESTS",
-                        "help": "If not set (default), during startup in the app all unused digest slots will be revoked.\nTo revoke unused slot will be called esp_efuse_set_digest_revoke(num_digest) for each digest.\nRevoking unused digest slots makes ensures that no trusted keys can be added later by an attacker.\nIf set, it means that you have a plan to use unused digests slots later.",
+                        "help": "If not set (default), during startup in the app all unused digest slots will be revoked.\nTo revoke unused slot will be called esp_efuse_set_digest_revoke(num_digest) for each digest.\nRevoking unused digest slots makes ensures that no trusted keys can be added later by an attacker.\nIf set, it means that you have a plan to use unused digests slots later.\n\nNote that if you plan to enable secure boot during the first boot up, the bootloader will intentionally\nrevoke the unused digest slots while enabling secure boot, even if the above config is enabled because\nkeeping the unused key slots un-revoked would a security hazard.\nIn case for any development workflow if you need to avoid this revocation, you should enable\nsecure boot externally (host based mechanism) rather than enabling it during the boot up,\nso that the bootloader would not need to enable secure boot and thus you could avoid its revocation\nstrategy.",
                         "id": "SECURE_BOOT_ALLOW_UNUSED_DIGEST_SLOTS",
                         "name": "SECURE_BOOT_ALLOW_UNUSED_DIGEST_SLOTS",
                         "range": null,
@@ -4929,7 +4999,7 @@
             {
                 "children": [],
                 "depends_on": "SECURE_FLASH_ENC_ENABLED && !SECURE_FLASH_REQUIRE_ALREADY_ENABLED",
-                "help": "If set, optimise encryption time for the partition of type APP,\nby only encrypting the app image that is present in the partition,\ninstead of the whole partition.\nThe image length used for encryption is derived from the image metadata, which\nincludes the size of the app image, checksum, hash and also the signature sector\nwhen secure boot is enabled.\n\nIf not set (default), the whole partition of type APP would be encrypted,\nwhich increases the encryption time but might be useful if there\nis any custom data appended to the firmware image.",
+                "help": "If set (default), optimise encryption time for the partition of type APP,\nby only encrypting the app image that is present in the partition,\ninstead of the whole partition.\nThe image length used for encryption is derived from the image metadata, which\nincludes the size of the app image, checksum, hash and also the signature sector\nwhen secure boot is enabled.\n\nIf not set, the whole partition of type APP would be encrypted,\nwhich increases the encryption time but might be useful if there\nis any custom data appended to the firmware image.",
                 "id": "SECURE_FLASH_ENCRYPT_ONLY_IMAGE_LEN_IN_APP_PART",
                 "name": "SECURE_FLASH_ENCRYPT_ONLY_IMAGE_LEN_IN_APP_PART",
                 "range": null,
@@ -5160,6 +5230,16 @@
         "help": null,
         "id": "ESP_ROM_HAS_ERASE_0_REGION_BUG",
         "name": "ESP_ROM_HAS_ERASE_0_REGION_BUG",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "ESP_ROM_HAS_ENCRYPTED_WRITES_USING_LEGACY_DRV",
+        "name": "ESP_ROM_HAS_ENCRYPTED_WRITES_USING_LEGACY_DRV",
         "range": null,
         "title": null,
         "type": "bool"
@@ -5935,7 +6015,7 @@
             {
                 "children": [],
                 "depends_on": null,
-                "help": "Name of the custom partition CSV filename. This path is evaluated\nrelative to the project root directory.",
+                "help": "Name of the custom partition CSV filename.\nThis path is evaluated relative to the project root directory by default.\nHowever, if the absolute path for the CSV file is provided, then the absolute path is configured.",
                 "id": "PARTITION_TABLE_CUSTOM_FILENAME",
                 "name": "PARTITION_TABLE_CUSTOM_FILENAME",
                 "range": null,
@@ -6968,11 +7048,11 @@
                             {
                                 "children": [],
                                 "depends_on": "SOC_GDMA_SUPPORTED",
-                                "help": "Place GDMA control functions (like start/stop/append/reset) into IRAM,\nso that these functions can be IRAM-safe and able to be called in the other IRAM interrupt context.\nEnabling this option can improve driver performance as well.",
+                                "help": "Place GDMA control functions (like start/stop/append/reset) into IRAM,\nso that these functions can be IRAM-safe and able to be called in the other IRAM interrupt context.",
                                 "id": "GDMA_CTRL_FUNC_IN_IRAM",
                                 "name": "GDMA_CTRL_FUNC_IN_IRAM",
                                 "range": null,
-                                "title": "Place GDMA control functions into IRAM",
+                                "title": "Place GDMA control functions in IRAM",
                                 "type": "bool"
                             },
                             {
@@ -6997,8 +7077,84 @@
                             }
                         ],
                         "depends_on": "SOC_GDMA_SUPPORTED",
-                        "id": "component-config-hardware-settings-gdma-configuration",
-                        "title": "GDMA Configuration",
+                        "id": "component-config-hardware-settings-gdma-configurations",
+                        "title": "GDMA Configurations",
+                        "type": "menu"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": "SOC_DW_GDMA_SUPPORTED",
+                                "help": "Place DW_GDMA control functions (e.g. dw_gdma_channel_continue) into IRAM,\nso that these functions can be IRAM-safe and able to be called in the other IRAM interrupt context.",
+                                "id": "DW_GDMA_CTRL_FUNC_IN_IRAM",
+                                "name": "DW_GDMA_CTRL_FUNC_IN_IRAM",
+                                "range": null,
+                                "title": null,
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "SOC_DW_GDMA_SUPPORTED",
+                                "help": "Place DW_GDMA setter functions (e.g. dw_gdma_channel_set_block_markers) into IRAM,\nso that these functions can be IRAM-safe and able to be called in the other IRAM interrupt context.",
+                                "id": "DW_GDMA_SETTER_FUNC_IN_IRAM",
+                                "name": "DW_GDMA_SETTER_FUNC_IN_IRAM",
+                                "range": null,
+                                "title": null,
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "SOC_DW_GDMA_SUPPORTED",
+                                "help": "This will ensure the DW_GDMA interrupt handler is IRAM-Safe, allow to avoid flash\ncache misses, and also be able to run whilst the cache is disabled.\n(e.g. SPI Flash write).",
+                                "id": "DW_GDMA_ISR_IRAM_SAFE",
+                                "name": "DW_GDMA_ISR_IRAM_SAFE",
+                                "range": null,
+                                "title": null,
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "SOC_DW_GDMA_SUPPORTED",
+                                "help": "Wether to enable the debug log message for DW_GDMA driver.\nNote that, this option only controls the DW_GDMA driver log, won't affect other drivers.",
+                                "id": "DW_GDMA_ENABLE_DEBUG_LOG",
+                                "name": "DW_GDMA_ENABLE_DEBUG_LOG",
+                                "range": null,
+                                "title": "Enable debug log",
+                                "type": "bool"
+                            }
+                        ],
+                        "depends_on": "SOC_DW_GDMA_SUPPORTED",
+                        "id": "component-config-hardware-settings-dw_gdma-configurations",
+                        "title": "DW_GDMA Configurations",
+                        "type": "menu"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": "SOC_DMA2D_SUPPORTED",
+                                "help": "Place 2D-DMA all operation functions, including control functions (e.g. start/stop/append/reset) and setter\nfunctions (e.g. connect/strategy/callback registration) into IRAM, so that these functions can be IRAM-safe\nand able to be called in the other IRAM interrupt context. It also helps optimizing the performance.",
+                                "id": "DMA2D_OPERATION_FUNC_IN_IRAM",
+                                "name": "DMA2D_OPERATION_FUNC_IN_IRAM",
+                                "range": null,
+                                "title": "Place 2D-DMA operation functions into IRAM",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "SOC_DMA2D_SUPPORTED",
+                                "help": "This will ensure the 2D-DMA interrupt handler is IRAM-Safe, allow to avoid flash\ncache misses, and also be able to run whilst the cache is disabled.\n(e.g. SPI Flash write).",
+                                "id": "DMA2D_ISR_IRAM_SAFE",
+                                "name": "DMA2D_ISR_IRAM_SAFE",
+                                "range": null,
+                                "title": "2D-DMA ISR IRAM-Safe",
+                                "type": "bool"
+                            }
+                        ],
+                        "depends_on": "SOC_DMA2D_SUPPORTED",
+                        "id": "component-config-hardware-settings-2d-dma-configurations",
+                        "title": "2D-DMA Configurations",
                         "type": "menu"
                     },
                     {
@@ -7043,6 +7199,16 @@
                                         "name": "XTAL_FREQ_40",
                                         "range": null,
                                         "title": "40 MHz",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "SOC_XTAL_SUPPORT_48M && <choice XTAL_FREQ_SEL>",
+                                        "help": null,
+                                        "id": "XTAL_FREQ_48",
+                                        "name": "XTAL_FREQ_48",
+                                        "range": null,
+                                        "title": "48 MHz",
                                         "type": "bool"
                                     },
                                     {
@@ -7150,10 +7316,47 @@
                     },
                     {
                         "children": [],
+                        "depends_on": "SOC_MULTI_USAGE_LDO_SUPPORTED",
+                        "id": "component-config-hardware-settings-ldo-config",
+                        "title": "LDO Config",
+                        "type": "menu"
+                    },
+                    {
+                        "children": [],
                         "depends_on": null,
                         "help": "This option is only used for new chip bringup, when\nclock support isn't done yet. So with this option,\nwe use xtal on FPGA as the clock source.",
                         "id": "ESP_BRINGUP_BYPASS_CPU_CLK_SETTING",
                         "name": "ESP_BRINGUP_BYPASS_CPU_CLK_SETTING",
+                        "range": null,
+                        "title": null,
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "This option is only used for new chip bringup, when\nRNG isn't done yet. So with this option, we use 0x5A\nto fill the random buffers",
+                        "id": "ESP_BRINGUP_BYPASS_RANDOM_SETTING",
+                        "name": "ESP_BRINGUP_BYPASS_RANDOM_SETTING",
+                        "range": null,
+                        "title": null,
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "ESP_SPI_BUS_LOCK_ISR_FUNCS_IN_IRAM",
+                        "name": "ESP_SPI_BUS_LOCK_ISR_FUNCS_IN_IRAM",
+                        "range": null,
+                        "title": null,
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "ESP_SPI_BUS_LOCK_FUNCS_IN_IRAM",
+                        "name": "ESP_SPI_BUS_LOCK_FUNCS_IN_IRAM",
                         "range": null,
                         "title": null,
                         "type": "bool"
@@ -7579,7 +7782,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "ESP32S3_TRAX && !FREERTOS_UNICORE",
+                                        "depends_on": "ESP32S3_TRAX && !ESP_SYSTEM_SINGLE_CORE_MODE",
                                         "help": "The esp32-s3 contains a feature which allows you to trace the execution path the processor\nhas taken through the program. This is stored in a chunk of 32K (16K for single-processor)\nof memory that can't be used for general purposes anymore. Disable this if you do not know\nwhat this is.",
                                         "id": "ESP32S3_TRAX_TWOBANKS",
                                         "name": "ESP32S3_TRAX_TWOBANKS",
@@ -8020,6 +8223,16 @@
                         "help": null,
                         "id": "ESP_CONSOLE_UART_NUM",
                         "name": "ESP_CONSOLE_UART_NUM",
+                        "range": null,
+                        "title": null,
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "ESP_CONSOLE_ROM_SERIAL_PORT_NUM",
+                        "name": "ESP_CONSOLE_ROM_SERIAL_PORT_NUM",
                         "range": null,
                         "title": null,
                         "type": "int"
@@ -8640,6 +8853,56 @@
                                 "type": "string"
                             },
                             {
+                                "children": [
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice FREERTOS_TIMER_SERVICE_TASK_CORE_AFFINITY>",
+                                        "help": null,
+                                        "id": "FREERTOS_TIMER_TASK_AFFINITY_CPU0",
+                                        "name": "FREERTOS_TIMER_TASK_AFFINITY_CPU0",
+                                        "range": null,
+                                        "title": "CPU0",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "!FREERTOS_UNICORE && <choice FREERTOS_TIMER_SERVICE_TASK_CORE_AFFINITY>",
+                                        "help": null,
+                                        "id": "FREERTOS_TIMER_TASK_AFFINITY_CPU1",
+                                        "name": "FREERTOS_TIMER_TASK_AFFINITY_CPU1",
+                                        "range": null,
+                                        "title": "CPU1",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice FREERTOS_TIMER_SERVICE_TASK_CORE_AFFINITY>",
+                                        "help": null,
+                                        "id": "FREERTOS_TIMER_TASK_NO_AFFINITY",
+                                        "name": "FREERTOS_TIMER_TASK_NO_AFFINITY",
+                                        "range": null,
+                                        "title": "No affinity",
+                                        "type": "bool"
+                                    }
+                                ],
+                                "depends_on": null,
+                                "help": "Sets the timer task's core affinity\n(see configTIMER_SERVICE_TASK_CORE_AFFINITY documentation for more details).",
+                                "id": "component-config-freertos-kernel-configtimer_service_task_core_affinity",
+                                "name": "FREERTOS_TIMER_SERVICE_TASK_CORE_AFFINITY",
+                                "title": "configTIMER_SERVICE_TASK_CORE_AFFINITY",
+                                "type": "choice"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": null,
+                                "id": "FREERTOS_TIMER_SERVICE_TASK_CORE_AFFINITY",
+                                "name": "FREERTOS_TIMER_SERVICE_TASK_CORE_AFFINITY",
+                                "range": null,
+                                "title": null,
+                                "type": "hex"
+                            },
+                            {
                                 "children": [],
                                 "depends_on": null,
                                 "help": "Sets the timer task's priority (see configTIMER_TASK_PRIORITY documentation for more details).",
@@ -8707,18 +8970,7 @@
                             {
                                 "children": [
                                     {
-                                        "children": [
-                                            {
-                                                "children": [],
-                                                "depends_on": "!FREERTOS_SMP && FREERTOS_USE_STATS_FORMATTING_FUNCTIONS",
-                                                "help": "If enabled, this will include an extra column when vTaskList is called to display the CoreID the task\nis pinned to (0,1) or -1 if not pinned.",
-                                                "id": "FREERTOS_VTASKLIST_INCLUDE_COREID",
-                                                "name": "FREERTOS_VTASKLIST_INCLUDE_COREID",
-                                                "range": null,
-                                                "title": "Enable display of xCoreID in vTaskList",
-                                                "type": "bool"
-                                            }
-                                        ],
+                                        "children": [],
                                         "depends_on": "FREERTOS_USE_TRACE_FACILITY",
                                         "help": "Set configUSE_TRACE_FACILITY and configUSE_STATS_FORMATTING_FUNCTIONS to 1 to include the\n``vTaskList()`` and ``vTaskGetRunTimeStats()`` functions in the build (see\nconfigUSE_STATS_FORMATTING_FUNCTIONS documentation for more details).",
                                         "id": "FREERTOS_USE_STATS_FORMATTING_FUNCTIONS",
@@ -8734,6 +8986,26 @@
                                 "name": "FREERTOS_USE_TRACE_FACILITY",
                                 "range": null,
                                 "title": "configUSE_TRACE_FACILITY",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "Enable list integrity checker\n(see configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES documentation for more details).",
+                                "id": "FREERTOS_USE_LIST_DATA_INTEGRITY_CHECK_BYTES",
+                                "name": "FREERTOS_USE_LIST_DATA_INTEGRITY_CHECK_BYTES",
+                                "range": null,
+                                "title": "configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "!FREERTOS_SMP && FREERTOS_USE_STATS_FORMATTING_FUNCTIONS",
+                                "help": "If enabled, this will include an extra column when vTaskList is called to display the CoreID the task\nis pinned to (0,1) or -1 if not pinned.",
+                                "id": "FREERTOS_VTASKLIST_INCLUDE_COREID",
+                                "name": "FREERTOS_VTASKLIST_INCLUDE_COREID",
+                                "range": null,
+                                "title": "Enable display of xCoreID in vTaskList",
                                 "type": "bool"
                             },
                             {
@@ -9104,6 +9376,19 @@
                         "range": null,
                         "title": null,
                         "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "FREERTOS_NUMBER_OF_CORES",
+                        "name": "FREERTOS_NUMBER_OF_CORES",
+                        "range": [
+                            1,
+                            2
+                        ],
+                        "title": null,
+                        "type": "int"
                     }
                 ],
                 "depends_on": null,
@@ -9882,6 +10167,19 @@
                                 "range": null,
                                 "title": "Auto suspend long erase/write operations (READ DOCS FIRST)",
                                 "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
+                                "help": "This config is used for setting Tsus parameter. Tsus means CS# high to next command after\nsuspend. You can refer to the chapter of AC CHARACTERISTICS of flash datasheet.",
+                                "id": "SPI_FLASH_SUSPEND_TSUS_VAL_US",
+                                "name": "SPI_FLASH_SUSPEND_TSUS_VAL_US",
+                                "range": [
+                                    20,
+                                    100
+                                ],
+                                "title": "SPI flash tSUS value (refer to chapter AC CHARACTERISTICS)",
+                                "type": "int"
                             }
                         ],
                         "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
