@@ -2,12 +2,21 @@
     "version":            "1.1",
     "project_name":       "project-name",
     "project_version":    "df654a6-dirty",
+<<<<<<< Updated upstream
     "project_path":       "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name",
     "idf_path":           "/Users/nicolekaldus/esp/esp-idf",
     "build_dir":          "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build",
     "config_file":        "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/sdkconfig",
     "config_defaults":    "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/sdkconfig.defaults",
     "bootloader_elf":     "/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader/bootloader.elf",
+=======
+    "project_path":       "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name",
+    "idf_path":           "/Users/benchou/esp/esp-idf",
+    "build_dir":          "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build",
+    "config_file":        "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/sdkconfig",
+    "config_defaults":    "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/sdkconfig.defaults",
+    "bootloader_elf":     "/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader/bootloader.elf",
+>>>>>>> Stashed changes
     "app_elf":            "project-name.elf",
     "app_bin":            "project-name.bin",
     "build_type":         "flash_app",

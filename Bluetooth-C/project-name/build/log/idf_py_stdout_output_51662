@@ -1,0 +1,66 @@
+[1/5] cd /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/esptool_py && /Users/benchou/.espressif/python_env/idf5.2_py3.11_env/bin/python /Users/benchou/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/partition_table/partition-table.bin /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/project-name.bin
+project-name.bin binary size 0xbc2d0 bytes. Smallest app partition is 0x100000 bytes. 0x43d30 bytes (26%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader/esp-idf/esptool_py && /Users/benchou/.espressif/python_env/idf5.2_py3.11_env/bin/python /Users/benchou/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader/bootloader.bin
+Bootloader binary size 0x5250 bytes. 0x2db0 bytes (36%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /Users/benchou/esp/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -D IDF_PATH=/Users/benchou/esp/esp-idf -D "SERIAL_TOOL=/Users/benchou/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/Users/benchou/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/benchou/Desktop/GitHub/CS528-Drone-Gestures/Bluetooth-C/project-name/build -P /Users/benchou/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbserial-10 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 project-name.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/cu.usbserial-10
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.1)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_1v8)
+Crystal is 40MHz
+MAC: 68:b6:b3:3e:1b:6c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000ccfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 21072 bytes to 13075...
+Writing at 0x00000000... (100 %)
+Wrote 21072 bytes (13075 compressed) at 0x00000000 in 0.6 seconds (effective 265.0 kbit/s)...
+Hash of data verified.
+Compressed 770768 bytes to 433336...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001f6b8... (7 %)
+Writing at 0x0002cddd... (11 %)
+Writing at 0x00039ae7... (14 %)
+Writing at 0x0003f411... (18 %)
+Writing at 0x0004533e... (22 %)
+Writing at 0x0004b966... (25 %)
+Writing at 0x00051aac... (29 %)
+Writing at 0x00057771... (33 %)
+Writing at 0x0005d3ca... (37 %)
+Writing at 0x000633c9... (40 %)
+Writing at 0x000692db... (44 %)
+Writing at 0x0006fa95... (48 %)
+Writing at 0x00075eca... (51 %)
+Writing at 0x0007c1f2... (55 %)
+Writing at 0x00081fea... (59 %)
+Writing at 0x00088187... (62 %)
+Writing at 0x0008d9f9... (66 %)
+Writing at 0x00093125... (70 %)
+Writing at 0x00099781... (74 %)
+Writing at 0x0009f679... (77 %)
+Writing at 0x000a4c38... (81 %)
+Writing at 0x000ab053... (85 %)
+Writing at 0x000b576a... (88 %)
+Writing at 0x000bcbf9... (92 %)
+Writing at 0x000c2c46... (96 %)
+Writing at 0x000c93c0... (100 %)
+Wrote 770768 bytes (433336 compressed) at 0x00010000 in 13.5 seconds (effective 455.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 221.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
