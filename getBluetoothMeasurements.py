@@ -42,7 +42,7 @@ async def read_from_connection(client):
    
 movementLen = 500
 recordingsPerGesture = 62
-gestureTypes = ['down']#, 'down', 'left', 'right']
+gestureTypes = ['left']#, 'down', 'left', 'right']
 recordedMovements = [] #3d array ==> [gesture type][gesture reading][single movement reading]
 
 loop = asyncio.get_event_loop()
