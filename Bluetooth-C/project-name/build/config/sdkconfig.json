@@ -770,7 +770,7 @@
     "IDF_CMAKE": true,
     "IDF_EXPERIMENTAL_FEATURES": false,
     "IDF_FIRMWARE_CHIP_ID": 9,
-    "IDF_INIT_VERSION": "5.2.1",
+    "IDF_INIT_VERSION": "5.3.0",
     "IDF_TARGET": "esp32s3",
     "IDF_TARGET_ARCH": "xtensa",
     "IDF_TARGET_ARCH_XTENSA": true,

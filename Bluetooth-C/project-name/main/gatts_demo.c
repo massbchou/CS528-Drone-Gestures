@@ -40,8 +40,47 @@
 #define BUFFER_SIZE 25
 float measurements[BUFFER_SIZE][6];
 int insertIndex = 0;
+//
+#define FALLBACK_LENGTH 4
+#define FALLBACK_SIZE 75
+#define MAX_TO_SEND_SIZE 200
+
+typedef struct {
+    char data[FALLBACK_LENGTH][FALLBACK_SIZE];
+    int start;
+    int end;
+    int size;
+} CircularBuffer;
+
+void cb_init(CircularBuffer* cb) {
+    cb->start = 0;
+    cb->end = 0;
+    cb->size = 0;
+}
+
+void cb_push(CircularBuffer* cb, char* measurement) {
+    strncpy(cb->data[cb->end], measurement, FALLBACK_SIZE);
+    cb->data[cb->end][FALLBACK_SIZE - 1] = '\0'; // Ensure null termination
+    cb->end = (cb->end + 1) % FALLBACK_LENGTH;
+    if (cb->size < FALLBACK_LENGTH) {
+        cb->size++;
+    } else {
+        cb->start = (cb->start + 1) % FALLBACK_LENGTH;
+    }
+}
+
+char* cb_pop(CircularBuffer* cb) {
+    if (cb->size == 0) {
+        return NULL;
+    }
+    char* measurement = cb->data[cb->start];
+    cb->start = (cb->start + 1) % FALLBACK_LENGTH;
+    cb->size--;
+    return measurement;
+}
+
 //Fallback measurements encoded as a string to send
-char fallback[100];
+CircularBuffer fallback;
 
 //mpu imports
 #include <stdio.h>
@@ -381,9 +420,21 @@ static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_i
         // memset(measurements, 0, sizeof(measurements));
         // insertIndex = 0;
 
+        char toSend[MAX_TO_SEND_SIZE] = ""; 
+        int pops = 0;
+        while (pops < FALLBACK_LENGTH) {
+            char* measurement = cb_pop(&fallback);
+            if (measurement == NULL) {
+                break;
+            }
+            strcat(toSend, measurement);
+            strcat(toSend, "\n");
+            pops++;
+        }
+
         //send the fallback
-        memcpy(rsp.attr_value.value, fallback, sizeof(fallback));
-        rsp.attr_value.len = strlen(fallback);
+        memcpy(rsp.attr_value.value, toSend, sizeof(toSend));
+        rsp.attr_value.len = strlen(toSend);
 
         // esp_ble_gatts_send_indicate(gatts_if, param->read.conn_id, gl_profile_tab[PROFILE_A_APP_ID].char_handle,
         //                                         sizeof(measurements), measurements, false)
@@ -838,11 +889,13 @@ void recordData(esp_err_t ret, mpu6050_handle_t mpu6050, mpu6050_acce_value_t ac
         float newMeasurement[6] = {acce.acce_x, acce.acce_y, acce.acce_z, gyro.gyro_x, gyro.gyro_y, gyro.gyro_z};
         insertMeasurement(newMeasurement);
         //string representation of the data
-        sprintf(fallback, "%.2f,%.2f,%.2f,%.2f,%.2f,%.2f",
+        char data[FALLBACK_SIZE];
+        sprintf(data, "%.2f,%.2f,%.2f,%.2f,%.2f,%.2f",
              acce.acce_x, acce.acce_y, acce.acce_z, gyro.gyro_x, gyro.gyro_y, gyro.gyro_z);
+        cb_push(&fallback, data);
 
         //log fallback
-        ESP_LOGI(TAG, "FALLBACK: %s", fallback);
+        ESP_LOGI(TAG, "FALLBACK: %s", data);
 
         counter++; 
     }
@@ -854,6 +907,8 @@ void recordData(esp_err_t ret, mpu6050_handle_t mpu6050, mpu6050_acce_value_t ac
 
 void app_main(void)
 {
+    //initialize the circular buffer
+    cb_init(&fallback);
     esp_err_t ret;
 
     // Initialize NVS.

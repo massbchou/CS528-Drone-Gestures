@@ -1,0 +1,66 @@
+[1/5] cd /Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/esp-idf/esptool_py && /Users/nicolekaldus/.espressif/python_env/idf5.3_py3.11_env/bin/python /Users/nicolekaldus/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/partition_table/partition-table.bin /Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/project-name.bin
+project-name.bin binary size 0xbd490 bytes. Smallest app partition is 0x100000 bytes. 0x42b70 bytes (26%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader/esp-idf/esptool_py && /Users/nicolekaldus/.espressif/python_env/idf5.3_py3.11_env/bin/python /Users/nicolekaldus/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build/bootloader/bootloader.bin
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /Users/nicolekaldus/esp/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -D IDF_PATH=/Users/nicolekaldus/esp/esp-idf -D "SERIAL_TOOL=/Users/nicolekaldus/.espressif/python_env/idf5.3_py3.11_env/bin/python;;/Users/nicolekaldus/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/Bluetooth-C/project-name/build -P /Users/nicolekaldus/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbserial-1120 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 project-name.bin 0x8000 partition_table/partition-table.bin
+esptool.py vv4.8.dev1
+Serial port /dev/cu.usbserial-1120
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.1)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_1v8)
+Crystal is 40MHz
+MAC: 68:b6:b3:3e:1b:d8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000cdfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 21056 bytes to 13070...
+Writing at 0x00000000... (100 %)
+Wrote 21056 bytes (13070 compressed) at 0x00000000 in 0.6 seconds (effective 292.0 kbit/s)...
+Hash of data verified.
+Compressed 775312 bytes to 435275...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001f456... (7 %)
+Writing at 0x0002ce70... (11 %)
+Writing at 0x00039ba1... (14 %)
+Writing at 0x0003f6e1... (18 %)
+Writing at 0x00045652... (22 %)
+Writing at 0x0004bdcc... (25 %)
+Writing at 0x00051fce... (29 %)
+Writing at 0x00057d6b... (33 %)
+Writing at 0x0005d9df... (37 %)
+Writing at 0x000639e0... (40 %)
+Writing at 0x000695cc... (44 %)
+Writing at 0x0006ffd9... (48 %)
+Writing at 0x00076507... (51 %)
+Writing at 0x0007c870... (55 %)
+Writing at 0x00082674... (59 %)
+Writing at 0x000887e3... (62 %)
+Writing at 0x0008e241... (66 %)
+Writing at 0x00093885... (70 %)
+Writing at 0x00099bb7... (74 %)
+Writing at 0x0009fd65... (77 %)
+Writing at 0x000a5366... (81 %)
+Writing at 0x000ab746... (85 %)
+Writing at 0x000b5e78... (88 %)
+Writing at 0x000bd24a... (92 %)
+Writing at 0x000c31f3... (96 %)
+Writing at 0x000c984c... (100 %)
+Wrote 775312 bytes (435275 compressed) at 0x00010000 in 12.3 seconds (effective 502.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 410.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
