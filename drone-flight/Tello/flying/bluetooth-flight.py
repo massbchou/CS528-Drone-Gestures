@@ -70,7 +70,7 @@ else:
     device = torch.device('cpu')
     print("CPU")
 
-model = torch.load("/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/models/CNN-L.pth", map_location="cpu")
+model = torch.load("/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/models/CNN-bluetooth.pth", map_location="cpu")
 model.eval()
 
 def checkForMovement(paddingWindow, numActivationMovements, accelerationThreshold):
@@ -97,14 +97,6 @@ def normalize(data):
     return torch.from_numpy(data)
 
 def decideMovement(data): #0 = up, 1 = down, 2 = left, 3 = right
-  #we would run the neural net here
-  # newsize = 500
-  # oldsize = data.shape
-  # interpolated = np.zeros((newsize,oldsize[1]))
-  # for i in range(6):
-  #   interpolated[:,i] = np.interp(np.linspace(0, oldsize[0] - 1, newsize), range(newsize), data[:, i])
-  #   plt.plot(data[:, i])
-  # plt.show()
 
   # data = interpolated
   data = normalize(data)
@@ -153,7 +145,7 @@ client = loop.run_until_complete(connect_to_device())
 
 readyToRecord = False
 print('ready to run')
-while numGestures < 5: #program will run 5 gestures
+while numGestures < 10: #program will run 10 gestures
   loop = asyncio.get_event_loop()
   data = loop.run_until_complete(read_from_connection(client))
   # data = read_from_connection(client)
