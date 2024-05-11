@@ -132,12 +132,11 @@ numActivationMovements = 10
 accelerationThreshold = 20
 upThreshold = 4
 upCount = 0
-distCM = 20
+distCM = 200
 numGestures = 0
 
 
-# start()
-# takeoff() 
+ 
 
 #connect to the esp
 loop = asyncio.get_event_loop()
@@ -145,7 +144,9 @@ client = loop.run_until_complete(connect_to_device())
 
 readyToRecord = False
 print('ready to run')
-while numGestures < 10: #program will run 10 gestures
+start()
+takeoff()
+while numGestures < 5: #program will run 10 gestures
   loop = asyncio.get_event_loop()
   data = loop.run_until_complete(read_from_connection(client))
   # data = read_from_connection(client)
@@ -184,28 +185,28 @@ while numGestures < 10: #program will run 10 gestures
       if movementType == 0: #up
         if upCount < upThreshold:
           upCount += 1
-          # up(distCM)
+          up(distCM)
           print('up')
         else:
           print('too high...spin')
-          # clockwise(360)
+          clockwise(360)
       
       elif movementType == 1: #down
         if upCount > 1:
           upCount -= 1
           print('down')
-          # down(distCM)
+          down(distCM)
         else:
           print('too low...spin')
-          # clockwise(360)
+          clockwise(360)
           
       elif movementType == 2: #left
         print('left')
-        # left(distCM)
+        left(distCM)
       
       elif movementType == 3: #right
         print('right')
-        # right(distCM)
+        right(distCM)
         
-# land() #safely lands the drone
+land() #safely lands the drone
 print('landing')
