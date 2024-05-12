@@ -70,7 +70,7 @@ else:
     device = torch.device('cpu')
     print("CPU")
 
-model = torch.load("/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/models/CNN-bluetooth.pth", map_location="cpu")
+model = torch.load("/Users/nicolekaldus/esp/final-project/CS528-Drone-Gestures/models/CNN-finetune.pth", map_location="cpu")
 model.eval()
 
 def checkForMovement(paddingWindow, numActivationMovements, accelerationThreshold):
@@ -114,10 +114,10 @@ def decideMovement(data): #0 = up, 1 = down, 2 = left, 3 = right
             print("Predict: down")
             return 1
         case 2:
-            print("Predict: left")
+            print("Predict: right")
             return 2
         case 3:
-            print("Predict: right")
+            print("Predict: left")
             return 3
   return -1
 
@@ -130,9 +130,9 @@ recordedMovement = []
 recording = False
 numActivationMovements = 10
 accelerationThreshold = 20
-upThreshold = 4
+upThreshold = 1
 upCount = 0
-distCM = 200
+distCM = 100
 numGestures = 0
 
 
@@ -144,8 +144,8 @@ client = loop.run_until_complete(connect_to_device())
 
 readyToRecord = False
 print('ready to run')
-start()
-takeoff()
+
+
 while numGestures < 5: #program will run 10 gestures
   loop = asyncio.get_event_loop()
   data = loop.run_until_complete(read_from_connection(client))
@@ -173,6 +173,10 @@ while numGestures < 5: #program will run 10 gestures
       for movement in data:
         recordedMovement.append(movement)
     else: #time to detect what the movement is
+      # if numGestures == 0:
+        # start()
+        # print('battery: ', get_battery())
+        # takeoff()
       print('DECIDING THE MOVEMENT')
       movementType = decideMovement(paddingWindow + recordedMovement)
       recordedMovement = []
@@ -185,28 +189,27 @@ while numGestures < 5: #program will run 10 gestures
       if movementType == 0: #up
         if upCount < upThreshold:
           upCount += 1
-          up(distCM)
+          # up(distCM)
           print('up')
         else:
           print('too high...spin')
           clockwise(360)
       
       elif movementType == 1: #down
-        if upCount > 1:
+        if upCount > 0:
           upCount -= 1
-          print('down')
-          down(distCM)
+          # down(distCM)
         else:
           print('too low...spin')
-          clockwise(360)
+          # clockwise(360)
           
-      elif movementType == 2: #left
-        print('left')
-        left(distCM)
-      
-      elif movementType == 3: #right
+      elif movementType == 2: #right
         print('right')
-        right(distCM)
+        # right(distCM)
+      
+      elif movementType == 3: #left
+        print('left')
+        # left(distCM)
         
-land() #safely lands the drone
+# land() #safely lands the drone
 print('landing')

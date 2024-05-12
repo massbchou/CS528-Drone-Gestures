@@ -5,7 +5,7 @@ takeoff()
 
 initial_tof = get_tof()
 
-for j in range(4):
+for j in range(1):
   clockwise(90)
   for i in range(2):
     forward(20)
