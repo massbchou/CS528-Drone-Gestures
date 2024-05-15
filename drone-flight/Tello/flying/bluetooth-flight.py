@@ -172,11 +172,12 @@ while numGestures < 5: #program will run 10 gestures
     if len(recordedMovement) < movementSize:
       for movement in data:
         recordedMovement.append(movement)
+        print(len(recordedMovement))
     else: #time to detect what the movement is
-      # if numGestures == 0:
-        # start()
-        # print('battery: ', get_battery())
-        # takeoff()
+      if numGestures == 0:
+        start()
+        print('battery: ', get_battery())
+        takeoff()
       print('DECIDING THE MOVEMENT')
       movementType = decideMovement(paddingWindow + recordedMovement)
       recordedMovement = []
@@ -189,7 +190,7 @@ while numGestures < 5: #program will run 10 gestures
       if movementType == 0: #up
         if upCount < upThreshold:
           upCount += 1
-          # up(distCM)
+          up(distCM)
           print('up')
         else:
           print('too high...spin')
@@ -198,18 +199,18 @@ while numGestures < 5: #program will run 10 gestures
       elif movementType == 1: #down
         if upCount > 0:
           upCount -= 1
-          # down(distCM)
+          down(distCM)
         else:
           print('too low...spin')
-          # clockwise(360)
+          clockwise(360)
           
       elif movementType == 2: #right
         print('right')
-        # right(distCM)
+        right(distCM)
       
       elif movementType == 3: #left
         print('left')
-        # left(distCM)
+        left(distCM)
         
-# land() #safely lands the drone
+land() #safely lands the drone
 print('landing')
